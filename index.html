@@ -140,12 +140,16 @@
     });
 
     // Highlight active navigation link
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPage = window.location.pathname.split('/').pop() || 'index';
     const navLinks = document.querySelectorAll('nav a, #menu a');
 
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === currentPage || (currentPage === 'index.html' && href === 'index.html') || (currentPage === '' && href === 'index.html')) {
+        // Match both 'index' and 'index.html', and handle empty string for homepage
+        const pageName = currentPage.replace('.html', '') || 'index';
+        const linkName = href.replace('.html', '');
+
+        if (pageName === linkName) {
             link.classList.add('active-link');
         }
     });
