@@ -152,7 +152,7 @@
 
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === currentPage || (currentPage.includes('about') && href === 'about.html')) {
+        if (href === currentPage || currentPage === 'about.html' && href === 'about.html') {
             link.classList.add('active-link');
         }
     });
