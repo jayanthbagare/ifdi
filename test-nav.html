@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { padding: 40px; }
+        .debug { margin: 20px 0; padding: 10px; background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1>Navigation Test</h1>
+
+    <div class="debug">
+        <strong>Current Page:</strong> <span id="currentPageDebug"></span>
+    </div>
+
+    <nav class="flex space-x-8">
+        <a href="fellowship.html" class="text-lg">Fellowship</a>
+        <a href="about.html" class="text-lg">About Us</a>
+    </nav>
+
+    <div class="debug" id="linkDebug"></div>
+
+    <div style="margin-top: 30px;">
+        <p>Testing active-link class manually:</p>
+        <a href="#" class="active-link text-lg">This should be underlined</a>
+    </div>
+
+    <script>
+        // Debug script
+        const currentPage = window.location.pathname.split('/').pop() || 'test-nav.html';
+        document.getElementById('currentPageDebug').textContent = currentPage;
+
+        const navLinks = document.querySelectorAll('nav a');
+        let debugInfo = '<strong>Link Debug Info:</strong><br>';
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            const matches = href === currentPage;
+            debugInfo += `Link href: "${href}" | Matches: ${matches}<br>`;
+
+            if (matches) {
+                link.classList.add('active-link');
+            }
+        });
+
+        document.getElementById('linkDebug').innerHTML = debugInfo;
+    </script>
+</body>
+</html>

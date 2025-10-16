@@ -132,7 +132,11 @@
 
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === currentPage || currentPage === 'fellowship.html' && href === 'fellowship.html') {
+        // Match both 'fellowship' and 'fellowship.html'
+        const pageName = currentPage.replace('.html', '');
+        const linkName = href.replace('.html', '');
+
+        if (pageName === linkName) {
             link.classList.add('active-link');
         }
     });

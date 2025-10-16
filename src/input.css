@@ -8,8 +8,9 @@
   --font-family-sans: 'Poppins', sans-serif;
 }
 
-.active-link {
-  text-decoration: underline;
+nav a.active-link,
+#menu a.active-link {
+  text-decoration: underline !important;
   text-underline-offset: 4px;
   font-weight: 500;
 }
