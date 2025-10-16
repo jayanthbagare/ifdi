@@ -8,8 +8,8 @@ module.exports = {
         'brand-beige': '#f9f6f1',
       },
       fontFamily: {
-        'serif': ['Playfair Display', 'serif'],
-        'sans': ['Poppins', 'sans-serif'],
+        'serif': ['Calistoga', 'serif'],
+        'sans': ['Inria Sans', 'sans-serif'],
       }
     },
   },
