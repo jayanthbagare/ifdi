@@ -147,16 +147,17 @@
     });
 
     // Highlight active navigation link
-    const currentPage = window.location.pathname.split('/').pop() || 'about.html';
+    const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('nav a, #menu a');
 
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        // Match both 'about' and 'about.html'
-        const pageName = currentPage.replace('.html', '');
-        const linkName = href.replace('.html', '');
 
-        if (pageName === linkName) {
+        // Normalize paths: remove leading slash and .html extension
+        const normalizedCurrent = currentPath.replace(/^\//, '').replace('.html', '') || 'index';
+        const normalizedHref = href.replace(/^\//, '').replace('.html', '');
+
+        if (normalizedCurrent === normalizedHref) {
             link.classList.add('active-link');
         }
     });
