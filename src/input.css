@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #1e3932;
+  --color-brand-beige: #f9f6f1;
+
+  --font-family-serif: 'Playfair Display', serif;
+  --font-family-sans: 'Poppins', sans-serif;
+}
