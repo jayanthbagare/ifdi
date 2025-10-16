@@ -7,3 +7,9 @@
   --font-family-serif: 'Playfair Display', serif;
   --font-family-sans: 'Poppins', sans-serif;
 }
+
+.active-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 500;
+}
