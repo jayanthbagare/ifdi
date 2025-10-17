@@ -11,38 +11,41 @@
 </head>
 <body class="bg-brand-beige font-sans text-brand-green">
 
-<header class="container mx-auto px-6 py-6 flex justify-between items-center relative">
-    <a href="index.html" style="margin-left: -100px;">
-         <img src="assets/logo.svg" alt="IFDI Logo" width="132" height="107">
-    </a>
+<div class="relative bg-cover bg-center" style="background-image: url('assets/home-hero.jpg');">
+    <div class="absolute inset-0 bg-black opacity-40"></div>
 
-    <nav class="hidden md:flex items-center space-x-8">
-        <a href="fellowship.html" class="text-lg hover:text-opacity-80">Fellowship</a>
-        <a href="about.html" class="text-lg hover:text-opacity-80">About Us</a>
-    </nav>
+    <header class="container mx-auto px-6 py-6 flex justify-between items-center relative z-30">
+        <a href="index.html" style="margin-left: -100px;" class="flex items-center z-40 relative">
+             <img src="assets/logo.svg" alt="IFDI Logo" width="132" height="55">
+        </a>
 
-    <div class="md:hidden">
-        <button id="menu-btn" class="z-30 block">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-brand-green">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-        </button>
-    </div>
+        <nav class="hidden md:flex items-center space-x-8 z-40 relative text-white">
+            <a href="fellowship.html" class="text-lg hover:text-opacity-80">Fellowship</a>
+            <a href="about.html" class="text-lg hover:text-opacity-80">About Us</a>
+        </nav>
 
-    <div id="menu" class="hidden md:hidden absolute top-0 left-0 w-full bg-brand-beige z-20">
-        <div class="flex flex-col items-center justify-center min-h-screen space-y-8 font-bold text-2xl text-brand-green">
-            <a href="fellowship.html" class="hover:text-opacity-80">Fellowship</a>
-            <a href="about.html" class="hover:text-opacity-80">About Us</a>
+        <div class="md:hidden z-40 relative">
+            <button id="menu-btn" class="z-30 block">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
         </div>
-    </div>
-</header>
-<main>
-        <section class="relative h-[80vh] bg-cover bg-center text-white flex items-center justify-center text-center" style="background-image: url('assets/home-hero.jpg');">
-            <div class="absolute inset-0 bg-black opacity-40"></div>
-            <div class="relative z-10">
-                <h1 class="font-serif text-5xl md:text-7xl font-bold">Landing Page Title</h1>
+
+        <div id="menu" class="hidden md:hidden absolute top-0 left-0 w-full bg-brand-beige z-50">
+            <div class="flex flex-col items-center justify-center min-h-screen space-y-8 font-bold text-2xl text-brand-green">
+                <a href="fellowship.html" class="hover:text-opacity-80">Fellowship</a>
+                <a href="about.html" class="hover:text-opacity-80">About Us</a>
             </div>
-        </section>
+        </div>
+    </header>
+
+    <section class="h-[80vh] text-white flex items-center justify-center text-center relative z-10">
+        <h1 class="font-serif text-5xl md:text-7xl font-bold">Landing Page Title</h1>
+    </section>
+</div>
+
+<main>
 
         <section class="py-20 px-6">
             <div class="container mx-auto max-w-4xl text-center">
