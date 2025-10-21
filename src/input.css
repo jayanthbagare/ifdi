@@ -14,3 +14,59 @@ nav a.active-link,
   text-underline-offset: 4px;
   font-weight: 500;
 }
+
+/* Responsive Logo Styles */
+.logo-container {
+  margin-left: -100px;
+}
+
+.logo-svg {
+  width: 132px;
+  height: 55px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  width: 295px;
+  height: auto;
+  margin-left: -5px;
+  position: relative;
+  top: 10px;
+  flex-shrink: 0;
+}
+
+/* Tablet Responsive (768px and below) */
+@media (max-width: 768px) {
+  .logo-container {
+    margin-left: -40px;
+  }
+
+  .logo-svg {
+    width: 88px;
+    height: auto;
+  }
+
+  .logo-text {
+    width: 196px;
+    top: 6px;
+    margin-left: -3px;
+  }
+}
+
+/* Mobile Responsive (480px and below) */
+@media (max-width: 480px) {
+  .logo-container {
+    margin-left: 0;
+  }
+
+  .logo-svg {
+    width: 66px;
+    height: auto;
+  }
+
+  .logo-text {
+    width: 147px;
+    top: 5px;
+    margin-left: -2px;
+  }
+}
