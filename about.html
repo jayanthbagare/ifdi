@@ -1,283 +1,342 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - IFDI</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us — IFDI</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calistoga&amp;family=Inria+Sans:wght@300;400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
 </head>
+
 <body class="bg-brand-beige font-sans text-brand-green">
-
-<header class="container mx-auto px-6 py-6 flex justify-between items-center relative">
-    <a href="index.html" class="flex items-center logo-container">
-         <img src="assets/logo.svg" alt="IFDI Logo" class="logo-svg">
-         <img src="assets/logo_text_dark.png" alt="IFDI Text" class="logo-text">
-    </a>
-
-    <nav class="hidden md:flex items-center space-x-8 font-serif">
-        <a href="fellowship.html" class="hover:text-opacity-80" style="font-size: 32px;">Fellowship</a>
-        <a href="about.html" class="hover:text-opacity-80" style="font-size: 32px;">About Us</a>
-    </nav>
-
-    <div class="md:hidden">
-        <button id="menu-btn" class="z-30 block">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-brand-green">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-        </button>
-    </div>
-
-    <div id="menu" class="hidden md:hidden absolute top-0 left-0 w-full bg-brand-beige z-20">
-        <div class="flex flex-col items-center justify-center min-h-screen space-y-8 font-bold text-2xl text-brand-green">
-            <a href="fellowship.html" class="hover:text-opacity-80">Fellowship</a>
-            <a href="about.html" class="hover:text-opacity-80">About Us</a>
+    <!-- Header -->
+    <header class="container mx-auto px-6 py-6 flex justify-between items-center relative">
+        <a aria-label="IFDI home" class="flex items-center logo-container" href="index.html">
+            <img alt="IFDI Logo" class="logo-svg" src="assets/logo.svg" />
+            <img alt="IFDI Text" class="logo-text" src="assets/logo_text_dark.png" />
+        </a>
+        <nav class="hidden md:flex items-center space-x-10 z-40 relative">
+            <a class="nav-link font-sans text-base font-medium text-brand-green hover:underline"
+                href="fellowship.html">Fellowship</a>
+            <a class="nav-link font-sans text-base font-medium text-brand-green hover:underline" href="about.html">About
+                Us</a>
+        </nav>
+        <div class="md:hidden">
+            <button aria-label="Open menu" class="z-30 block rounded-xl p-2 hover:bg-white/60 transition-colors"
+                id="menu-btn">
+                <svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" stroke-width="1.5"
+                    viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+            </button>
         </div>
-    </div>
-</header>
-    <main class="container mx-auto px-6 py-16">
-        <section class="max-w-4xl mx-auto py-20">
-            <div class="text-center mb-12">
-                <img src="assets/logo.svg" alt="IFDI Logo" class="h-20 mx-auto mb-8">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold">Our Ethos</h2>
-                <h3 class="font-serif text-xl font-bold mb-1">About the Brand Pillars</h3>
+        <!-- Mobile menu -->
+        <div id="menu" class="hidden absolute top-0 left-0 w-full bg-brand-beige z-20">
+            <div class="flex flex-col items-center justify-center min-h-screen space-y-8">
+                <a class="nav-link font-sans text-base font-medium text-brand-green hover:underline underline-offset-4"
+                    href="index.html">Home</a>
+                <a class="nav-link font-sans text-base font-medium text-brand-green hover:underline underline-offset-4"
+                    href="fellowship.html">Fellowship</a>
+                <a class="nav-link font-sans text-base font-medium text-brand-green hover:underline underline-offset-4"
+                    href="about.html">About Us</a>
             </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-serif text-xl font-bold mb-2">Truth</h3>
-                    <p class="text-gray-700 leading-relaxed">Spreading awareness and documentation on the state of disability inclusion through journalism and data.</p>
+        </div>
+    </header>
+    <main class="container mx-auto px-6 py-14 space-y-16">
+        <section class="max-w-5xl mx-auto">
+            <div class="bg-white/60 border border-brand-green/20 rounded-3xl p-8 md:p-12 shadow-sm text-center"><img
+                    alt="IFDI Logo" class="h-14 mx-auto mb-6" src="assets/logo.svg" />
+                <h1 class="font-serif text-4xl md:text-5xl font-bold tracking-tight mb-4">About IFDI</h1>
+                <p class="text-lg leading-relaxed text-brand-green/80 max-w-3xl mx-auto">We work to advance disability
+                    inclusion through storytelling, research, and action—centering lived experience across the Global
+                    South and beyond.</p>
+            </div>
+        </section>
+        <section class="max-w-6xl mx-auto">
+            <div class="bg-white/50 border border-brand-green/20 rounded-3xl p-8 md:p-12 shadow-sm">
+                <div class="text-center mb-10"><img alt="IFDI Logo" class="h-12 mx-auto mb-5" src="assets/logo.svg" />
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight">Our Ethos</h2>
+                    <p class="mt-2 text-base md:text-lg font-bold text-brand-green/80">The pillars that guide our work
+                    </p>
                 </div>
-                <div>
-                    <h3 class="font-serif text-xl font-bold mb-2">Justice</h3>
-                    <p class="text-gray-700 leading-relaxed">Treating inclusion as a right. Pushing for policy change and RTI.</p>
-                </div>
-                <div>
-                    <h3 class="font-serif text-xl font-bold mb-2">Courage</h3>
-                    <p class="text-gray-700 leading-relaxed">Asking the hard questions, challenging barriers, and staying independent (neutral for the cause).</p>
-                </div>
-                 <div>
-                    <h3 class="font-serif text-xl font-bold mb-2">Wisdom</h3>
-                    <p class="text-gray-700 leading-relaxed">Building continuity through mentorship and research that lives beyond our fellowship.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="rounded-2xl bg-white/70 p-7 shadow-sm border border-brand-green/10">
+                        <h3 class="font-serif text-xl font-bold mb-2">Truth</h3>
+                        <p class="text-brand-green/80 leading-relaxed">Spreading awareness and documenting the state of
+                            disability inclusion through journalism and data.</p>
+                    </div>
+                    <div class="rounded-2xl bg-white/70 p-7 shadow-sm border border-brand-green/10">
+                        <h3 class="font-serif text-xl font-bold mb-2">Justice</h3>
+                        <p class="text-brand-green/80 leading-relaxed">Treating inclusion as a right—pushing for policy
+                            change and accountability.</p>
+                    </div>
+                    <div class="rounded-2xl bg-white/70 p-7 shadow-sm border border-brand-green/10">
+                        <h3 class="font-serif text-xl font-bold mb-2">Courage</h3>
+                        <p class="text-brand-green/80 leading-relaxed">Asking the hard questions, challenging barriers,
+                            and staying independent—neutral for the cause.</p>
+                    </div>
+                    <div class="rounded-2xl bg-white/70 p-7 shadow-sm border border-brand-green/10">
+                        <h3 class="font-serif text-xl font-bold mb-2">Wisdom</h3>
+                        <p class="text-brand-green/80 leading-relaxed">Building continuity through mentorship and
+                            research that lives beyond our fellowship.</p>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <section class="py-20">
-            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-12">About us</h2>
-            <h3 class="font-serif text-xl text-center font-bold mb-2">Board Members</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-8">
-                <div class="text-center">
-                    <img src="assets/Deepali.png" class="w-full h-auto rounded-lg mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img"
-                         data-name="Deepali Kulkarni"
-                         data-bio="Deepali brings her passion for using technology for the greater good to her role on the IFDI Board. She helps Aikyam stay close to its mission and guides the organization with her leadership and mentoring. She has been involved with the India Inclusion Foundation for over a decade and previously worked in the IT sector.
-                         A graduate of NIT Warangal, Deepali also serves on the board of Aikyam, which supports small nonprofits to grow and thrive. She loves music and traveling, bringing a creative and global perspective to her work. At IFDI, Deepali draws on her experience in technology, mentoring, and nonprofit leadership to strengthen the foundation’s mission of inclusion.">
-                    <h4 class="font-sans font-bold">Deepali Kulkarni</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed"></p>
+        <section class="max-w-6xl mx-auto">
+            <div class="bg-white/50 border border-brand-green/20 rounded-3xl p-8 md:p-12 shadow-sm">
+                <div class="text-center mb-10">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight">Leadership</h2>
+                    <p class="mt-3 text-base md:text-lg text-brand-green/80 max-w-3xl mx-auto">Meet the people guiding
+                        IFDI’s work. Click a photo to read their full bio.</p>
                 </div>
-                <div class="text-center">
-                    <img src="assets/Avinash.png" class="w-full h-auto rounded-lg mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img"
-                         data-name="Avinash Kumar"
-                         data-bio="Avinash Kumar comes from India, where he has worked with grassroots organizations and campaigns to strengthen people’s participation in governance and promote greater accountability and transparency. He holds a Master’s degree in Social Work from the University of Chicago and was selected as an Obama Foundation Scholar (2023–2024) for his work and commitment to advancing social causes.
-                         Avinash has also supported the India Inclusion Foundation, helping to expand its programs and build strategic partnerships. At the International Foundation for Disability Inclusion (IFDI), he is leading Operations and Strategy, bringing his experience in community organizing, coalition building, and policy advocacy to strengthen the foundation’s global mission of inclusion.">
-                    <h4 class="font-sans font-bold">Avinash Kumar</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed"></p>
+                <div class="mt-2">
+                    <h3 class="font-serif text-xl md:text-2xl text-center font-bold">Board Members</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+                        <div class="rounded-2xl bg-white/70 p-4 shadow-sm border border-brand-green/10 text-center"><img
+                                alt="Deepali Kulkarni"
+                                class="w-full aspect-[4/5] object-cover rounded-2xl mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img shadow-sm"
+                                data-bio="Deepali brings her passion for using technology for the greater good to her role on the IFDI Board. She helps Aikyam stay close to its mission and guides the organization with her leadership and mentoring. She has been involved with the India Inclusion Foundation for over a decade and previously worked in the IT sector.
+                         A graduate of NIT Warangal, Deepali also serves on the board of Aikyam, which supports small nonprofits to grow and thrive. She loves music and traveling, bringing a creative and global perspective to her work. At IFDI, Deepali draws on her experience in technology, mentoring, and nonprofit leadership to strengthen the foundation’s mission of inclusion."
+                                data-name="Deepali Kulkarni" src="assets/Deepali.png" />
+                            <h4 class="font-sans font-bold text-base md:text-lg">Deepali Kulkarni</h4>
+                            <p class="text-sm text-brand-green/70 mt-1">Board Member</p>
+                        </div>
+                        <div class="rounded-2xl bg-white/70 p-4 shadow-sm border border-brand-green/10 text-center"><img
+                                alt="Avinash Kumar"
+                                class="w-full aspect-[4/5] object-cover rounded-2xl mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img shadow-sm"
+                                data-bio="Avinash Kumar comes from India, where he has worked with grassroots organizations and campaigns to strengthen people’s participation in governance and promote greater accountability and transparency. He holds a Master’s degree in Social Work from the University of Chicago and was selected as an Obama Foundation Scholar (2023–2024) for his work and commitment to advancing social causes.
+                         Avinash has also supported the India Inclusion Foundation, helping to expand its programs and build strategic partnerships. At the International Foundation for Disability Inclusion (IFDI), he is leading Operations and Strategy, bringing his experience in community organizing, coalition building, and policy advocacy to strengthen the foundation’s global mission of inclusion."
+                                data-name="Avinash Kumar" src="assets/Avinash.png" />
+                            <h4 class="font-sans font-bold text-base md:text-lg">Avinash Kumar</h4>
+                            <p class="text-sm text-brand-green/70 mt-1">Board Member</p>
+                        </div>
+                        <div class="rounded-2xl bg-white/70 p-4 shadow-sm border border-brand-green/10 text-center"><img
+                                alt="Iqbal Singh"
+                                class="w-full aspect-[4/5] object-cover rounded-2xl mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img shadow-sm"
+                                data-bio="Iqbal Singh brings decades of leadership experience in technology, data, and wealth management to his role as Board Chair of the International Foundation for Disability Inclusion (IFDI). Guided by the principle of seva — selfless service — he has built and scaled companies that expand access, opportunity, and inclusion.
+                         He holds a B.Tech in Computer Science from NIT Warangal, which shaped his commitment to combining purpose with innovation. He believes technology can be a powerful force for good when grounded in purpose and integrity. At IFDI, Iqbal is helping lead its global growth, supporting programs and partnerships that create more equitable futures for people with disabilities worldwide."
+                                data-name="Iqbal Singh" src="assets/Iqbal.jpg" />
+                            <h4 class="font-sans font-bold text-base md:text-lg">Iqbal Singh</h4>
+                            <p class="text-sm text-brand-green/70 mt-1">Board Member</p>
+                        </div>
+                        <div class="rounded-2xl bg-white/70 p-4 shadow-sm border border-brand-green/10 text-center"><img
+                                alt="Chickoo Chawda"
+                                class="w-full aspect-[4/5] object-cover rounded-2xl mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img shadow-sm"
+                                data-bio="Chickoo Chawda brings extensive leadership experience from both large enterprises and Silicon Valley startups to his role on the IFDI Board. He is committed to expanding equal opportunities for all and guided by the principles of servant leadership.
+                            He holds an MBA from UC Berkeley’s Haas School of Business and is a Partner and Co-Founder of a software consulting firm specializing in technology strategy and transformative software solutions. At IFDI, Chickoo brings his expertise in technology, team-building, and strategy to strengthen the foundation’s global mission of empowering people with disabilities to realize their full potential."
+                                data-name="Chickoo Chawda" src="assets/Chickoo.png" />
+                            <h4 class="font-sans font-bold text-base md:text-lg">Chickoo Chawda</h4>
+                            <p class="text-sm text-brand-green/70 mt-1">Board Member</p>
+                        </div>
+                        <div class="rounded-2xl bg-white/70 p-4 shadow-sm border border-brand-green/10 text-center"><img
+                                alt="Arun Sreekumar"
+                                class="w-full aspect-[4/5] object-cover rounded-2xl mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img shadow-sm"
+                                data-bio="Arun Sreekumar is the Chief Customer Officer at the SAP Academy for Engineering and Chief of Staff to Ferose V R, where he drives organizational strategy, customer engagement, and cross-functional execution. Passionate about people, purpose, and performance, Arun combines strategic thinking with human-centered leadership to create impactful learning experiences for the next generation of engineers.
+                         Beyond his corporate role, Arun has been a core team member of the India Inclusion Foundation since its inception, where he leads the curation of the Inclusion Fellowship,  dedicated to nurturing changemakers in the field of disability inclusion . Wearing multiple hats, he has been an integral voice behind the Foundation’s creative direction, storytelling, and program design, helping bring its vision of empathy and inclusion to life in meaningful ways."
+                                data-name="Arun Sreekumar" src="assets/Arun.png" />
+                            <h4 class="font-sans font-bold text-base md:text-lg">Arun Sreekumar</h4>
+                            <p class="text-sm text-brand-green/70 mt-1">Board Member</p>
+                        </div>
+                        <div class="rounded-2xl bg-white/70 p-4 shadow-sm border border-brand-green/10 text-center"><img
+                                alt="Baljinder Kaur Johal"
+                                class="w-full aspect-[4/5] object-cover rounded-2xl mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img shadow-sm"
+                                data-bio="Baljinder brings decades of experience in project management and customer success, with a proven ability to bridge technical execution and strategic vision. Deeply committed to mission-driven work, Baljinder is passionate about supporting nonprofits and social impact organizations in achieving lasting change. Outside of work, yoga, running, and gardening provide balance and renewal, fueling the energy and mindfulness that carry into both personal and professional life."
+                                data-name="Baljinder Kaur Johal" src="assets/Baljinder.jpg" />
+                            <h4 class="font-sans font-bold text-base md:text-lg">Baljinder Kaur Johal</h4>
+                            <p class="text-sm text-brand-green/70 mt-1">Board Member</p>
+                        </div>
+                        <div class="rounded-2xl bg-white/70 p-4 shadow-sm border border-brand-green/10 text-center"><img
+                                alt="Manjula Muppu"
+                                class="w-full aspect-[4/5] object-cover rounded-2xl mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img shadow-sm"
+                                data-bio="Manjula Muppu,is a board-certified family medicine physician with over 20 years of experience in comprehensive primary care. She earned her medical degree from Gandhi Medical College in Hyderabad, India and completed her residency at Conemaugh Memorial Medical Center in Pennsylvania. Known for her dedication to patient-centered care, Dr. Muppu is affiliated with leading health systems in California.
+                         Beyond medicine, she actively supports women’s cricket and mentors high school students pursuing biomedical career paths—reflecting her commitment to both community engagement and youth empowerment."
+                                data-name="Manjula Muppu" src="assets/Manjula.jpg" />
+                            <h4 class="font-sans font-bold text-base md:text-lg">Manjula Muppu</h4>
+                            <p class="text-sm text-brand-green/70 mt-1">Board Member</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <img src="assets/Iqbal.jpg" class="w-full h-auto rounded-lg mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img"
-                         data-name="Iqbal Singh"
-                         data-bio="Iqbal Singh brings decades of leadership experience in technology, data, and wealth management to his role as Board Chair of the International Foundation for Disability Inclusion (IFDI). Guided by the principle of seva — selfless service — he has built and scaled companies that expand access, opportunity, and inclusion.
-                         He holds a B.Tech in Computer Science from NIT Warangal, which shaped his commitment to combining purpose with innovation. He believes technology can be a powerful force for good when grounded in purpose and integrity. At IFDI, Iqbal is helping lead its global growth, supporting programs and partnerships that create more equitable futures for people with disabilities worldwide.">
-                    <h4 class="font-sans font-bold">Iqbal Singh</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed"></p>
-                </div>
-                <div class="text-center">
-                    <img src="assets/Chickoo.png" class="w-full h-auto rounded-lg mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img brightness-100 saturate-100 contrast-100"
-                         data-name="Chickoo Chawda"
-                         data-bio="Chickoo Chawda brings extensive leadership experience from both large enterprises and Silicon Valley startups to his role on the IFDI Board. He is committed to expanding equal opportunities for all and guided by the principles of servant leadership.
-                            He holds an MBA from UC Berkeley’s Haas School of Business and is a Partner and Co-Founder of a software consulting firm specializing in technology strategy and transformative software solutions. At IFDI, Chickoo brings his expertise in technology, team-building, and strategy to strengthen the foundation’s global mission of empowering people with disabilities to realize their full potential.">
-                    <h4 class="font-sans font-bold">Chickoo Chawda</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed"></p>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-8">
-                 <div class="text-center">
-                    <img src="assets/Arun.png" class="w-full h-auto rounded-lg mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img"
-                         data-name="Arun Sreekumar"
-                         data-bio="Arun Sreekumar is the Chief Customer Officer at the SAP Academy for Engineering and Chief of Staff to Ferose V R, where he drives organizational strategy, customer engagement, and cross-functional execution. Passionate about people, purpose, and performance, Arun combines strategic thinking with human-centered leadership to create impactful learning experiences for the next generation of engineers.
-                         Beyond his corporate role, Arun has been a core team member of the India Inclusion Foundation since its inception, where he leads the curation of the Inclusion Fellowship,  dedicated to nurturing changemakers in the field of disability inclusion . Wearing multiple hats, he has been an integral voice behind the Foundation’s creative direction, storytelling, and program design, helping bring its vision of empathy and inclusion to life in meaningful ways.">
-                    <h4 class="font-sans font-bold">Arun Sreekumar</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed"></p>
-                </div>
-                <div class="text-center">
-                    <img src="assets/Baljinder.jpg" class="w-full h-auto rounded-lg mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img"
-                         data-name="Baljinder Kaur Johal"
-                         data-bio="Baljinder brings decades of experience in project management and customer success, with a proven ability to bridge technical execution and strategic vision. Deeply committed to mission-driven work, Baljinder is passionate about supporting nonprofits and social impact organizations in achieving lasting change. Outside of work, yoga, running, and gardening provide balance and renewal, fueling the energy and mindfulness that carry into both personal and professional life.">
-                    <h4 class="font-sans font-bold">Baljinder Kaur Johal</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed"></p>
-                </div>
-                <div class="text-center">
-                    <img src="assets/Manjula.jpg" class="w-full h-auto rounded-lg mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img"
-                         data-name="Manjula Muppu"
-                         data-bio="Manjula Muppu,is a board-certified family medicine physician with over 20 years of experience in comprehensive primary care. She earned her medical degree from Gandhi Medical College in Hyderabad, India and completed her residency at Conemaugh Memorial Medical Center in Pennsylvania. Known for her dedication to patient-centered care, Dr. Muppu is affiliated with leading health systems in California.
-                         Beyond medicine, she actively supports women’s cricket and mentors high school students pursuing biomedical career paths—reflecting her commitment to both community engagement and youth empowerment.">
-                    <h4 class="font-sans font-bold">Manjula Muppu</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed"></p>
-                </div>
-            </div>
-        </section>
-        <section class="py-20">
-            <h3 class="font-serif text-xl text-center font-bold mb-2">Advisory Board</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-8">
-                <div class="text-center">
-                    <img src="assets/Larry.png" class="w-full h-auto rounded-lg mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img"
-                         data-name="Larry Brilliant"
-                         data-bio="Dr. Larry Brilliant is a renowned epidemiologist and philanthropist with decades of experience in global health. He played a pivotal role in the successful eradication of smallpox and continues to work on public health initiatives worldwide. His advisory role brings invaluable strategic vision and global perspective to our mission of advancing disability inclusion and ensuring that health and development programs are accessible to all.">
-                    <h4 class="font-sans font-bold">Larry Brilliant</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed"></p>
-                </div>
-                <div class="text-center">
-                    <img src="assets/Malvika_Iyer.png" class="w-full h-auto rounded-lg mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img"
-                         data-name="Malvika Iyer"
-                         data-bio="Malvika Iyer is an internationally recognized disability rights activist, motivational speaker, and model. As a bilateral amputee, she has overcome tremendous challenges to become a powerful voice for persons with disabilities. Her advocacy focuses on changing societal perceptions and breaking barriers. She brings lived experience and a fresh perspective to our advisory board, inspiring systemic change through her work in accessibility and inclusion.">
-                    <h4 class="font-sans font-bold">Malvika Iyer</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed"></p>
-                </div>
-                <div class="text-center">
-                    <img src="assets/Bob.png" class="w-full h-auto rounded-lg mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img"
-                         data-name="Bob Sutton"
-                         data-bio="Dr. Bob Sutton is a renowned organizational psychologist and professor at Stanford University, known for his expertise in workplace dynamics and organizational behavior. His research on creating positive, inclusive work environments and reducing toxic behaviors has influenced organizations worldwide. He provides strategic guidance on building inclusive organizational cultures and implementing evidence-based practices that foster belonging and productivity for all employees, including those with disabilities.">
-                    <h4 class="font-sans font-bold">Bob Sutton</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed"></p>
-                </div>
-                <div class="text-center">
-                    <img src="assets/Ferose.png" class="w-full h-auto rounded-lg mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img"
-                         data-name="Ferose VR"
-                         data-bio="Ferose VR is a thought leader in disability inclusion and workplace diversity, particularly within the technology sector. As a pioneer in establishing inclusive hiring practices at global corporations, he has championed employment opportunities for persons with disabilities. His expertise in creating systemic organizational change and building inclusive workplaces makes him an invaluable advisor. He continues to advocate for accessible technology and equitable opportunities in the corporate world.">
-                    <h4 class="font-sans font-bold">Ferose VR</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed"></p>
+                <div class="mt-14">
+                    <h3 class="font-serif text-xl md:text-2xl text-center font-bold">Advisory Board</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+                        <div class="rounded-2xl bg-white/70 p-4 shadow-sm border border-brand-green/10 text-center"><img
+                                alt="Larry Brilliant"
+                                class="w-full aspect-[4/5] object-cover rounded-2xl mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img shadow-sm"
+                                data-bio="Dr. Larry Brilliant is a renowned epidemiologist and philanthropist with decades of experience in global health. He played a pivotal role in the successful eradication of smallpox and continues to work on public health initiatives worldwide. His advisory role brings invaluable strategic vision and global perspective to our mission of advancing disability inclusion and ensuring that health and development programs are accessible to all."
+                                data-name="Larry Brilliant" src="assets/Larry.png" />
+                            <h4 class="font-sans font-bold text-base md:text-lg">Larry Brilliant</h4>
+                            <p class="text-sm text-brand-green/70 mt-1">Advisory Board</p>
+                        </div>
+                        <div class="rounded-2xl bg-white/70 p-4 shadow-sm border border-brand-green/10 text-center"><img
+                                alt="Malvika Iyer"
+                                class="w-full aspect-[4/5] object-cover rounded-2xl mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img shadow-sm"
+                                data-bio="Malvika Iyer is an internationally recognized disability rights activist, motivational speaker, and model. As a bilateral amputee, she has overcome tremendous challenges to become a powerful voice for persons with disabilities. Her advocacy focuses on changing societal perceptions and breaking barriers. She brings lived experience and a fresh perspective to our advisory board, inspiring systemic change through her work in accessibility and inclusion."
+                                data-name="Malvika Iyer" src="assets/Malvika_Iyer.png" />
+                            <h4 class="font-sans font-bold text-base md:text-lg">Malvika Iyer</h4>
+                            <p class="text-sm text-brand-green/70 mt-1">Advisory Board</p>
+                        </div>
+                        <div class="rounded-2xl bg-white/70 p-4 shadow-sm border border-brand-green/10 text-center"><img
+                                alt="Bob Sutton"
+                                class="w-full aspect-[4/5] object-cover rounded-2xl mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img shadow-sm"
+                                data-bio="Dr. Bob Sutton is a renowned organizational psychologist and professor at Stanford University, known for his expertise in workplace dynamics and organizational behavior. His research on creating positive, inclusive work environments and reducing toxic behaviors has influenced organizations worldwide. He provides strategic guidance on building inclusive organizational cultures and implementing evidence-based practices that foster belonging and productivity for all employees, including those with disabilities."
+                                data-name="Bob Sutton" src="assets/Bob.png" />
+                            <h4 class="font-sans font-bold text-base md:text-lg">Bob Sutton</h4>
+                            <p class="text-sm text-brand-green/70 mt-1">Advisory Board</p>
+                        </div>
+                        <div class="rounded-2xl bg-white/70 p-4 shadow-sm border border-brand-green/10 text-center"><img
+                                alt="Ferose VR"
+                                class="w-full aspect-[4/5] object-cover rounded-2xl mb-4 cursor-pointer hover:opacity-90 transition-opacity team-member-img shadow-sm"
+                                data-bio="Ferose VR is a thought leader in disability inclusion and workplace diversity, particularly within the technology sector. As a pioneer in establishing inclusive hiring practices at global corporations, he has championed employment opportunities for persons with disabilities. His expertise in creating systemic organizational change and building inclusive workplaces makes him an invaluable advisor. He continues to advocate for accessible technology and equitable opportunities in the corporate world."
+                                data-name="Ferose VR" src="assets/Ferose.png" />
+                            <h4 class="font-sans font-bold text-base md:text-lg">Ferose VR</h4>
+                            <p class="text-sm text-brand-green/70 mt-1">Advisory Board</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-
     <!-- Modal -->
-    <div id="teamModal" class="modal">
+    <div class="modal" id="teamModal">
         <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <button aria-label="Close modal" class="modal-close">×</button>
             <div class="modal-body">
-                <img id="modalImage" src="" alt="" class="modal-image">
+                <img alt="" class="modal-image" id="modalImage" src="" />
                 <div class="modal-text">
-                    <h3 id="modalName" class="modal-name"></h3>
-                    <p id="modalBio" class="modal-bio"></p>
+                    <h3 class="modal-name" id="modalName"></h3>
+                    <p class="modal-bio" id="modalBio"></p>
                 </div>
             </div>
         </div>
     </div>
-
-<footer class="bg-brand-green text-white py-12 px-6">
-    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-        <div class="mb-6 md:mb-0">
-            <img src="assets/logo.svg" alt="IFDI Logo" class="h-14 mb-4 mx-auto md:mx-0" style="filter: brightness(0) invert(1);">
-            <p>International Foundation for Disability Inclusion</p>
-            <p>14054, Alta Vista Ave</p>
-            <p>Saratoga, CA 95070</p>
-            <p>USA</p>
-        </div>
-        <div class="flex flex-col items-center">
-            <h3 class="text-3xl font-bold mb-4">#InclusionReimagined</h3>
-            <div class="flex space-x-4">
-                <a href="#" class="hover:opacity-80">
-                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"/></svg>
-                </a>
-                <a href="#" class="hover:opacity-80">
-                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"/></svg>
-                </a>
-                <a href="#" class="hover:opacity-80">
-                   <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <a href="#" class="hover:opacity-80">
-                   <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                </a>
+    <footer id="site-footer" class="bg-brand-green text-white py-12 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-6 md:mb-0">
+                <img alt="IFDI Logo" class="h-14 mb-4 mx-auto md:mx-0" src="assets/logo.svg"
+                    style="filter: brightness(0) invert(1);" />
+                <p>International Foundation for Disability Inclusion</p>
+                <p>14054, Alta Vista Ave</p>
+                <p>Saratoga, CA 95070</p>
+                <p>USA</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <h3 class="text-3xl font-bold mb-4">#InclusionReimagined</h3>
+                <div class="flex space-x-4">
+                    <a class="hover:opacity-80" href="#">
+                        <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="hover:opacity-80" href="#">
+                        <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="hover:opacity-80" href="#">
+                        <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="hover:opacity-80" href="#">
+                        <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-<script>
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
+    </footer>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
 
-    menuBtn.addEventListener('click', () => {
-        // Toggle the 'hidden' class on the menu
-        menu.classList.toggle('hidden');
+        menuBtn.addEventListener('click', () => {
+            // Toggle the 'hidden' class on the menu
+            menu.classList.toggle('hidden');
 
-        // Optional: Prevent scrolling when the menu is open
-        document.body.classList.toggle('overflow-hidden');
-    });
-
-    // Highlight active navigation link
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('nav a, #menu a');
-
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-
-        // Normalize paths: remove leading slash and .html extension
-        const normalizedCurrent = currentPath.replace(/^\//, '').replace('.html', '') || 'index';
-        const normalizedHref = href.replace(/^\//, '').replace('.html', '');
-
-        if (normalizedCurrent === normalizedHref) {
-            link.classList.add('active-link');
-        }
-    });
-
-    // Modal functionality
-    const modal = document.getElementById('teamModal');
-    const modalImage = document.getElementById('modalImage');
-    const modalName = document.getElementById('modalName');
-    const modalBio = document.getElementById('modalBio');
-    const modalClose = document.querySelector('.modal-close');
-    const teamMemberImages = document.querySelectorAll('.team-member-img');
-
-    // Open modal when clicking team member image
-    teamMemberImages.forEach(img => {
-        img.addEventListener('click', () => {
-            const name = img.getAttribute('data-name');
-            const bio = img.getAttribute('data-bio');
-            const imageSrc = img.getAttribute('src');
-
-            modalImage.src = imageSrc;
-            modalImage.alt = name;
-            modalName.textContent = name;
-            modalBio.textContent = bio;
-
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
+            // Optional: Prevent scrolling when the menu is open
+            document.body.classList.toggle('overflow-hidden');
         });
-    });
 
-    // Close modal when clicking the close button
-    modalClose.addEventListener('click', () => {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
+        // Highlight active navigation link
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('nav a, #menu a');
 
-    // Close modal when clicking outside the modal content
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+
+            // Normalize paths: remove leading slash and .html extension
+            const normalizedCurrent = currentPath.replace(/^\//, '').replace('.html', '') || 'index';
+            const normalizedHref = href.replace(/^\//, '').replace('.html', '');
+
+            if (normalizedCurrent === normalizedHref) {
+                link.classList.add('active-link');
+            }
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('teamModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalName = document.getElementById('modalName');
+        const modalBio = document.getElementById('modalBio');
+        const modalClose = document.querySelector('.modal-close');
+        const teamMemberImages = document.querySelectorAll('.team-member-img');
+
+        // Open modal when clicking team member image
+        teamMemberImages.forEach(img => {
+            img.addEventListener('click', () => {
+                const name = img.getAttribute('data-name');
+                const bio = img.getAttribute('data-bio');
+                const imageSrc = img.getAttribute('src');
+
+                modalImage.src = imageSrc;
+                modalImage.alt = name;
+                modalName.textContent = name;
+                modalBio.textContent = bio;
+
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal when clicking the close button
+        modalClose.addEventListener('click', () => {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
-        }
-    });
+        });
 
-    // Close modal with Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.style.display === 'flex') {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
-</script>
+        // Close modal when clicking outside the modal content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
+
 </html>

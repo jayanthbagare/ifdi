@@ -15,11 +15,6 @@ nav a.active-link,
   font-weight: 500;
 }
 
-/* Responsive Logo Styles */
-.logo-container {
-  margin-left: -100px;
-}
-
 .logo-svg {
   width: 132px;
   height: 55px;
@@ -35,10 +30,22 @@ nav a.active-link,
   flex-shrink: 0;
 }
 
+/* Logo positioning: safe across tablets (incl. iPad 1024px) */
+.logo-container {
+  margin-left: 0; /* prevent clipping on iPad */
+}
+
+/* Optional: only nudge left on very wide screens if desired */
+@media (min-width: 1280px) {
+  .logo-container {
+    margin-left: -24px;
+  }
+}
+
 /* Tablet Responsive (768px and below) */
 @media (max-width: 768px) {
   .logo-container {
-    margin-left: -40px;
+    margin-left: 0;
   }
 
   .logo-svg {
