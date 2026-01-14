@@ -1,148 +1,206 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>International Foundation for Disability Inclusion</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Calistoga&amp;family=Inria+Sans:wght@300;400;700&amp;display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inria+Sans:wght@300;400;700&display=swap"
         rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
 </head>
 
 <body class="bg-brand-beige font-sans text-brand-green">
+    <!-- Hero -->
     <div class="relative bg-cover bg-center" style="background-image: url('assets/home-hero.jpg');">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
-        <header class="container mx-auto px-6 py-6 flex justify-between items-center relative z-30">
-            <a class="flex items-center z-40 relative logo-container" href="index.html">
-                <img alt="IFDI Logo" class="logo-svg" src="assets/logo.svg" />
-                <img alt="IFDI Text" class="logo-text" src="assets/logo_text_white.png" />
-            </a>
-            <nav class="hidden md:flex items-center space-x-8 z-40 relative text-white font-serif">
-                <a class="hover:text-opacity-80 text-lg md:text-xl" href="fellowship.html">Fellowship</a>
-                <a class="hover:text-opacity-80 text-lg md:text-xl" href="about.html">About Us</a>
-            </nav>
-            <div class="md:hidden z-40 relative">
-                <button class="z-30 block" id="menu-btn">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="1.5"
-                        viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                    </svg>
-                </button>
+        <div class="absolute inset-0 bg-black/45"></div>
+
+        <!-- Header -->
+        <header class="relative z-20">
+            <div class="mx-auto max-w-6xl px-6 py-6 flex items-center justify-between">
+                <a class="flex items-center logo-container" href="index.html" aria-label="IFDI home">
+                    <img alt="IFDI Logo" class="logo-svg" src="assets/logo.svg" />
+                    <img alt="IFDI Text" class="logo-text" src="assets/logo_text_white.png" />
+                </a>
+
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="nav-link font-sans text-base font-medium text-white/95 hover:text-white hover:underline underline-offset-4"
+                        href="fellowship.html">Fellowship</a>
+                    <a class="nav-link font-sans text-base font-medium text-white/95 hover:text-white hover:underline underline-offset-4"
+                        href="about.html">About Us</a>
+                </nav>
+
+                <div class="md:hidden">
+                    <button id="menu-btn" class="z-30 block rounded-2xl p-2 hover:bg-white/10 transition-colors"
+                        aria-label="Open menu">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <div class="hidden md:hidden absolute top-0 left-0 w-full bg-brand-beige z-50" id="menu">
-                <div
-                    class="flex flex-col items-center justify-center min-h-screen space-y-8 font-bold text-2xl text-brand-green">
-                    <a class="hover:text-opacity-80" href="fellowship.html">Fellowship</a>
-                    <a class="hover:text-opacity-80" href="about.html">About Us</a>
+
+            <!-- Mobile menu -->
+            <div id="menu" class="hidden absolute top-0 left-0 w-full bg-brand-beige z-20">
+                <div class="flex flex-col items-center justify-center min-h-screen space-y-8">
+                    <a class="nav-link font-sans text-base font-medium text-brand-green hover:underline underline-offset-4"
+                        href="fellowship.html">Fellowship</a>
+                    <a class="nav-link font-sans text-base font-medium text-brand-green hover:underline underline-offset-4"
+                        href="about.html">About Us</a>
                 </div>
             </div>
         </header>
-        <section class="min-h-[78vh] text-white flex items-center relative z-10">
-            <div class="container max-w-4xl mx-auto px-6">
-                <h1 class="font-serif text-4xl md:text-6xl font-bold tracking-tight leading-tight">Imagining an
-                    Inclusive Future</h1>
-                <p class="mt-5 text-lg md:text-xl leading-relaxed max-w-2xl">Connecting grassroot leaders, researchers,
-                    and funders to scale disability inclusion across the Global South and the world.</p>
-                <div class="mt-8 flex flex-col sm:flex-row gap-3"><a
-                        class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-bold text-brand-green shadow-sm hover:opacity-90 transition"
-                        href="fellowship.html">Explore the Fellowship</a><a
-                        class="inline-flex items-center justify-center rounded-full border border-white/70 px-6 py-3 font-bold text-white hover:bg-white/10 transition"
-                        href="about.html">Learn about IFDI</a></div>
+
+        <!-- Hero content -->
+        <section class="relative z-10">
+            <div class="mx-auto max-w-6xl px-6 py-20 md:py-28">
+                <div
+                    class="max-w-3xl rounded-3xl border border-white/15 bg-white/10 backdrop-blur-md p-8 md:p-10 shadow-lg">
+                    <p class="inline-flex items-center rounded-full bg-white/15 px-4 py-2 text-sm font-bold text-white">
+                        #InclusionReimagined
+                    </p>
+
+                    <h1 class="mt-5 font-serif text-4xl md:text-6xl font-bold tracking-tight leading-tight text-white">
+                        Imagining an Inclusive Future
+                    </h1>
+
+                    <p class="mt-5 text-base md:text-xl leading-relaxed text-white/90">
+                        Connecting grassroots leaders, researchers, and funders to scale disability inclusion across the
+                        Global South and the world.
+                    </p>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                        <a class="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 font-bold text-brand-green shadow-sm hover:opacity-90 transition"
+                            href="fellowship.html">
+                            Explore the Fellowship
+                        </a>
+                        <a class="inline-flex items-center justify-center rounded-2xl border border-white/60 px-6 py-3 font-bold text-white hover:bg-white/10 transition"
+                            href="about.html">
+                            Learn about IFDI
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
-    <main>
-        <section class="py-20 px-6">
-            <div class="container mx-auto max-w-4xl text-center">
-                <div class="bg-brand-green text-white p-12 rounded-lg shadow-lg">
-                    <p class="text-2xl leading-relaxed">After 13 years of experience and learning with the India
-                        Inclusion Foundation (IIF), we are taking the next step to build a globally connected,
-                        equitable, and innovation-driven ecosystem that supports disability inclusion, particularly in
-                        under-resourced and marginalized regions across the Global South and Africa.</p>
+
+    <main class="mx-auto max-w-6xl px-6">
+        <!-- Statement / positioning -->
+        <section class="py-16 md:py-20">
+            <div class="rounded-3xl bg-brand-green text-white p-8 md:p-12 shadow-lg">
+                <p class="text-xl md:text-2xl leading-relaxed">
+                    After 13 years of experience and learning with the India Inclusion Foundation (IIF), we are taking
+                    the next step to build a globally connected,
+                    equitable, and innovation-driven ecosystem that supports disability inclusion—particularly in
+                    under-resourced and marginalized regions across the Global South and Africa.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Vision -->
+        <section class="py-12 md:py-16">
+            <div class="text-center">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight">Our Vision</h2>
+                <p class="mt-3 text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                    A future where disability inclusion is embedded into how we design technology, fund solutions, and
+                    shape public policy.
+                </p>
+            </div>
+
+            <div class="mt-10 grid gap-6 md:grid-cols-2">
+                <div
+                    class="rounded-3xl bg-white/70 border border-brand-green/15 p-6 md:p-8 shadow-sm space-y-4 text-left">
+                    <p class="text-gray-700 leading-relaxed">
+                        We advocate for the active participation of persons with disabilities in the development of
+                        technological and policy innovations,
+                        ensuring inclusion is built into design, decision-making, and implementation—especially in the
+                        Global South and Africa.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Disability inclusion is recognized not only as a social justice goal, but as an integral part of
+                        development, governance, health,
+                        education, urban planning, and artificial intelligence ethics.
+                    </p>
+                </div>
+
+                <div
+                    class="rounded-3xl bg-white/70 border border-brand-green/15 p-6 md:p-8 shadow-sm space-y-4 text-left">
+                    <p class="text-gray-700 leading-relaxed">
+                        The divide between small grassroots groups and large philanthropic institutions is narrowed
+                        through equitable funding partnerships and intermediary support.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Cross-cultural and interdisciplinary learning informs the development of inclusive public
+                        policies, educational systems, products, and services.
+                    </p>
                 </div>
             </div>
         </section>
-        <section class="py-16 px-6">
-            <div class="container mx-auto text-center">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight mb-10">Our Vision</h2>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="space-y-4 text-left">
-                        <p class="text-gray-700 leading-relaxed">We advocate for the active participation of persons
-                            with
-                            disabilities in the development of technological and policy innovations, ensuring inclusion
-                            is
-                            built into the design, decision-making, and implementation processes—especially in the
-                            Global
-                            South and Africa.</p>
-                        <p class="text-gray-700 leading-relaxed">Disability inclusion is recognized not only as a social
-                            justice goal, but as an integral part of development, governance, health, education, urban
-                            planning, and artificial intelligence ethics.</p>
-                    </div>
-                    <div class="space-y-4 text-left">
-                        <p class="text-gray-700 leading-relaxed">The divide between small grassroots groups and large
-                            philanthropic institutions is narrowed through equitable funding partnerships and
-                            intermediary
-                            support.</p>
-                        <p class="text-gray-700 leading-relaxed">Cross-cultural and interdisciplinary learning informs
-                            the
-                            development of inclusive public policies, educational systems, products, and services.</p>
-                    </div>
+
+        <!-- Our Values -->
+        <section class="py-12 md:py-16">
+            <div class="text-center">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight">Our Values</h2>
+                <p class="mt-3 text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                    Principles that guide how we work, whom we center, and what we build.
+                </p>
+            </div>
+
+            <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="rounded-3xl bg-brand-beige p-6 shadow-sm border border-brand-green/10">
+                    <h3 class="font-serif text-lg font-bold mb-2">Equity Over Charity</h3>
+                    <p class="text-gray-700 leading-relaxed">We listen to learn. Building trust with each other and
+                        those we serve is core to our mission.</p>
+                </div>
+                <div class="rounded-3xl bg-brand-beige p-6 shadow-sm border border-brand-green/10">
+                    <h3 class="font-serif text-lg font-bold mb-2">Representation Matters</h3>
+                    <p class="text-gray-700 leading-relaxed">Those closest to the issue must lead the solutions. We
+                        prioritize community-led approaches and lived experience in decision-making.</p>
+                </div>
+                <div class="rounded-3xl bg-brand-beige p-6 shadow-sm border border-brand-green/10">
+                    <h3 class="font-serif text-lg font-bold mb-2">Learning Across Borders</h3>
+                    <p class="text-gray-700 leading-relaxed">We are systems-thinkers. We aim to contribute meaningful
+                        and sustainable solutions.</p>
+                </div>
+                <div class="rounded-3xl bg-brand-beige p-6 shadow-sm border border-brand-green/10">
+                    <h3 class="font-serif text-lg font-bold mb-2">Every Effort Counts</h3>
+                    <p class="text-gray-700 leading-relaxed">From solo advocates to large coalitions, every contribution
+                        is part of the collective change we seek to build.</p>
                 </div>
             </div>
         </section>
-        <section class="bg-white py-20 px-6">
-            <div class="container mx-auto text-center">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight mb-10">Our Values</h2>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto text-left">
-                    <div class="rounded-2xl bg-brand-beige p-6 shadow-sm border border-brand-green/10">
-                        <h3 class="font-serif text-lg font-bold mb-2 text-left whitespace-wrap">Equity Over Charity
-                        </h3>
-                        <p class="text-gray-700 leading-relaxed text-left">We listen to learn. Building trust with each
-                            other and those we serve is core to our mission.</p>
-                    </div>
-                    <div class="rounded-2xl bg-brand-beige p-6 shadow-sm border border-brand-green/10">
-                        <h3 class="font-serif text-lg font-bold mb-2 text-left whitespace-wrap">Representation Matters
-                        </h3>
-                        <p class="text-gray-700 leading-relaxed text-left">Those closest to the issue must lead the
-                            solutions. We prioritize community-led approaches and lived experience in decision-making.
-                        </p>
-                    </div>
-                    <div class="rounded-2xl bg-brand-beige p-6 shadow-sm border border-brand-green/10">
-                        <h3 class="font-serif text-lg font-bold mb-2 text-left whitespace-wrap">Learning Across
-                            Borders</h3>
-                        <p class="text-gray-700 leading-relaxed text-left">We are systems-thinkers. We aim to contribute
-                            meaningful and sustainable solutions.</p>
-                    </div>
-                    <div class="rounded-2xl bg-brand-beige p-6 shadow-sm border border-brand-green/10">
-                        <h3 class="font-serif text-lg font-bold mb-2 text-left whitespace-wrap">Every Effort Counts
-                        </h3>
-                        <p class="text-gray-700 leading-relaxed text-left">From solo advocates to large coalitions,
-                            every contribution is part of the collective change we seek to build.</p>
-                    </div>
+
+        <!-- Fellowship CTA -->
+        <section class="py-12 md:py-16 mb-10">
+            <div class="rounded-3xl bg-white/70 border border-brand-green/15 p-8 md:p-10 shadow-sm text-center">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight">Fellowship</h2>
+                <p class="mt-4 font-serif text-lg font-bold text-brand-green">
+                    Empowering inclusive storytelling to influence policy and perception.
+                </p>
+                <p class="mt-4 max-w-4xl mx-auto text-base md:text-lg text-gray-700 leading-relaxed">
+                    In a country where millions of persons with disabilities remain unseen and unheard, this fellowship
+                    seeks to amplify their voices through powerful, rights-based storytelling that can influence hearts,
+                    minds, and policy.
+                </p>
+
+                <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a class="inline-flex items-center justify-center rounded-2xl bg-brand-green text-brand-beige px-6 py-3 font-bold shadow-sm hover:opacity-90 transition-opacity"
+                        href="fellowship.html">
+                        Learn more
+                    </a>
+                    <a class="inline-flex items-center justify-center rounded-2xl border border-brand-green/30 text-brand-green px-6 py-3 font-bold hover:bg-brand-green/5 transition-colors"
+                        href="about.html">
+                        Who we are
+                    </a>
                 </div>
-            </div>
-        </section>
-        <section class="bg-brand-beige py-16 px-6 text-center">
-            <div class="container mx-auto max-w-4xl">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight mb-10">Fellowship</h2>
-                <h3 class="font-serif text-lg font-bold mb-2 text-center whitespace-wrap">Empowering Inclusive
-                    Storytelling to Influence Policy and Perception.</h3>
-                <p class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed mb-8">In a country where millions of
-                    persons with disabilities remain unseen and unheard, this fellowship seeks to amplify their voices
-                    through powerful, rights-based storytelling that can influence hearts, minds, and policy.</p>
-                <a class="inline-block" href="fellowship.html">
-                    <img alt="Learn More" class="hover:opacity-90 transition-opacity" height="50"
-                        src="assets/button_learn_more.png" width="210" />
-                </a>
             </div>
         </section>
     </main>
+
     <footer class="bg-brand-green text-white py-12 px-6">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
             <div class="mb-6 md:mb-0">
@@ -188,15 +246,13 @@
             </div>
         </div>
     </footer>
+
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const menu = document.getElementById('menu');
 
         menuBtn.addEventListener('click', () => {
-            // Toggle the 'hidden' class on the menu
             menu.classList.toggle('hidden');
-
-            // Optional: Prevent scrolling when the menu is open
             document.body.classList.toggle('overflow-hidden');
         });
 
@@ -206,11 +262,8 @@
 
         navLinks.forEach(link => {
             const href = link.getAttribute('href');
-
-            // Normalize paths: remove leading slash and .html extension
             const normalizedCurrent = currentPath.replace(/^\//, '').replace('.html', '') || 'index';
             const normalizedHref = href.replace(/^\//, '').replace('.html', '');
-
             if (normalizedCurrent === normalizedHref) {
                 link.classList.add('active-link');
             }
