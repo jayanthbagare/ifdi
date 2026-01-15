@@ -91,6 +91,92 @@
                 </div>
             </div>
         </section>
+        <section class="max-w-5xl mx-auto">
+            <div class="bg-white/50 border border-brand-green/20 rounded-3xl p-6 md:p-10 shadow-sm">
+                <div class="text-center">
+                    <h2 class="font-serif text-2xl md:text-3xl font-bold tracking-tight">What is IFDI?</h2>
+                    <p class="mt-3 text-brand-green/80 leading-relaxed max-w-3xl mx-auto">
+                        IFDI is a California-based nonprofit building on a decade of inclusion work in India—bringing
+                        research,
+                        policy advocacy, and global partnerships to advance disability inclusion worldwide.
+                    </p>
+                </div>
+
+                <div class="mt-6">
+                    <button
+                        class="ifdi-longread-toggle w-full flex items-center justify-between text-left bg-white/70 border border-brand-green/20 rounded-2xl px-5 py-4 shadow-sm hover:bg-white/90 transition-colors"
+                        aria-expanded="false" aria-controls="ifdi-longread" type="button">
+                        <span class="font-sans font-bold text-brand-green">Read the full story</span>
+                        <svg class="ifdi-longread-icon w-6 h-6 text-brand-green transition-transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+
+                    <div id="ifdi-longread"
+                        class="ifdi-longread-content hidden mt-5 space-y-4 text-brand-green/80 leading-relaxed">
+                        <p>
+                            International Foundation for Disability Inclusion (IFDI - USA) is a newly registered
+                            501(c)(3) nonprofit organization in California, established as an international extension of
+                            the India Inclusion Foundation (IIF). Taking inspiration from the work and learnings of IIF
+                            over the last decade, we have set up the International Foundation for Disability Inclusion
+                            to take this work to a global platform. For over a decade, IIF has been at the forefront of
+                            advocating for the inclusion of persons with disabilities (PWD) in India. Its work has
+                            spanned creating awareness, organizing impactful programs, and building strong collaborative
+                            networks with corporates, nonprofits, and government bodies. Recognizing the need to scale
+                            this impact and respond to deeper systemic challenges, IIF has launched IFDI - USA to focus
+                            on research, policy advocacy, and international partnerships that can drive long-term,
+                            meaningful change.
+                        </p>
+                        <p>
+                            The journey of the India Inclusion Foundation began in 2012 with the India Inclusion Summit
+                            (IIS). Early inclusion efforts within the corporate sector laid the foundation for the
+                            annual IIS. Over the past 12 years, IIS has grown into a world-class, community-driven
+                            platform for conversations and action around inclusion. Through this platform, IIF has
+                            reached more than 18 million online viewers and engaged over 10,000 in-person participants,
+                            bringing together policymakers, corporate leaders, civil society organizations, and unsung
+                            heroes working in the disability space.
+                        </p>
+                        <p>
+                            Building on this strong foundation, IIF has expanded into initiatives such as the Inclusive
+                            Walkathon, Art for Inclusion, the Inclusion Fellowship, and media advocacy campaigns. These
+                            programs create platforms for persons with disabilities to share their talent and stories,
+                            raise awareness, and push for a deeper shift in how disability is viewed and understood.
+                            Despite these efforts, major challenges remain, especially in the implementation of the
+                            Rights of Persons with Disabilities Act (RPWDA), 2016. Inaccessible infrastructure, gaps in
+                            inclusive education, and limited employment opportunities continue to affect millions of
+                            people across the country.
+                        </p>
+                        <p>
+                            The establishment of IFDI USA marks an important step toward addressing these challenges at
+                            a global level. The organization's mission is to drive systemic change through research,
+                            policy advocacy, and international collaboration. By learning from global best practices and
+                            building cross-border partnerships, IFDI aims to strengthen disability inclusion efforts and
+                            develop scalable models that can be adapted in different social and policy contexts.
+                        </p>
+                        <p>
+                            IFDI's primary focus will be on research and knowledge creation to better understand the
+                            everyday barriers faced by persons with disabilities. The foundation plans to initiate
+                            studies on disability-related policies, social attitudes, and access to education and
+                            employment. These studies will lead to practical recommendations for policymakers, corporate
+                            leaders, and community organizations. Alongside research, IFDI will work to amplify the
+                            voices of persons with disabilities through advocacy, storytelling initiatives, and digital
+                            platforms, shifting the narrative from sympathy to empathy, dignity, and rights.
+                        </p>
+                        <p>
+                            IFDI will actively seek partnerships with universities, nonprofits, and corporates to
+                            co-develop research, share knowledge, and implement inclusive practices on the ground.
+                            Through these collaborations, the foundation aims to build a global network of institutions
+                            and individuals committed to advancing disability inclusion. IFDI also plans to convene
+                            international summits and conferences that bring together thought leaders, practitioners,
+                            and persons with disabilities to share experiences, showcase successful models, and inspire
+                            collective action.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="max-w-6xl mx-auto">
             <div class="bg-white/50 border border-brand-green/20 rounded-3xl p-8 md:p-12 shadow-sm">
                 <div class="text-center mb-10">
@@ -337,6 +423,19 @@
                 document.body.style.overflow = 'auto';
             }
         });
+
+        // Long-read toggle (About IFDI)
+        const longReadBtn = document.querySelector('.ifdi-longread-toggle');
+        const longReadContent = document.querySelector('.ifdi-longread-content');
+        const longReadIcon = document.querySelector('.ifdi-longread-icon');
+
+        if (longReadBtn && longReadContent) {
+            longReadBtn.addEventListener('click', () => {
+                const nowHidden = longReadContent.classList.toggle('hidden');
+                longReadBtn.setAttribute('aria-expanded', String(!nowHidden));
+                if (longReadIcon) longReadIcon.classList.toggle('rotate-180');
+            });
+        }
     </script>
 </body>
 
