@@ -322,3 +322,13 @@ nav a.active-link,
     font-size: 16px;
   }
 }
+
+/* ------------------------------
+   Text justification (site-wide)
+   ------------------------------ */
+
+/* Justify long-form text while keeping UI elements (nav/buttons/headings) normal */
+.justify-text {
+  text-align: justify;
+  text-justify: inter-word;
+}

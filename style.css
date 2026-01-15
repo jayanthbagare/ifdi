@@ -1411,6 +1411,10 @@ nav a.active-link, #menu a.active-link {
     font-size: 16px;
   }
 }
+.justify-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
