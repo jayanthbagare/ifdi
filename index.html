@@ -5,273 +5,323 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>International Foundation for Disability Inclusion</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inria+Sans:wght@300;400;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=Montserrat:wght@400;500&display=swap"
         rel="stylesheet" />
+
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 </head>
 
-<body class="bg-brand-beige font-sans text-brand-green">
-    <!-- Hero -->
-    <div class="relative bg-cover bg-center" style="background-image: url('assets/home-hero.jpg');">
-        <div class="absolute inset-0 bg-black/45"></div>
+<body class="bg-[#222625] text-[#EDEEE6]">
 
-        <!-- Header -->
-        <header class="relative z-20">
-            <div class="mx-auto max-w-6xl px-6 py-6 flex items-center justify-between">
-                <a class="flex items-center logo-container" href="index.html" aria-label="IFDI home">
-                    <img alt="IFDI Logo" class="logo-svg" src="assets/logo.svg" />
-                    <img alt="IFDI Text" class="logo-text" src="assets/logo_text_white.png" />
+    <div class="mx-auto max-w-[100%] sm:px-6">
+
+        <!-- HERO -->
+        <section
+            class="relative z-50 overflow-hidden rounded-b-[120px] border border-[#000000] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
+            <img src="assets/index-photo.jpg" class="h-[720px] w-full object-cover sm:h-[820px]" alt="Hero image" />
+
+            <!-- logo -->
+            <img src="assets/logo.svg" class="absolute right-6 top-6 h-20 w-20 sm:h-28 sm:w-28" alt="Logo" />
+
+            <!-- title -->
+            <div class="hero-text absolute left-6 top-6 sm:left-9 sm:top-10 sm:right-[260px]">
+                <h1 class="font-['Instrument_Sans'] text-[40px] font-bold tracking-wider text-[#F8F9F1] sm:text-6xl">
+                    INTERNATIONAL <br />
+                    FOUNDATION <br />
+                    FOR DISABILITY <br />
+                    INCLUSION
+                </h1>
+            </div>
+
+
+            <!-- bottom line -->
+            <div
+                class="hero-text absolute bottom-8 left-6 right-6 flex flex-col gap-3 sm:bottom-10 sm:left-9 sm:right-9 sm:flex-row sm:items-center sm:gap-6">
+                <p class="font-['Montserrat'] text-sm font-medium text-[#F8F9F1] sm:text-lg">
+                    Imagining an Inclusive Future
+                </p>
+
+                <div class="hidden h-px flex-1 bg-[#FFFFFF] sm:block"></div>
+
+                <p class="font-['Montserrat'] text-xs text-[#F8F9F1] sm:max-w-[340px] sm:text-right sm:text-sm">
+                    Connecting grassroots leaders, researchers, and funders to scale disability inclusion across the
+                    Global South and the world.
+                </p>
+            </div>
+        </section>
+
+        <!-- BODY -->
+        <section class="relative z-40 -mt-30 rounded-b-[71px] bg-[#222625] pt-40 overflow-hidden">
+            <!-- glow -->
+            <div
+                class="pointer-events-none absolute -right-40 -top-52 h-[590px] w-[1108px] rounded-full bg-[#404F30] blur-[250px]">
+            </div>
+
+            <div class="relative px-6 sm:px-[99px]">
+                <h2 class="font-['Instrument_Sans'] text-3xl font-bold tracking-wide text-[#EDEEE6] sm:text-4xl">
+                    The Next Frontier in <br class="hidden sm:block" />
+                    Disability Innovation.
+                </h2>
+
+                <p class="mt-4 max-w-[820px] font-['Montserrat'] text-sm tracking-tight text-[#F8F9F1] sm:text-base">
+                    After 13 years of experience and learning with the India Inclusion Foundation (IIF), we are taking
+                    the next step to build a globally connected, equitable, and innovation-driven ecosystem that
+                    supports disability inclusion—particularly in under-resourced and marginalized regions across the
+                    Global South and Africa.
+                </p>
+            </div>
+
+            <!-- CTA bands -->
+            <div class="mt-20 relative">
+                <!-- 1) TOP band -->
+                <a href="fellowship.html"
+                    class="relative z-30 -mt-8 block rounded-b-[45px] bg-[#404F30] px-6 py-14 sm:px-[99px]">
+                    <div class="grid grid-cols-[auto_1fr_auto] items-center">
+                        <span class="font-['Instrument_Sans'] text-xl font-bold text-[#EDEEE6]">
+                            ABOUT THE FELLOWSHIP
+                        </span>
+
+                        <div></div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="h-1 w-28 bg-[#FFFFFF]"></span>
+                            <span class="text-3xl leading-none text-[#FFFFFF]">→</span>
+                        </div>
+                    </div>
                 </a>
 
-                <nav class="hidden md:flex items-center gap-10">
-                    <a class="nav-link font-sans text-base font-medium text-white/95 hover:text-white hover:underline underline-offset-4"
-                        href="fellowship.html">Fellowship</a>
-                    <a class="nav-link font-sans text-base font-medium text-white/95 hover:text-white hover:underline underline-offset-4"
-                        href="about.html">About Us</a>
-                </nav>
+                <!-- 2) MIDDLE band -->
+                <a href="about.html"
+                    class="relative z-20 -mt-8 block rounded-b-[45px] bg-[#222625] px-6 py-14 sm:px-[99px] sm:-mt-10">
+                    <div class="grid grid-cols-[auto_1fr_auto] items-center">
+                        <span class="font-['Instrument_Sans'] text-xl font-bold text-[#EDEEE6]">
+                            ABOUT IFDI
+                        </span>
 
-                <div class="md:hidden">
-                    <button id="menu-btn" class="z-30 block rounded-2xl p-2 hover:bg-white/10 transition-colors"
-                        aria-label="Open menu">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="1.5"
-                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
-                                stroke-linejoin="round"></path>
-                        </svg>
-                    </button>
-                </div>
+                        <div></div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="h-1 w-28 bg-[#FFFFFF]"></span>
+                            <span class="text-3xl leading-none text-[#FFFFFF]">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 3) BOTTOM band -->
+                <a href="#contact"
+                    class="relative z-10 -mt-8 block rounded-b-[45px] bg-[#404F30] px-6 py-14 sm:px-[99px] sm:-mt-10">
+                    <div class="grid grid-cols-[auto_1fr_auto] items-center">
+                        <span class="font-['Instrument_Sans'] text-xl font-bold text-[#EDEEE6]">
+                            CONTACT US
+                        </span>
+
+                        <div></div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="h-1 w-28 bg-[#FFFFFF]"></span>
+                            <span class="text-3xl leading-none text-[#FFFFFF]">→</span>
+                        </div>
+                    </div>
+                </a>
             </div>
 
-        <!-- Mobile menu -->
-        <div id="menu" class="hidden absolute top-0 left-0 w-full bg-brand-beige z-20">
-            <div class="flex flex-col items-center justify-center min-h-screen space-y-8">
-                <a class="nav-link font-sans text-base font-medium text-brand-green hover:underline underline-offset-4"
-                    href="index.html">Home</a>
-                <a class="nav-link font-sans text-base font-medium text-brand-green hover:underline underline-offset-4"
-                    href="fellowship.html">Fellowship</a>
-                <a class="nav-link font-sans text-base font-medium text-brand-green hover:underline underline-offset-4"
-                    href="about.html">About Us</a>
-            </div>
-        </div>
-        </header>
 
-        <!-- Hero content -->
-        <section class="relative z-10">
-            <div class="mx-auto max-w-6xl px-6 py-20 md:py-28">
-                <div
-                    class="max-w-3xl rounded-3xl border border-white/15 bg-white/10 backdrop-blur-md p-8 md:p-10 shadow-lg">
-                    <p class="inline-flex items-center rounded-full bg-white/15 px-4 py-2 text-sm font-bold text-white">
-                        #InclusionReimagined
-                    </p>
+        </section>
 
-                    <h1 class="mt-5 font-serif text-4xl md:text-6xl font-bold tracking-tight leading-tight text-white">
-                        Imagining an Inclusive Future
-                    </h1>
-
-                    <p class="mt-5 text-base md:text-xl leading-relaxed text-white/90">
-                        Connecting grassroots leaders, researchers, and funders to scale disability inclusion across the
-                        Global South and the world.
-                    </p>
-
-                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
-                        <a class="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 font-bold text-brand-green shadow-sm hover:opacity-90 transition"
-                            href="fellowship.html">
-                            Explore the Fellowship
-                        </a>
-                        <a class="inline-flex items-center justify-center rounded-2xl border border-white/60 px-6 py-3 font-bold text-white hover:bg-white/10 transition"
-                            href="about.html">
-                            Learn about IFDI
-                        </a>
+        <!-- APPLY NOW STRIP -->
+        <section class="bg-[#C9DBB7] mt-5">
+            <div class="marquee py-6">
+                <div class="marquee__inner">
+                    <div class="flex items-center gap-10">
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                    </div>
+                    <div class="flex items-center gap-10" aria-hidden="true">
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
+                        <span class="ticker-item"><a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">APPLY
+                                NOW</a></span><span class="ticker-dot"></span>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- FOOTER -->
+        <footer id="contact" class="bg-[#222625] px-6 py-12">
+            <div class="grid gap-10 sm:grid-cols-4">
+
+                <div>
+                    <img src="assets/logo.svg" class="h-20 w-20" />
+                    <p class="mt-4 text-xs text-[#EDEEE6] font-medium font-['Instrument_Sans']">
+                        International Foundation<br />
+                        for Disability Inclusion<br /><br />
+                        14054, Alta Vista Ave<br />
+                        Saratoga, CA 95070<br />
+                        USA
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-bold text-[#EDEEE6] font-['Instrument_Sans']">USEFUL LINKS</h3>
+                    <ul class="mt-4 space-y-2 text-xs text-[#EDEEE6] font-medium">
+                        <li>Meet The Team</li>
+                        <li>About Us</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-bold text-[#EDEEE6] font-['Instrument_Sans']">CONTACT US</h3>
+                    <p class="mt-4 text-xs text-[#EDEEE6]">contact@ifdi.ngo</p>
+                </div>
+
+                <div class="flex flex-col items-center text-right">
+                    <h3 class="text-lg font-semibold text-[#EDEEE6]">#InclusionReimagined</h3>
+                    <div class="flex space-x-4">
+                        <a class="hover:opacity-80" href="#">
+                            <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="hover:opacity-80" href="#">
+                            <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="hover:opacity-80" href="#">
+                            <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="hover:opacity-80" href="#">
+                            <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="mt-10 text-center text-xs text-[#EDEEE6]">
+                © 2026 International Foundation for Disability Inclusion (IFDI)
+            </p>
+        </footer>
+
     </div>
-
-    <main class="mx-auto max-w-6xl px-6">
-        <!-- Statement / positioning -->
-        <section class="py-16 md:py-20">
-            <div class="rounded-3xl bg-brand-green text-white p-8 md:p-12 shadow-lg">
-                <p class="text-xl md:text-2xl leading-relaxed justify-text">
-                    After 13 years of experience and learning with the India Inclusion Foundation (IIF), we are taking
-                    the next step to build a globally connected,
-                    equitable, and innovation-driven ecosystem that supports disability inclusion—particularly in
-                    under-resourced and marginalized regions across the Global South and Africa.
-                </p>
-            </div>
-        </section>
-
-        <!-- Our Vision -->
-        <section class="py-12 md:py-16">
-            <div class="text-center">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight">Our Vision</h2>
-                <p class="mt-3 text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                    A future where disability inclusion is embedded into how we design technology, fund solutions, and
-                    shape public policy.
-                </p>
-            </div>
-
-            <div class="mt-10 grid gap-6 md:grid-cols-2">
-                <div
-                    class="rounded-3xl bg-white/70 border border-brand-green/15 p-6 md:p-8 shadow-sm space-y-4 text-left justify-text">
-                    <p class="text-gray-700 leading-relaxed">
-                        We advocate for the active participation of persons with disabilities in the development of
-                        technological and policy innovations,
-                        ensuring inclusion is built into design, decision-making, and implementation—especially in the
-                        Global South and Africa.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed">
-                        Disability inclusion is recognized not only as a social justice goal, but as an integral part of
-                        development, governance, health,
-                        education, urban planning, and artificial intelligence ethics.
-                    </p>
-                </div>
-
-                <div
-                    class="rounded-3xl bg-white/70 border border-brand-green/15 p-6 md:p-8 shadow-sm space-y-4 text-left justify-text">
-                    <p class="text-gray-700 leading-relaxed">
-                        The divide between small grassroots groups and large philanthropic institutions is narrowed
-                        through equitable funding partnerships and intermediary support.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed">
-                        Cross-cultural and interdisciplinary learning informs the development of inclusive public
-                        policies, educational systems, products, and services.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Values -->
-        <section class="py-12 md:py-16">
-            <div class="text-center">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight">Our Values</h2>
-                <p class="mt-3 text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                    Principles that guide how we work, whom we center, and what we build.
-                </p>
-            </div>
-
-            <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-                <div class="rounded-3xl bg-brand-beige p-6 shadow-sm border border-brand-green/10">
-                    <h3 class="font-serif text-lg font-bold mb-2">Equity Over Charity</h3>
-                    <p class="text-gray-700 leading-relaxed">We listen to learn. Building trust with each other and
-                        those we serve is core to our mission.</p>
-                </div>
-                <div class="rounded-3xl bg-brand-beige p-6 shadow-sm border border-brand-green/10">
-                    <h3 class="font-serif text-lg font-bold mb-2">Representation Matters</h3>
-                    <p class="text-gray-700 leading-relaxed">Those closest to the issue must lead the solutions. We
-                        prioritize community-led approaches and lived experience in decision-making.</p>
-                </div>
-                <div class="rounded-3xl bg-brand-beige p-6 shadow-sm border border-brand-green/10">
-                    <h3 class="font-serif text-lg font-bold mb-2">Learning Across Borders</h3>
-                    <p class="text-gray-700 leading-relaxed">We are systems-thinkers. We aim to contribute meaningful
-                        and sustainable solutions.</p>
-                </div>
-                <div class="rounded-3xl bg-brand-beige p-6 shadow-sm border border-brand-green/10">
-                    <h3 class="font-serif text-lg font-bold mb-2">Every Effort Counts</h3>
-                    <p class="text-gray-700 leading-relaxed">From solo advocates to large coalitions, every contribution
-                        is part of the collective change we seek to build.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Fellowship CTA -->
-        <section class="py-12 md:py-16 mb-10">
-            <div class="rounded-3xl bg-white/70 border border-brand-green/15 p-8 md:p-10 shadow-sm text-center">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold tracking-tight">Fellowship</h2>
-                <p class="mt-4 font-serif text-lg font-bold text-brand-green">
-                    Empowering inclusive storytelling to influence policy and perception.
-                </p>
-                <p class="mt-4 max-w-4xl mx-auto text-base md:text-lg text-gray-700 leading-relaxed">
-                    In a country where millions of persons with disabilities remain unseen and unheard, this fellowship
-                    seeks to amplify their voices through powerful, rights-based storytelling that can influence hearts,
-                    minds, and policy.
-                </p>
-
-                <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-                    <a class="inline-flex items-center justify-center rounded-2xl bg-brand-green text-brand-beige px-6 py-3 font-bold shadow-sm hover:opacity-90 transition-opacity"
-                        href="fellowship.html">
-                        Learn more
-                    </a>
-                    <a class="inline-flex items-center justify-center rounded-2xl border border-brand-green/30 text-brand-green px-6 py-3 font-bold hover:bg-brand-green/5 transition-colors"
-                        href="about.html">
-                        Who we are
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="site-footer" class="bg-brand-green text-white py-12 px-6">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <div class="mb-6 md:mb-0">
-                <img alt="IFDI Logo" class="h-14 mb-4 mx-auto md:mx-0" src="assets/logo.svg"
-                    style="filter: brightness(0) invert(1);" />
-                <p>International Foundation for Disability Inclusion</p>
-                <p>14054, Alta Vista Ave</p>
-                <p>Saratoga, CA 95070</p>
-                <p>USA</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <h3 class="text-3xl font-bold mb-4">#InclusionReimagined</h3>
-                <div class="flex space-x-4">
-                    <a class="hover:opacity-80" href="#">
-                        <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a class="hover:opacity-80" href="#">
-                        <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a class="hover:opacity-80" href="#">
-                        <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a class="hover:opacity-80" href="#">
-                        <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
-                            </path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const menu = document.getElementById('menu');
-
-        menuBtn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            document.body.classList.toggle('overflow-hidden');
-        });
-
-        // Highlight active navigation link
-        const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll('nav a, #menu a');
-
-        navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            const normalizedCurrent = currentPath.replace(/^\//, '').replace('.html', '') || 'index';
-            const normalizedHref = href.replace(/^\//, '').replace('.html', '');
-            if (normalizedCurrent === normalizedHref) {
-                link.classList.add('active-link');
-            }
-        });
-    </script>
 </body>
 
 </html>
