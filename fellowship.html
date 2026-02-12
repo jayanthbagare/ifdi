@@ -7,9 +7,9 @@
     <title>Fellowship - IFDI</title>
 
     <!-- Fonts (match your new design system) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+    <link rel="preconnect" target="_blank" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" target="_blank" href="https://fonts.gstatic.com" crossorigin />
+    <link target="_blank"
         href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap"
         rel="stylesheet" />
 
@@ -40,7 +40,9 @@
                     <nav
                         class="hidden sm:flex items-center gap-10 font-['Instrument_Sans'] text-sm font-semibold text-[#EDEEE6]">
                         <a class="hover:underline" href="#contact">Contact Us</a>
-                        <a class="hover:underline" href="#apply">Apply Now</a>
+                        <a class="hover:underline" target="_blank"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">Apply
+                            Now</a>
                     </nav>
 
                     <!-- Mobile menu button -->
@@ -68,7 +70,9 @@
                         <a class="hover:underline" href="about.html">About Us</a>
                         <a class="hover:underline" href="fellowship.html">About The Fellowship</a>
                         <a class="hover:underline" href="#contact">Contact Us</a>
-                        <a class="hover:underline" href="#apply">Apply Now</a>
+                        <a class="hover:underline" target="_blank"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform">Apply
+                            Now</a>
                     </div>
                 </div>
             </div>
@@ -248,52 +252,211 @@
         </section>
 
 
-        <!-- 3 IMAGE TILES -->
-        <section class="mt-14">
-            <div class="grid gap-4 sm:grid-cols-3">
-                <a href="#" class="relative overflow-hidden rounded-[10px]">
+        <!-- 3 IMAGE TILES -> CASCADED INFO (toggle) -->
+        <section class="relative mt-14" id="cascade-section">
+
+            <!-- DEFAULT VIEW: 3 tiles side-by-side -->
+            <div id="tiles-view" class="grid gap-4 sm:grid-cols-3">
+                <!-- Tile: Background -->
+                <button type="button" class="group relative overflow-hidden rounded-[10px] text-left"
+                    data-open-cascade="background">
                     <img src="assets/rec1.jpg" alt="Background and Rationale"
-                        class="h-[360px] w-full object-cover sm:h-[456px]" />
+                        class="w-full object-cover sm:h-[456px]" />
                     <div class="absolute inset-0 bg-[#000000]/40"></div>
                     <div
                         class="absolute bottom-6 left-6 hero-text font-['Montserrat'] text-2xl font-semibold tracking-wide text-[#EDEEE6] sm:text-4xl">
                         Background<br />and Rationale
                     </div>
-                </a>
+                </button>
 
-                <a href="#" class="relative overflow-hidden rounded-[10px]">
-                    <img src="assets/rec2.jpg" alt="The Need"
-                        class="h-[360px] w-full object-cover sm:h-[456px]" />
+                <!-- Tile: Need -->
+                <button type="button" class="group relative overflow-hidden rounded-[10px] text-left"
+                    data-open-cascade="need">
+                    <img src="assets/rec2.jpg" alt="The Need" class="w-full object-cover sm:h-[456px]" />
                     <div class="absolute inset-0 bg-[#000000]/40"></div>
                     <div
                         class="absolute bottom-6 left-6 hero-text font-['Montserrat'] text-2xl font-semibold tracking-wide text-[#EDEEE6] sm:text-4xl">
                         The Need
                     </div>
-                </a>
+                </button>
 
-                <a href="#" class="relative overflow-hidden rounded-[10px]">
-                    <img src="assets/rec3.jpg" alt="Objective"
-                        class="h-[360px] w-full object-cover sm:h-[456px]" />
+                <!-- Tile: Objective -->
+                <button type="button" class="group relative overflow-hidden rounded-[10px] text-left"
+                    data-open-cascade="objective">
+                    <img src="assets/rec3.jpg" alt="Objective" class="w-full object-cover sm:h-[456px]" />
                     <div class="absolute inset-0 bg-[#000000]/40"></div>
                     <div
                         class="absolute bottom-6 left-6 hero-text font-['Montserrat'] text-2xl font-semibold tracking-wide text-[#EDEEE6] sm:text-4xl">
                         Objective
                     </div>
-                </a>
+                </button>
             </div>
 
-            <!-- chevron hint -->
-            <!-- <div class="mt-10 flex justify-center">
-                <div class="flex flex-col items-center gap-2 text-[#EDEEE6]/90">
-                    <div class="flex items-center gap-3 text-xs font-['Instrument_Sans'] tracking-widest">
-                        <span class="">MORE INFORMATION ON THE FELLOWSHIP</span>
-                    </div>
-                    <div class="flex h-10 w-10 items-center justify-center rounded-full border border-[#EDEEE6]/40">
-                        ↓
-                    </div>
+            <!-- CASCADE VIEW (hidden until click) -->
+            <div id="cascade-view" class="hidden relative">
+
+                <!-- header tabs that mimic cascade “behind” -->
+                <div class="relative z-10 flex px-2 sm:px-0">
+                    <button type="button"
+                        class="cascade-tab group relative flex-1 overflow-hidden rounded-t-[18px] sm:h-28"
+                        data-panel="background" aria-controls="panel-background">
+                        <img src="assets/rec1.jpg" class="h-full w-full object-cover" alt="Background and Rationale" />
+                        <div class="absolute inset-0 bg-[#000000]/35"></div>
+                        <div
+                            class="absolute left-4 top-3 font-['Montserrat'] text-base font-semibold text-[#EDEEE6] sm:text-lg">
+                            Background and Rationale
+                        </div>
+                    </button>
+
+                    <button type="button"
+                        class="cascade-tab group relative flex-1 overflow-hidden rounded-t-[18px] sm:h-28"
+                        data-panel="need" aria-controls="panel-need">
+                        <img src="assets/rec2.jpg" class="h-full w-full object-cover" alt="The Need" />
+                        <div class="absolute inset-0 bg-[#000000]/35"></div>
+                        <div
+                            class="absolute left-4 top-3 font-['Montserrat'] text-base font-semibold text-[#EDEEE6] sm:text-lg">
+                            The Need
+                        </div>
+                    </button>
+
+                    <button type="button"
+                        class="cascade-tab group relative flex-1 overflow-hidden rounded-t-[18px] sm:h-28"
+                        data-panel="objective" aria-controls="panel-objective">
+                        <img src="assets/rec3.jpg" class="h-full w-full object-cover" alt="Objective" />
+                        <div class="absolute inset-0 bg-[#000000]/35"></div>
+                        <div
+                            class="absolute left-4 top-3 font-['Montserrat'] text-base font-semibold text-[#EDEEE6] sm:text-lg">
+                            Objective
+                        </div>
+                    </button>
                 </div>
-            </div> -->
+
+                <!-- active panel -->
+                <div
+                    class="relative -mt-2 z-15 overflow-hidden rounded-[22px] bg-[#EDEEE6] shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+
+                    <!-- close/back to tiles -->
+                    <button type="button" id="cascade-close"
+                        class="absolute right-4 top-4 z-20 rounded-full bg-[#000000]/25 px-4 py-2 font-['Instrument_Sans'] text-sm font-semibold text-[#FFFFFF] hover:bg-[#000000]/35">
+                        Back
+                    </button>
+
+                    <!-- PANEL: Background -->
+                    <div id="panel-background" class="cascade-panel hidden">
+                        <div class="grid min-h-[520px] grid-cols-1 lg:grid-cols-[minmax(360px,1fr)_2fr]">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/rec1.jpg" class="h-full w-full object-cover"
+                                    alt="Background and Rationale" />
+                                <div class="absolute inset-0 bg-[#000000]/30"></div>
+                                <div
+                                    class="absolute bottom-8 left-8 hero-text font-['Montserrat'] text-4xl font-semibold text-[#EDEEE6]">
+                                    Background<br />and Rationale
+                                </div>
+                            </div>
+
+                            <div class="px-10 py-14 text-[#404F30]">
+                                <p class="font-['Montserrat'] text-lg leading-8">
+                                    India is home to over 26.8 million persons with disabilities (Census 2011), though
+                                    the actual number is likely higher due to underreporting, social stigma, and limited
+                                    access to diagnosis. PWDs in India continue to face structural and social exclusion
+                                    in areas such as education, employment, healthcare, housing, transportation, and
+                                    digital access. Despite several legal protections including the Rights of Persons
+                                    with Disabilities (RPwD) Act, 2016, implementation remains uneven, and public
+                                    awareness is alarmingly low.
+                                </p>
+                                <br>
+                                <p class="font-['Montserrat'] text-lg leading-8">
+                                    While many journalists and media organizations in India have taken significant steps
+                                    to highlight issues of disability, there remains a need to deepen and diversify the
+                                    coverage—especially from a rights-based, intersectional, and policy-oriented
+                                    perspective. With this fellowship, we aim to support and nurture a dedicated cohort
+                                    of journalists whose work focuses specifically on the experiences of persons with
+                                    disabilities. These stories will explore the intersection of disability with health,
+                                    education, employment, social justice, and regional disparities—bringing forth
+                                    perspectives often overlooked in mainstream discourse. The fellowship complements
+                                    ongoing efforts by amplifying such narratives and supporting a sustained, inclusive
+                                    media ecosystem around disability rights.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PANEL: Need -->
+                    <div id="panel-need" class="cascade-panel hidden">
+                        <div class="grid min-h-[520px] grid-cols-1 lg:grid-cols-[minmax(360px,1fr)_2fr]">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/rec2.jpg" class="h-full w-full object-cover" alt="The Need" />
+                                <div class="absolute inset-0 bg-[#000000]/30"></div>
+                                <div
+                                    class="absolute bottom-8 left-8 hero-text font-['Montserrat'] text-5xl font-semibold text-[#EDEEE6]">
+                                    The Need
+                                </div>
+                            </div>
+
+                            <div class="px-10 py-14 text-[#404F30]">
+                                <p class="font-['Montserrat'] text-lg leading-8">
+                                    There is an urgent need to foster a new generation of journalists who understand
+                                    disability not as a medical condition, but as a matter of rights, dignity, and
+                                    social justice. This fellowship is an attempt to:
+                                </p>
+
+                                <ul class="mt-6 list-disc space-y-4 pl-6 font-['Montserrat'] text-lg leading-8">
+                                    <li>Create space for long-form, investigative stories that capture lived realities
+                                        of the disability community.</li>
+                                    <li>Amplify stories from underserved geographies and intersectional
+                                        identities—Dalit, Adivasi, Muslim, women, and LGBTQ+ PWDs.</li>
+                                    <li>Bridge journalism and policy through evidence-based storytelling that can
+                                        influence public understanding and advocacy.</li>
+                                    <li>Support journalists with mentorship, editorial guidance, and financial resources
+                                        to pursue independent public-interest journalism.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PANEL: Objective -->
+                    <div id="panel-objective" class="cascade-panel hidden">
+                        <div class="grid min-h-[520px] grid-cols-1 lg:grid-cols-[minmax(360px,1fr)_2fr]">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/rec3.jpg" class="h-full w-full object-cover" alt="Objective" />
+                                <div class="absolute inset-0 bg-[#000000]/30"></div>
+                                <div
+                                    class="absolute bottom-8 left-8 hero-text font-['Montserrat'] text-5xl font-semibold text-[#EDEEE6]">
+                                    Objective
+                                </div>
+                            </div>
+
+                            <div class="px-10 py-14 text-[#404F30]">
+                                <div class="space-y-10 font-['Montserrat'] text-lg leading-8">
+                                    <div>
+                                        <div class="font-semibold">Build awareness</div>
+                                        <div>Build awareness about systemic issues affecting persons with
+                                            disabilities—from education and employment to healthcare and access to
+                                            justice.</div>
+                                    </div>
+
+                                    <div>
+                                        <div class="font-semibold">Influence policy discourse</div>
+                                        <div>Surface on-ground evidence, success stories, and challenges through
+                                            high-quality reporting.</div>
+                                    </div>
+
+                                    <div>
+                                        <div class="font-semibold">Nurture a cohort</div>
+                                        <div>Build a cohort of sensitive, informed storytellers shaping inclusive
+                                            narratives at regional and national levels.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
+
+
 
         <!-- TABS HEADER + CONTENT PANEL -->
         <section class="mt-12">
@@ -305,73 +468,80 @@
             </div>
 
             <!-- content panel -->
-            <div class="rounded-b-[38px] rounded-t-none bg-[#404F30] px-6 py-10 sm:px-10">
-                <!-- glow -->
-                <div class="pointer-events-none absolute hidden"></div>
+            <div
+                class="rounded-b-[38px] rounded-t-none bg-[#404F30] px-6 py-10 sm:px-10 min-h-[400px] sm:min-h-[520px] flex flex-col justify-center">
+                <div class="w-full max-w-[80%] mx-auto">
+                    <!-- glow -->
+                    <div class="pointer-events-none absolute hidden"></div>
 
-                <!-- GAIN -->
-                <div class="tab-panel" data-tab-panel="gain">
-                    <div class="grid gap-4 sm:grid-cols-2">
-                        <div class="info-card">
-                            <div class="info-title">Financial support</div>
-                            <div class="info-body">A grant of ₹2,00,000 to report and produce your fellowship stories.
+                    <!-- GAIN -->
+                    <div class="tab-panel" data-tab-panel="gain">
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div class="info-card">
+                                <div class="info-title">Financial support</div>
+                                <div class="info-body">A grant of ₹2,00,000 to report and produce your fellowship
+                                    stories.
+                                </div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-title">Mentorship</div>
+                                <div class="info-body">Guidance from editors and domain experts to strengthen your
+                                    reporting
+                                    and writing.</div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-title">Peer cohort</div>
+                                <div class="info-body">Learn with and from a cohort of fellows working on
+                                    disability-inclusive storytelling.</div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-title">Capacity building</div>
+                                <div class="info-body">Resources on disability rights, ethics, and intersectional
+                                    reporting—designed for practical newsroom use.</div>
+                            </div>
+                            <div class="info-card sm:col-span-2">
+                                <div class="info-title">Editorial support</div>
+                                <div class="info-body">Feedback across pitching, structure, sensitivity, fact-checking,
+                                    and
+                                    narrative craft.</div>
                             </div>
                         </div>
-                        <div class="info-card">
-                            <div class="info-title">Mentorship</div>
-                            <div class="info-body">Guidance from editors and domain experts to strengthen your reporting
-                                and writing.</div>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-title">Peer cohort</div>
-                            <div class="info-body">Learn with and from a cohort of fellows working on
-                                disability-inclusive storytelling.</div>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-title">Capacity building</div>
-                            <div class="info-body">Resources on disability rights, ethics, and intersectional
-                                reporting—designed for practical newsroom use.</div>
-                        </div>
-                        <div class="info-card sm:col-span-2">
-                            <div class="info-title">Editorial support</div>
-                            <div class="info-body">Feedback across pitching, structure, sensitivity, fact-checking, and
-                                narrative craft.</div>
+                    </div>
+
+                    <!-- APPLICATION PROCESS -->
+                    <div class="tab-panel hidden" data-tab-panel="applyproc">
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div class="info-card sm:col-span-2">
+                                <div class="info-title">How to apply</div>
+                                <div class="info-body">Applications are accepted via a written form. (Keep your form
+                                    link
+                                    here.)</div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-title">Work samples</div>
+                                <div class="info-body">Submit two published work samples (links or PDFs).</div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-title">Story pitches</div>
+                                <div class="info-body">Submit three original pitches (at least one from an underserved
+                                    geography/community).</div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- APPLICATION PROCESS -->
-                <div class="tab-panel hidden" data-tab-panel="applyproc">
-                    <div class="grid gap-4 sm:grid-cols-2">
-                        <div class="info-card sm:col-span-2">
-                            <div class="info-title">How to apply</div>
-                            <div class="info-body">Applications are accepted via a written form. (Keep your form link
-                                here.)</div>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-title">Work samples</div>
-                            <div class="info-body">Submit two published work samples (links or PDFs).</div>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-title">Story pitches</div>
-                            <div class="info-body">Submit three original pitches (at least one from an underserved
-                                geography/community).</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SELECTION PROCESS -->
-                <div class="tab-panel hidden" data-tab-panel="selectproc">
-                    <div class="grid gap-4 sm:grid-cols-2">
-                        <div class="info-card">
-                            <div class="info-title">Independent jury</div>
-                            <div class="info-body">Applications are reviewed by an independent jury using defined
-                                criteria.</div>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-title">Assessment criteria</div>
-                            <div class="info-body">Quality of past work, feasibility of pitches, and commitment to
-                                ethical reporting.</div>
+                    <!-- SELECTION PROCESS -->
+                    <div class="tab-panel hidden" data-tab-panel="selectproc">
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div class="info-card">
+                                <div class="info-title">Independent jury</div>
+                                <div class="info-body">Applications are reviewed by an independent jury using defined
+                                    criteria.</div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-title">Assessment criteria</div>
+                                <div class="info-body">Quality of past work, feasibility of pitches, and commitment to
+                                    ethical reporting.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -405,99 +575,151 @@
             </div>
         </section>
 
-        <!-- JURY SECTION (matches screenshot block style) -->
-        <section class="relative">
-            <div class="bg-[#EDEEE6] px-6 py-10 sm:px-10">
-                <div class="grid gap-8 lg:grid-cols-[340px_1fr_320px] lg:items-start">
+        <!-- JURY (Cascading Columns) -->
+        <section class="relative mt-16">
+            <div class="rounded-[28px] overflow-hidden bg-[#C9DBB7] shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
 
-                    <!-- card left -->
-                    <div
-                        class="rounded-3xl bg-[#FFFFFF]/90 p-5 shadow-[0_4px_10px_rgba(0,0,0,0.18)] border border-[#404F30]/40">
-                        <img class="h-[280px] w-full rounded-3xl object-cover" src="https://placehold.co/309x309"
-                            alt="Jury photo" />
-                        <div
-                            class="mt-4 font-['Instrument_Sans'] text-xl font-semibold uppercase leading-6 text-[#404F30]">
-                            Pamela Philipose
-                        </div>
-                        <div class="mt-2 font-['Montserrat'] text-sm font-medium text-[#404F30]/90">
-                            Ombudsperson, The Wire; journalist & author
+                <!-- (optional) top strip if you want your ticker to sit above -->
+                <div class="h-14 bg-[#C9DBB7]"></div>
+
+                <!-- layout -->
+                <div class="relative min-h-[600px] grid grid-cols-[auto_1fr_auto]">
+
+
+                    <!-- LEFT CASCADE BARS -->
+                    <div id="jury-left"
+                        class="relative flex flex-row flex-nowrap items-stretch bg-[#EDEEE6] border-r border-[#404F30]/20">
+
+                        <!-- JS will insert buttons here -->
+                    </div>
+
+                    <!-- ACTIVE CONTENT -->
+                    <div class="relative bg-[#EDEEE6]">
+                        <div class="grid grid-cols-1 lg:grid-cols-[360px_1fr]">
+
+                            <!-- Active card -->
+                            <div class="p-6 lg:p-10">
+                                <div
+                                    class="rounded-[28px] bg-[#FFFFFF] shadow-[0_10px_30px_rgba(0,0,0,0.2)] border border-[#404F30]/20">
+                                    <div class="p-5">
+                                        <img id="jury-photo" src="assets/jury_pamela.png" alt="Jury member photo"
+                                            class="h-[280px] w-full rounded-[22px] object-cover" />
+                                    </div>
+                                    <div class="px-6 pb-7">
+                                        <div id="jury-name"
+                                            class="font-['Instrument_Sans'] text-xl font-bold uppercase text-[#404F30] leading-tight">
+                                            PAMELA PHILIPOSE
+                                        </div>
+                                        <div id="jury-title"
+                                            class="mt-2 font-['Montserrat'] text-base italic text-[#404F30]">
+                                            Ombudsperson, The Wire; Journalist & Author
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Active bio -->
+                            <div class="px-6 pb-10 pt-2 lg:px-10 lg:py-10">
+                                <p id="jury-bio"
+                                    class="font-['Montserrat'] text-base leading-7 text-[#404F30] lg:text-lg lg:leading-8">
+                                    Pamela Philipose, presently the ombudsperson of the New Delhi based news portal, The
+                                    Wire.in, has also served as editor-in-chief of Women's Feature Service, an
+                                    organisation mandated to highlight gender concerns in the mainstream media. Earlier,
+                                    she was senior associate editor, The Indian Express, with independent charge of the
+                                    editorial page. A recipient of prestigious awards for her journalism, she was
+                                    invited to deliver the concluding keynote address at the University of Chicago's
+                                    Sixteenth Annual South Asia Graduate Student Conference in 2019. Her book, Media's
+                                    Shifting Terrain - Five years that Transformed the Way India Communicates, was
+                                    published by Orient BlackSwan in 2019. In 2023, her documentation of the experiences
+                                    of the pandemic in Delhi's shanty towns, A Boundless Fear Gripped Me How the Other
+                                    Half Lived in the Pandemic's Shadow, was brought out by Yoda Press. Her latest work,
+                                    which came out in July 2025, is on Freedom of Speech, entitled, Framing the Media,
+                                    Government Policies, Law and Freedom of the Press in India. She has also contributed
+                                    a chapter in the recent anthology entitled 50 Years of the Emergency Lessons for
+                                    Democracy, edited by Peter Ronald deSouza and Harsh Sethi.
+                                </p>
+                            </div>
+
                         </div>
                     </div>
 
-                    <!-- bio -->
-                    <div class="font-['Montserrat'] text-sm leading-6 text-[#404F30]">
-                        <p>
-                            Pamela Philipose, presently the ombudsperson of the New Delhi based news portal, The
-                            Wire.in, has also served as editor-in-chief of Women's Feature Service...
-                        </p>
-                        <p class="mt-4">
-                            (Keep/replace this paragraph with your full bio text — placeholder for now.)
-                        </p>
-                    </div>
+                    <!-- RIGHT CASCADE BARS -->
+                    <div id="jury-right"
+                        class="relative flex flex-row flex-nowrap items-stretch bg-[#404F30] border-l border-[#000000]/10">
 
-                    <!-- vertical name bars (right) -->
-                    <div class="hidden lg:block">
-                        <div class="flex h-[420px] items-stretch justify-end">
-                            <div
-                                class="w-24 bg-[#C9DBB7] shadow-[2px_0px_5px_rgba(0,0,0,0.25)] flex items-center justify-center">
-                                <div
-                                    class="-rotate-90 font-['Instrument_Sans'] text-xl font-semibold uppercase text-[#404F30]">
-                                    SANGEETA BAROOAH PISHAROTY
-                                </div>
-                            </div>
-                            <div
-                                class="w-24 bg-[#9DB183] shadow-[2px_0px_5px_rgba(0,0,0,0.25)] flex items-center justify-center">
-                                <div
-                                    class="-rotate-90 font-['Instrument_Sans'] text-xl font-semibold uppercase text-[#404F30]">
-                                    C K MEENA
-                                </div>
-                            </div>
-                            <div
-                                class="w-24 bg-[#EDEEE6] shadow-[2px_0px_5px_rgba(0,0,0,0.25)] flex items-center justify-center">
-                                <div
-                                    class="-rotate-90 font-['Instrument_Sans'] text-xl font-semibold uppercase text-[#404F30]">
-                                    L SUBRAMANI LAKSHMINARAYANAN
-                                </div>
-                            </div>
-                            <div
-                                class="w-24 bg-[#6E8450] shadow-[2px_0px_5px_rgba(0,0,0,0.25)] flex items-center justify-center">
-                                <div
-                                    class="-rotate-90 font-['Instrument_Sans'] text-xl font-semibold uppercase text-[#EDEEE6]">
-                                    AVINASH KUMAR
-                                </div>
-                            </div>
-                            <div class="w-24 bg-[#404F30] flex items-center justify-center">
-                                <div
-                                    class="-rotate-90 font-['Instrument_Sans'] text-xl font-semibold uppercase text-[#C9DBB7]">
-                                    (MORE)
-                                </div>
-                            </div>
-                        </div>
+                        <!-- JS will insert buttons here -->
                     </div>
 
                 </div>
+
+                <!-- bottom band (matches screenshot vibe) -->
+                <div class="h-16 bg-[#404F30]"></div>
             </div>
 
-            <!-- apply button -->
-            <div id="apply" class="bg-[#EDEEE6] pb-12">
-                <div class="flex justify-center">
-                    <a href="#" class="inline-flex items-center justify-center rounded-[46px] bg-[#C9DBB7]/35 px-14 py-5
-                            font-['Montserrat'] text-lg font-bold tracking-wide text-[#EDEEE6]
-                            shadow-[3.2px_4.26px_5.65px_rgba(0,0,0,0.25)]">
-                        APPLY HERE
-                    </a>
-                </div>
+            <!-- Hidden master list of ALL tabs (JS re-parents them to left/right) -->
+            <div id="jury-tabs-master" class="hidden">
+                <!-- Each button is a vertical bar -->
+                <button type="button" class="jury-tab border-b border-[#404F30]/15 bg-[#EDEEE6] text-[#404F30]"
+                    data-jury="0">
+                    <span class="jury-vertical font-['Instrument_Sans'] text-2xl font-bold uppercase tracking-wide">
+                        Pamela Philipose
+                    </span>
+                </button>
+
+                <button type="button" class="jury-tab border-b border-[#404F30]/15 bg-[#C9DBB7] text-[#404F30]"
+                    data-jury="1">
+                    <span class="jury-vertical font-['Instrument_Sans'] text-2xl font-bold uppercase tracking-wide">
+                        Sangeeta Barooah Pisharoty
+                    </span>
+                </button>
+
+                <button type="button" class="jury-tab border-b border-[#404F30]/15 bg-[#EDEEE6] text-[#404F30]"
+                    data-jury="2">
+                    <span class="jury-vertical font-['Instrument_Sans'] text-2xl font-bold uppercase tracking-wide">
+                        C K Meena
+                    </span>
+                </button>
+
+                <button type="button" class="jury-tab border-b border-[#000000]/10 bg-[#5E7249] text-[#EDEEE6]"
+                    data-jury="3">
+                    <span class="jury-vertical font-['Instrument_Sans'] text-2xl font-bold uppercase tracking-wide">
+                        L Subramani Lakshminarayanan
+                    </span>
+                </button>
+
+                <button type="button" class="jury-tab bg-[#465537]/90 text-[#EDEEE6]" data-jury="4">
+                    <span class="jury-vertical font-['Instrument_Sans'] text-2xl font-bold uppercase tracking-wide">
+                        Avinash Kumar
+                    </span>
+                </button>
             </div>
         </section>
 
-        <!-- FOOTER (matches your home redesign palette) -->
-        <footer id="contact" class="bg-[#222625] px-6 py-10 sm:px-8 sm:py-12">
-            <div class="grid gap-10 sm:grid-cols-4 sm:items-start">
-                <div class="sm:col-span-1">
-                    <img class="h-20 w-20" src="https://placehold.co/169x189" alt="Footer logo placeholder" />
-                    <p class="mt-4 font-['Instrument_Sans'] text-xs font-medium tracking-tight text-[#EDEEE6]">
-                        International Foundation <br />
-                        for Disability Inclusion <br /><br />
+        <!-- APPLY NOW CTA -->
+        <section class="py-16 sm:py-20">
+            <div class="flex justify-center">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform"
+                    target="_blank" class="inline-flex items-center justify-center px-14 py-5 text-xl font-bold tracking-wide text-[#EDEEE6]
+             rounded-[46.352px]
+             bg-[rgba(217,217,217,0.36)]
+             shadow-[3.197px_4.262px_5.648px_rgba(0,0,0,0.25)]
+             backdrop-blur-sm
+             hover:bg-[rgba(217,217,217,0.46)]
+             transition">
+                    APPLY HERE
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer id="contact" class="bg-[#222625] px-6 py-12">
+            <div class="grid gap-10 sm:grid-cols-4">
+
+                <div>
+                    <img src="assets/ifdi-logo-white.png" class="h-20 w-20" />
+                    <p class="mt-4 text-xs text-[#EDEEE6] font-medium font-['Instrument_Sans']">
+                        International Foundation<br />
+                        for Disability Inclusion<br /><br />
                         14054, Alta Vista Ave<br />
                         Saratoga, CA 95070<br />
                         USA
@@ -505,33 +727,60 @@
                 </div>
 
                 <div>
-                    <h3 class="font-['Instrument_Sans'] text-sm font-bold tracking-tight text-[#EDEEE6]">USEFUL LINKS
-                    </h3>
-                    <ul
-                        class="mt-4 space-y-2 font-['Instrument_Sans'] text-xs font-medium tracking-tight text-[#EDEEE6]">
-                        <li><a class="hover:underline" href="#">Meet The Team</a></li>
-                        <li><a class="hover:underline" href="about.html">About Us</a></li>
-                        <li><a class="hover:underline" href="#">Privacy Policy</a></li>
+                    <h3 class="text-sm font-bold text-[#EDEEE6] font-['Instrument_Sans']">USEFUL LINKS</h3>
+                    <ul class="mt-4 space-y-2 text-xs text-[#EDEEE6] font-medium">
+                        <li>Meet The Team</li>
+                        <li>About Us</li>
+                        <li>Privacy Policy</li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="font-['Instrument_Sans'] text-sm font-bold tracking-tight text-[#EDEEE6]">CONTACT US</h3>
-                    <p class="mt-4 font-['Instrument_Sans'] text-xs font-medium tracking-tight text-[#EDEEE6]">
-                        <a class="hover:underline" href="mailto:contact@ifdi.ngo">contact@ifdi.ngo</a>
-                    </p>
+                    <h3 class="text-sm font-bold text-[#EDEEE6] font-['Instrument_Sans']">CONTACT US</h3>
+                    <p class="mt-4 text-xs text-[#EDEEE6]">contact@ifdi.ngo</p>
                 </div>
 
-                <div class="sm:text-right">
-                    <p class="font-['Instrument_Sans'] text-lg font-semibold tracking-tight text-[#EDEEE6]">
-                        #InclusionReimagined</p>
-                    <div class="mt-4 flex items-center gap-3 sm:justify-end">
-                        <img class="h-7 w-32" src="https://placehold.co/134x30" alt="Social icons placeholder" />
+                <div class="flex flex-col items-center text-right">
+                    <h3 class="text-lg font-semibold text-[#EDEEE6]">#InclusionReimagined</h3>
+                    <div class="flex space-x-4">
+                        <a class="hover:opacity-80" href="#">
+                            <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="hover:opacity-80" href="#">
+                            <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="hover:opacity-80" href="#">
+                            <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="hover:opacity-80" href="#">
+                            <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                                </path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
+
             </div>
 
-            <p class="mt-10 text-center font-['Instrument_Sans'] text-xs tracking-tight text-[#EDEEE6]">
+            <p class="mt-10 text-center text-xs text-[#EDEEE6]">
                 © 2026 International Foundation for Disability Inclusion (IFDI)
             </p>
         </footer>
@@ -574,7 +823,159 @@
                 });
             });
         });
+        // ---- Tiles -> Cascade toggle ----
+        const tilesView = document.getElementById('tiles-view');
+        const cascadeView = document.getElementById('cascade-view');
+        const cascadeClose = document.getElementById('cascade-close');
+
+        const openCascadeButtons = document.querySelectorAll('[data-open-cascade]');
+        const cascadeTabs = document.querySelectorAll('.cascade-tab');
+        const cascadePanels = document.querySelectorAll('.cascade-panel');
+
+        function setCascadeActive(key) {
+            // show correct panel
+            cascadePanels.forEach(p => p.classList.toggle('hidden', p.id !== `panel-${key}`));
+
+            // tab stacking / visual cascade
+            cascadeTabs.forEach(btn => {
+                const isActive = btn.dataset.panel === key;
+
+                btn.classList.toggle('z-30', isActive);
+                btn.classList.toggle('z-20', !isActive);
+
+                btn.classList.toggle('translate-y-0', isActive);
+                btn.classList.toggle('translate-y-2', !isActive);
+
+                btn.classList.toggle('shadow-[0_12px_35px_rgba(0,0,0,0.35)]', isActive);
+                btn.classList.toggle('shadow-[0_6px_20px_rgba(0,0,0,0.25)]', !isActive);
+            });
+        }
+
+        function openCascade(key) {
+            tilesView.classList.add('hidden');
+            cascadeView.classList.remove('hidden');
+            setCascadeActive(key);
+
+            // optional: scroll the section into view nicely
+            document.getElementById('cascade-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function closeCascade() {
+            cascadeView.classList.add('hidden');
+            tilesView.classList.remove('hidden');
+        }
+
+        // clicking a tile opens cascade with that panel active
+        openCascadeButtons.forEach(btn => {
+            btn.addEventListener('click', () => openCascade(btn.dataset.openCascade));
+        });
+
+        // clicking a cascade tab switches panels
+        cascadeTabs.forEach(btn => {
+            btn.addEventListener('click', () => setCascadeActive(btn.dataset.panel));
+        });
+
+        // back button
+        if (cascadeClose) cascadeClose.addEventListener('click', closeCascade);
+
+        // --- Jury cascading columns data ---
+        const juryData = [
+            {
+                name: "Pamela Philipose",
+                title: "Ombudsperson, The Wire; Journalist & Author",
+                photo: "assets/jury_pamela.png",
+                bio: "Pamela Philipose, presently the ombudsperson of the New Delhi based news portal, The Wire.in, has also served as editor-in-chief of Women's Feature Service, an organisation mandated to highlight gender concerns in the mainstream media.  Earlier, she was senior associate editor, The Indian Express, with independent charge of the editorial page. A recipient of prestigious awards for her journalism, she was invited to deliver the concluding keynote address at the University of Chicago's Sixteenth Annual South Asia Graduate Student Conference in 2019.  Her book, Media's Shifting Terrain - Five years that Transformed the Way India Communicates, was published by Orient BlackSwan in 2019. In 2023, her documentation of the experiences of the pandemic in Delhi's shanty towns, A Boundless Fear Gripped Me How the Other Half Lived in the Pandemic's Shadow, was brought out by Yoda Press. Her latest work, which came out in July 2025, is on Freedom of Speech, entitled, Framing the Media, Government Policies, Law and Freedom of the Press in India. She has also contributed a chapter in the recent anthology entitled 50 Years of the Emergency Lessons for Democracy, edited by Peter Ronald deSouza and Harsh Sethi."
+            },
+            {
+                name: "Sangeeta Barooah Pisharoty",
+                title: "President, Press Club Of India; Journalist & Author",
+                photo: "assets/jury_sangeeta.jpeg",
+                bio: "Sangeeta Barooah Pisharoty is a distinguished Delhi-based journalist and the President of the Press Club of India, specializing in national socio-economic issues and India’s Northeast. Her authoritative work on Assam includes two major non-fiction books, one of which was cited by the Supreme Court in 2024 during a Constitutional Bench ruling on the Citizenship Act. A decorated professional, she was the first woman to win the Parag Kumar Das Journalism Award in 2023 and received the Ramnath Goenka Excellence in Journalism Award in 2017. Beyond her reporting, she serves as a storytelling trainer for the social sector and has contributed to multiple notable anthologies. Currently, she is writing her third solo non-fiction book on Assam, scheduled for publication in 2026."
+            },
+            {
+                name: "C K Meena",
+                title: "Journalist & Author",
+                photo: "assets/jury_ck_meena.jpg",
+                bio: "C.K. Meena has been a journalist since 1981. She worked in The City Tab and Deccan Herald as a feature writer. In 1998 she won the Alfred Friendly Press Fellowship and worked in The Baltimore Sun for six months. In 1993 she quit Deccan Herald to be the co-founder of the Asian College of Journalism in Bangalore. She taught at ACJ till it moved to Chennai in 2000. Since then she has been freelancing. Besides contributing to The Hindu Magazine and Deccan Herald she has written for numerous national publications. Her fortnightly column in The Hindu called City Lights ran for 14 years. Three of her novels have been published by Dronequill, and her travelogue called Tripping is available on Kindle. Her latest book, The Invisible Majority, on the status of disability in India, was published by Hachette India in 2022."
+            },
+            {
+                name: "L Subramani Lakshminarayanan",
+                title: "Journalist, Deccan Herald",
+                photo: "assets/jury_subramani.jpg",
+                bio: "L. Subramani is a totally blind journalist working for the English daily Deccan Herald in Bangalore. He has 27 years of experience as a journalist, 20 of those years he spent with Deccan Herald covering various topics including technology, health, disability, science, social issues, and education. Author of Lights Out: The True Story Of A Mans Descent Into Blindness in 2014, Subramani has also been a content creator and runs a newsletter on Substack that examines the intersection of disability, AI and writing."
+            },
+            {
+                name: "Avinash Kumar",
+                title: "Operations & Strategy, IFDI",
+                photo: "assets/jury_avinash.jpg",
+                bio: "Avinash Kumar has worked extensively with grassroots organisations and campaigns to strengthen public participation in governance and promote accountability and transparency. He holds a Master's degree in Social Work from the University of Chicago and was selected as an Obama Foundation Scholar (2023-2024) in recognition of his work and commitment to advancing social causes. He has supported the India Inclusion Foundation in expanding programmes and building strategic partnerships. At the International Foundation for Disability Inclusion (IFDI), he leads Operations and Strategy, drawing on his experience in community organising, coalition building, and policy advocacy to advance the foundation's global mission of inclusion."
+            }
+        ];
+
+        const juryLeft = document.getElementById("jury-left");
+        const juryRight = document.getElementById("jury-right");
+        const juryTabsMaster = document.getElementById("jury-tabs-master");
+
+        const juryPhoto = document.getElementById("jury-photo");
+        const juryName = document.getElementById("jury-name");
+        const juryTitle = document.getElementById("jury-title");
+        const juryBio = document.getElementById("jury-bio");
+
+        const juryTabs = Array.from(juryTabsMaster.querySelectorAll(".jury-tab"));
+
+        let activeJuryIndex = 0;
+
+        function renderJuryActive(i) {
+            const d = juryData[i];
+            juryPhoto.src = d.photo;
+            juryPhoto.alt = d.name;
+
+            juryName.textContent = d.name.toUpperCase();
+            juryTitle.textContent = d.title;
+            juryBio.textContent = d.bio;
+        }
+
+        function placeJuryTabs(i) {
+            // clear columns
+            juryLeft.innerHTML = "";
+            juryRight.innerHTML = "";
+
+            // left gets [0..i-1], right gets [i+1..end]
+            juryTabs.forEach(btn => {
+                const idx = Number(btn.dataset.jury);
+
+                // highlight state on bar (optional)
+                btn.classList.toggle("opacity-80", idx !== i);
+                btn.classList.toggle("cursor-pointer", idx !== i);
+
+                // Do NOT show active member as a bar
+                if (idx === i) return;
+
+                if (idx < i) juryLeft.appendChild(btn);
+                else juryRight.appendChild(btn);
+            });
+        }
+
+        function setActiveJury(i) {
+            activeJuryIndex = i;
+            renderJuryActive(i);
+            placeJuryTabs(i);
+        }
+
+        // click handlers
+        juryTabs.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const idx = Number(btn.dataset.jury);
+                setActiveJury(idx);
+            });
+        });
+
+        // initial
+        setActiveJury(0);
     </script>
+
+
+
 </body>
 
 </html>

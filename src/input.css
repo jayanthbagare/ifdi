@@ -236,3 +236,18 @@ nav a.active-link,
   background: #404F30;
   display: inline-block;
 }
+
+/* Vertical text for the bars */
+.jury-vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    line-height: 1;
+    text-align: center;
+}
+
+/* input.css */
+@layer components {
+  .jury-tab {
+    @apply h-full w-[88px] flex-shrink-0 items-center justify-center px-2 lg:w-[110px] flex;
+  }
+}
