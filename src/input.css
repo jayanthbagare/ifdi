@@ -248,6 +248,44 @@ nav a.active-link,
 /* input.css */
 @layer components {
   .jury-tab {
-    @apply h-full w-[88px] flex-shrink-0 items-center justify-center px-2 lg:w-[110px] flex;
+    @apply h-full flex-shrink-0 items-center justify-center px-2 lg:w-[90px] flex;
   }
+}
+
+@layer components {
+  .board-tab {
+    @apply h-full flex-shrink-0 items-center justify-center px-2 lg:w-[90px] flex;
+  }
+}
+
+@layer components {
+  .advisory-tab {
+    @apply h-full flex-shrink-0 items-center justify-center px-2 lg:w-[90px] flex;
+  }
+}
+
+
+/* same “vertical name” treatment as jury */
+.advisory-tab {
+    width: 84px;
+    /* bar width */
+    min-width: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 10px;
+    border-right: 1px solid rgba(64, 79, 48, 0.15);
+}
+
+#advisory-right .advisory-tab {
+    border-right: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.advisory-vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    line-height: 1.05;
+    text-align: center;
+    white-space: nowrap;
 }
