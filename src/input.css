@@ -200,6 +200,31 @@ nav a.active-link,
   
 }
 
+@media (max-width: 640px) {
+  .tab-btn {
+    font-size: 13px;
+    padding: 10px 12px;
+    border-radius: 14px;
+  }
+
+  .tab-btn:not(.tab-btn--active) {
+    background: rgba(201, 219, 183, 0.35);
+    opacity: 0.9;
+  }
+
+  .tab-btn--active {
+    background: #404F30;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+  }
+}
+
+@media (max-width: 640px) {
+  .tab-btn {
+    border-radius: 12px;
+  }
+}
+
+
 /* Info cards inside tab content */
 .info-card {
   background: rgba(201, 219, 183, 0.4);
@@ -264,6 +289,53 @@ nav a.active-link,
   }
 }
 
+/* desktop bars stay vertical like you already have */
+.jury-tab { width: 84px; min-width: 84px; }
+
+/* mobile: full-width horizontal strips */
+@media (max-width: 640px) {
+  .jury-tab  {
+    width: 100%;
+    min-width: 100%;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .jury-vertical {
+    writing-mode: horizontal-tb;
+    transform: none;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* mobile: full-width horizontal strips (BOARD + ADVISORY) */
+@media (max-width: 640px) {
+  .board-tab,
+  .advisory-tab {
+    width: 100%;
+    min-width: 100%;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* optional: make them feel like list items */
+    padding: 0 12px;
+  }
+
+  /* advisory names must rotate to normal on mobile */
+  .advisory-vertical {
+    writing-mode: horizontal-tb;
+    transform: none;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    white-space: normal;
+  }
+}
 
 /* same “vertical name” treatment as jury */
 .advisory-tab {
@@ -288,4 +360,32 @@ nav a.active-link,
     line-height: 1.05;
     text-align: center;
     white-space: nowrap;
+}
+
+/* Advisory tabs: horizontal on mobile, vertical bars on desktop */
+.advisory-tab{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 14px;
+}
+
+.advisory-vertical{
+  writing-mode: horizontal-tb;
+  transform: none;
+  white-space: nowrap;
+}
+
+/* Desktop (lg+) becomes vertical bars */
+@media (min-width: 1024px){
+  .advisory-tab{
+    width: 84px;           /* match your board/jury bar width */
+    min-height: 600px;     /* match section height vibe */
+    padding: 0;
+  }
+  .advisory-vertical{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
 }

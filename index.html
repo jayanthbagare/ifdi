@@ -22,14 +22,21 @@
 
         <!-- HERO -->
         <section
-            class="relative z-50 overflow-hidden rounded-b-[120px] border border-[#000000] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
-            <img src="assets/index-photo.jpg" class="h-[720px] w-full object-cover sm:h-[820px]" alt="Hero image" />
+            class="relative z-60 overflow-hidden rounded-b-[35px] border border-[#000000] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
+            <img src="assets/index-photo.jpg" class="w-full object-cover sm:h-[820px]" alt="Hero image" />
 
             <!-- logo -->
-            <img src="assets/logo.svg" class="absolute right-6 top-6 h-20 w-20 sm:h-28 sm:w-28" alt="Logo" />
+            <img src="assets/ifdi-logo-white.png" class="
+    absolute
+    left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+    max-h-[80%] max-w-[80%]
+    sm:left-auto sm:top-6 sm:right-6 sm:translate-x-0 sm:translate-y-0
+    sm:h-28 sm:w-28
+  " alt="Logo" />
+
 
             <!-- title -->
-            <div class="hero-text absolute left-6 top-6 sm:left-9 sm:top-10 sm:right-[260px]">
+            <div class="hero-text hidden sm:block absolute left-6 top-6 sm:left-9 sm:top-10 sm:right-[260px]">
                 <h1 class="font-['Instrument_Sans'] text-[40px] font-bold tracking-wider text-[#F8F9F1] sm:text-6xl">
                     INTERNATIONAL <br />
                     FOUNDATION <br />
@@ -39,9 +46,11 @@
             </div>
 
 
+
             <!-- bottom line -->
             <div
-                class="hero-text absolute bottom-8 left-6 right-6 flex flex-col gap-3 sm:bottom-10 sm:left-9 sm:right-9 sm:flex-row sm:items-center sm:gap-6">
+                class="hero-text hidden sm:flex absolute bottom-8 left-6 right-6 flex-col gap-3 sm:bottom-10 sm:left-9 sm:right-9 sm:flex-row sm:items-center sm:gap-6">
+
                 <p class="font-['Montserrat'] text-sm font-medium text-[#F8F9F1] sm:text-lg">
                     Imagining an Inclusive Future
                 </p>
@@ -55,8 +64,32 @@
             </div>
         </section>
 
+        <!-- MOBILE HERO (Figma style) -->
+        <section class="relative z-50 sm:hidden">
+            <div class="rounded-b-[35px] bg-[#222625] shadow-[0_18px_60px_rgba(0,0,0,0.35)] overflow-hidden">
+
+                <!-- Title glass panel -->
+                <div class="relative py-8 px-4">
+                    <!-- frosted/gradient plate -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#465537]/35 via-[#222625]/60 to-[#222625]/90">
+                    </div>
+                    <div class="absolute inset-0 backdrop-blur-[2px]"></div>
+
+                    <div class="relative text-center">
+                        <h1
+                            class="font-['Instrument_Sans'] text-[40px] font-bold uppercase tracking-[0.08em] leading-[1.05] text-[#F8F9F1]">
+                            INTERNATIONAL<br />
+                            FOUNDATION<br />
+                            FOR DISABILITY INCLUSION
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- BODY -->
-        <section class="relative z-40 -mt-30 rounded-b-[71px] bg-[#222625] pt-40 overflow-hidden">
+        <section class="relative z-40 -mt-30 rounded-b-[35px] bg-[#222625] pt-40 overflow-hidden">
             <!-- glow -->
             <div
                 class="pointer-events-none absolute -right-40 -top-52 h-[590px] w-[1108px] rounded-full bg-[#404F30] blur-[250px]">
@@ -80,7 +113,7 @@
             <div class="mt-20 relative">
                 <!-- 1) TOP band -->
                 <a href="fellowship.html"
-                    class="relative z-30 -mt-8 block rounded-b-[45px] bg-[#404F30] px-6 py-12 sm:px-[99px]">
+                    class="relative z-30 -mt-8 block rounded-b-[35px] bg-[#404F30] px-6 py-12 sm:px-[99px]">
                     <div class="grid grid-cols-[auto_1fr_auto] items-center">
                         <span class="font-['Instrument_Sans'] text-xl font-bold text-[#EDEEE6]">
                             ABOUT THE FELLOWSHIP
@@ -97,7 +130,7 @@
 
                 <!-- 2) MIDDLE band -->
                 <a href="about.html"
-                    class="relative z-20 -mt-8 block rounded-b-[45px] bg-[#222625] px-6 pt-20 pb-12 sm:px-[99px] sm:-mt-10">
+                    class="relative z-20 -mt-8 block rounded-b-[35px] bg-[#222625] px-6 pt-20 pb-12 sm:px-[99px] sm:-mt-10">
                     <div class="grid grid-cols-[auto_1fr_auto] items-center">
                         <span class="font-['Instrument_Sans'] text-xl font-bold text-[#EDEEE6]">
                             ABOUT IFDI
@@ -114,7 +147,7 @@
 
                 <!-- 3) BOTTOM band -->
                 <a href="contact.html"
-                    class="relative z-10 -mt-8 block rounded-b-[45px] bg-[#404F30] px-6 pt-20 pb-12 sm:px-[99px] sm:-mt-10">
+                    class="relative z-10 -mt-8 block rounded-b-[35px] bg-[#404F30] px-6 pt-20 pb-12 sm:px-[99px] sm:-mt-10">
                     <div class="grid grid-cols-[auto_1fr_auto] items-center">
                         <span class="font-['Instrument_Sans'] text-xl font-bold text-[#EDEEE6]">
                             CONTACT US
@@ -134,7 +167,7 @@
         </section>
 
         <!-- APPLY NOW STRIP -->
-        <section class="bg-[#C9DBB7] z-5 -mt-15 rounded-b-[45px]">
+        <section class="bg-[#C9DBB7] z-5 -mt-15 rounded-b-[35px]">
             <div class="marquee pb-6 pt-21">
                 <div class="marquee__inner">
                     <div class="flex items-center gap-10">
@@ -266,14 +299,14 @@
                     <h3 class="text-sm font-bold text-[#EDEEE6] font-['Instrument_Sans']">USEFUL LINKS</h3>
                     <ul class="mt-4 space-y-2 text-xs text-[#EDEEE6] font-medium">
                         <li>Meet The Team</li>
-                        <li>About Us</li>
+                        <li><a href="about.html">About Us</a></li>
                         <li>Privacy Policy</li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="text-sm font-bold text-[#EDEEE6] font-['Instrument_Sans']">CONTACT US</h3>
-                    <p class="mt-4 text-xs text-[#EDEEE6]">contact@ifdi.ngo</p>
+                    <p class="mt-4 text-xs text-[#EDEEE6]"><a href="mailto:contact@ifdi.ngo">contact@ifdi.ngo</a></p>
                 </div>
 
                 <div class="flex flex-col items-center text-right">

@@ -75,27 +75,33 @@
         </header>
 
         <!-- HERO (full height) -->
-        <section class="relative z-40 -mt-10 overflow-hidden min-h-[100svh]">
+        <section class="relative z-40 -mt-10 overflow-hidden min-h-[100svh] rounded-b-[45px]">
             <!-- Full-height hero image -->
             <img src="assets/amir.jpg" alt="About IFDI hero" class="absolute inset-0 h-full w-full object-cover" />
 
             <!-- overlays -->
-            <!-- <div class="absolute inset-0 bg-[#222625]/35"></div> -->
-            <!-- <div class="absolute inset-0 bg-gradient-to-l from-[#404F30]/10 via-[#404F30]/60 to-[#404F30]"></div> -->
-            <div class="absolute inset-0 bg-gradient-to-l from-[#222625]/10 via-[#222625]/20 to-[#222625]"></div>
-
-            <!-- soft blur blob -->
+            <!-- Mobile: left-heavy dark wash so text reads; Desktop: keep your original gradient -->
+            <div class="absolute inset-0 sm:hidden bg-gradient-to-r from-[#222625]/90 via-[#222625]/55 to-transparent">
+            </div>
             <div
-                class="pointer-events-none absolute left-[154px] top-[324px] h-[866px] w-[1845px] rounded-full bg-[#222625] blur-[285px] opacity-70">
+                class="absolute inset-0 hidden sm:block bg-gradient-to-l from-[#222625]/10 via-[#222625]/20 to-[#222625]">
+            </div>
+
+            <!-- soft blur blob (desktop only) -->
+            <div
+                class="pointer-events-none absolute hidden sm:block left-[154px] top-[324px] h-[866px] w-[1845px] rounded-full bg-[#222625] blur-[285px] opacity-70">
             </div>
 
             <!-- Hero text -->
-            <div class="absolute left-6 top-[62%] max-w-[980px] -translate-y-1/2 sm:left-10">
-                <h1 class="font-['Instrument_Sans'] text-4xl font-bold uppercase tracking-wider sm:text-6xl">
+            <!-- Mobile: bottom-left like screenshot; Desktop: your original placement -->
+            <div
+                class="absolute left-6 right-6 bottom-24 sm:left-10 sm:top-[62%] sm:right-auto sm:max-w-[980px] sm:-translate-y-1/2">
+                <h1
+                    class="font-['Instrument_Sans'] text-5xl font-bold uppercase tracking-wider text-[#EDEEE6] sm:text-6xl">
                     ABOUT IFDI
                 </h1>
                 <p
-                    class="mt-4 max-w-[980px] font-['Montserrat'] text-base font-semibold tracking-tight text-[#EDEEE6] sm:text-lg">
+                    class="mt-4 max-w-[560px] font-['Montserrat'] text-base font-semibold tracking-tight text-[#EDEEE6] sm:max-w-[980px] sm:text-lg">
                     We work to advance disability inclusion through storytelling, research,
                     <br class="hidden sm:block" />
                     and action centering lived experience across the Global South and beyond.
@@ -104,13 +110,18 @@
         </section>
 
 
+
         <!-- STATEMENT BLOCK -->
-        <section class="relative z-30">
-            <div class="rounded-b-[45px] bg-[#404F30] px-6 py-12 sm:px-10 sm:py-14">
-                <div class="mx-auto max-w-[60%]">
-                    <div class="grid items-start gap-8 sm:grid-cols-[40px_1fr]">
-                        <div class="hidden sm:block h-full w-[2px] bg-[#EDEEE6] opacity-80"></div>
-                        <div class="font-['Instrument_Sans'] tracking-wide text-[#EDEEE6] sm:text-4xl">
+        <section class="relative z-30 -mt-10">
+            <div class="rounded-b-[45px] bg-[#404F30] px-6 pb-12 pt-22 sm:px-10 sm:pb-14 sm:pt-24">
+                <!-- Mobile: no max-width squeeze; Desktop: keep 60% -->
+                <div class="mx-auto max-w-none sm:max-w-[60%]">
+                    <div class="grid items-start gap-6 sm:gap-8 grid-cols-[18px_1fr] sm:grid-cols-[40px_1fr]">
+                        <!-- Show line on mobile too -->
+                        <div class="h-full w-[2px] bg-[#EDEEE6] opacity-80"></div>
+
+                        <div
+                            class="font-['Instrument_Sans'] tracking-wide text-[#EDEEE6] text-2xl leading-tight sm:text-2xl">
                             IFDI is a California-based nonprofit building on a decade of inclusion work in
                             India—bringing research, policy advocacy, and global partnerships to advance
                             disability inclusion worldwide.
@@ -120,130 +131,184 @@
             </div>
         </section>
 
+
         <!-- OUR STORY SECTION -->
         <section class="relative z-30">
-            <div class="relative mx-auto max-w-[80%] px-6 sm:px-10">
+            <div class="relative mx-auto max-w-[100%] px-6 sm:px-10">
 
                 <!-- container -->
                 <div class="relative overflow-hidden bg-[#222625] px-0 py-16">
 
-                    <!-- side strips -->
-                    <div class="pointer-events-none absolute inset-y-0 left-0 w-[64px] bg-[#C9DBB7]"></div>
-                    <div class="pointer-events-none absolute inset-y-0 right-0 w-[64px] bg-[#C9DBB7]"></div>
-
-                    <!-- repeated vertical “OUR STORY •” -->
-                    <div
-                        class="pointer-events-none absolute inset-y-0 left-0  flex w-[64px] items-center justify-center">
-                        <div class="flex flex-col items-center gap-20">
-                            <span
-                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">
-                                OUR STORY
-                            </span>
-                            <span class="h-1.5 w-1.5 rounded-full bg-[#404F30]"></span>
-                            <span
-                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">
-                                OUR STORY
-                            </span>
-                            <span class="h-1.5 w-1.5 rounded-full bg-[#404F30]"></span>
-                            <span
-                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">
-                                OUR STORY
-                            </span>
-                            <span class="h-1.5 w-1.5 rounded-full bg-[#404F30]"></span>
-                            <span
-                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">
-                                OUR STORY
-                            </span>
-                        </div>
-                    </div>
-
-                    <div
-                        class="pointer-events-none absolute inset-y-0 right-0 flex w-[64px] items-center justify-center">
-                        <div class="flex flex-col items-center gap-20">
-                            <span
-                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">
-                                OUR STORY
-                            </span>
-                            <span class="h-1.5 w-1.5 rounded-full bg-[#404F30]"></span>
-                            <span
-                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">
-                                OUR STORY
-                            </span>
-                            <span class="h-1.5 w-1.5 rounded-full bg-[#404F30]"></span>
-                            <span
-                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">
-                                OUR STORY
-                            </span>
-                            <span class="h-1.5 w-1.5 rounded-full bg-[#404F30]"></span>
-                            <span
-                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">
-                                OUR STORY
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- center story card -->
-                    <div class="relative mx-auto w-full max-w-[80%] px-6 sm:px-12">
-                        <div
-                            class="rounded-[45px] bg-[#404F30] px-6 py-10 shadow-[3px_4px_5.3px_0_rgba(0,0,0,0.25)] sm:px-12 sm:py-12">
+                    <!-- MOBILE: horizontal "OUR STORY •" strip -->
+                    <div class="sm:hidden -mt-6 mb-8">
+                        <div class="bg-[#C9DBB7] py-4 overflow-hidden">
                             <div
-                                class="space-y-8 font-['Montserrat'] text-base leading-6 text-[#F8F9F1] sm:text-[15px] sm:leading-6">
-                                <p>
-                                    International Foundation for Disability Inclusion (IFDI - USA) is a newly registered
-                                    501(c)(3) nonprofit
-                                    organization in California, established as an international extension of the India
-                                    Inclusion Foundation (IIF).
-                                    Taking inspiration from the work and learnings of IIF over the last decade, we have
-                                    set up the International
-                                    Foundation for Disability Inclusion to take this work to a global platform.
-                                </p>
-
-                                <p>
-                                    The journey of the India Inclusion Foundation began in 2012 with the India Inclusion
-                                    Summit (IIS). Early inclusion
-                                    efforts within the corporate sector laid the foundation for the annual IIS. Over the
-                                    past 12 years, IIS has grown
-                                    into a world-class, community-driven platform for conversations and action around
-                                    inclusion.
-                                </p>
-
-                                <p>
-                                    Building on this strong foundation, IIF has expanded into initiatives such as the
-                                    Inclusive Walkathon, Art for
-                                    Inclusion, the Inclusion Fellowship, and media advocacy campaigns. These programs
-                                    create platforms for persons
-                                    with disabilities to share their talent and stories, raise awareness, and push for a
-                                    deeper shift in how disability
-                                    is viewed and understood.
-                                </p>
-
-                                <p>
-                                    The establishment of IFDI USA marks an important step toward addressing these
-                                    challenges at a global level. The
-                                    organization's mission is to drive systemic change through research, policy
-                                    advocacy, and international collaboration.
-                                </p>
-
-                                <p>
-                                    IFDI will actively seek partnerships with universities, nonprofits, and corporates
-                                    to co-develop research, share
-                                    knowledge, and implement inclusive practices on the ground—building a global network
-                                    committed to advancing disability
-                                    inclusion.
-                                </p>
+                                class="flex gap-6 whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">
+                                <span>OUR STORY</span><span>•</span><span>OUR STORY</span><span>•</span><span>OUR
+                                    STORY</span><span>•</span><span>OUR STORY</span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- DESKTOP side strips -->
+                    <div class="pointer-events-none absolute inset-y-0 left-0 hidden sm:block w-[64px] bg-[#C9DBB7]">
+                    </div>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 hidden sm:block w-[64px] bg-[#C9DBB7]">
+                    </div>
+
+                    <!-- DESKTOP repeated vertical “OUR STORY •” -->
+                    <div
+                        class="pointer-events-none absolute inset-y-0 left-0 hidden sm:flex w-[64px] items-center justify-center">
+                        <div class="flex flex-col items-center gap-20">
+                            <span
+                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">OUR
+                                STORY</span>
+                            <span class="h-1.5 w-1.5 rounded-full bg-[#404F30]"></span>
+                            <span
+                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">OUR
+                                STORY</span>
+                            <span class="h-1.5 w-1.5 rounded-full bg-[#404F30]"></span>
+                            <span
+                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">OUR
+                                STORY</span>
+                            <span class="h-1.5 w-1.5 rounded-full bg-[#404F30]"></span>
+                            <span
+                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">OUR
+                                STORY</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="pointer-events-none absolute inset-y-0 right-0 hidden sm:flex w-[64px] items-center justify-center">
+                        <div class="flex flex-col items-center gap-20">
+                            <span
+                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">OUR
+                                STORY</span>
+                            <span class="h-1.5 w-1.5 rounded-full bg-[#404F30]"></span>
+                            <span
+                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">OUR
+                                STORY</span>
+                            <span class="h-1.5 w-1.5 rounded-full bg-[#404F30]"></span>
+                            <span
+                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">OUR
+                                STORY</span>
+                            <span class="h-1.5 w-1.5 rounded-full bg-[#404F30]"></span>
+                            <span
+                                class="rotate-[-90deg] whitespace-nowrap font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#404F30]">OUR
+                                STORY</span>
+                        </div>
+                    </div>
+                    <!-- center story card -->
+                    <div class="relative mx-auto w-full max-w-[92%] sm:max-w-[80%] px-0 sm:px-12">
+                        <div
+                            class="rounded-[45px] bg-[#404F30] px-6 py-10 shadow-[3px_4px_5.3px_0_rgba(0,0,0,0.25)] sm:px-12 sm:py-12">
+
+                            <div
+                                class="space-y-8 font-['Montserrat'] text-[12px] leading-6 text-[#F8F9F1] sm:text-[16px] sm:leading-6">
+
+                                <!-- ALWAYS VISIBLE -->
+                                <p>
+                                    International Foundation for Disability Inclusion (IFDI - USA) is a newly registered
+                                    501(c)(3) nonprofit organization in California, established as an international
+                                    extension of the India Inclusion Foundation (IIF). Taking inspiration from the work
+                                    and learnings of IIF over the last decade, we have set up the International
+                                    Foundation for Disability Inclusion to take this work to a global platform. For over
+                                    a decade, IIF has been at the forefront of advocating for the inclusion of persons
+                                    with disabilities (PWD) in India. Its work has spanned creating awareness,
+                                    organizing impactful programs, and building strong collaborative networks with
+                                    corporates, nonprofits, and government bodies. Recognizing the need to scale this
+                                    impact and respond to deeper systemic challenges, IIF has launched IFDI - USA to
+                                    focus on research, policy advocacy, and international partnerships that can drive
+                                    long-term, meaningful change.
+                                </p>
+
+                                <!-- HIDDEN CONTENT -->
+                                <div id="story-more" class="hidden space-y-8 transition-all duration-300">
+                                    <p>
+                                        The journey of the India Inclusion Foundation began in 2012 with the India
+                                        Inclusion Summit (IIS). Early inclusion efforts within the corporate sector laid
+                                        the foundation for the annual IIS. Over the past 12 years, IIS has grown into a
+                                        world-class, community-driven platform for conversations and action around
+                                        inclusion. Through this platform, IIF has reached more than 18 million online
+                                        viewers and engaged over 10,000 in-person participants, bringing together
+                                        policymakers, corporate leaders, civil society organizations, and unsung heroes
+                                        working in the disability space.
+                                    </p>
+
+                                    <p>
+                                        Building on this strong foundation, IIF has expanded into initiatives such as
+                                        the Inclusive Walkathon, Art for Inclusion, the Inclusion Fellowship, and media
+                                        advocacy campaigns. These programs create platforms for persons with
+                                        disabilities to share their talent and stories, raise awareness, and push for a
+                                        deeper shift in how disability is viewed and understood. Despite these efforts,
+                                        major challenges remain, especially in the implementation of the Rights of
+                                        Persons with Disabilities Act (RPWDA), 2016. Inaccessible infrastructure, gaps
+                                        in inclusive education, and limited employment opportunities continue to affect
+                                        millions of people across the country.
+                                    </p>
+
+                                    <p>
+                                        The establishment of IFDI USA marks an important step toward addressing these
+                                        challenges at a global level. The organization's mission is to drive systemic
+                                        change through research, policy advocacy, and international collaboration. By
+                                        learning from global best practices and building cross-border partnerships, IFDI
+                                        aims to strengthen disability inclusion efforts and develop scalable models that
+                                        can be adapted in different social and policy contexts.
+                                    </p>
+
+                                    <p>
+                                        IFDI's primary focus will be on research and knowledge creation to better
+                                        understand the everyday barriers faced by persons with disabilities. The
+                                        foundation plans to initiate studies on disability-related policies, social
+                                        attitudes, and access to education and employment. These studies will lead to
+                                        practical recommendations for policymakers, corporate leaders, and community
+                                        organizations. Alongside research, IFDI will work to amplify the voices of
+                                        persons with disabilities through advocacy, storytelling initiatives, and
+                                        digital platforms, shifting the narrative from sympathy to empathy, dignity, and
+                                        rights.
+                                    </p>
+                                    <p>
+                                        IFDI will actively seek partnerships with universities, nonprofits, and
+                                        corporates to co-develop research, share knowledge, and implement inclusive
+                                        practices on the ground. Through these collaborations, the foundation aims to
+                                        build a global network of institutions and individuals committed to advancing
+                                        disability inclusion. IFDI also plans to convene international summits and
+                                        conferences that bring together thought leaders, practitioners, and persons with
+                                        disabilities to share experiences, showcase successful models, and inspire
+                                        collective action.
+                                    </p>
+                                </div>
+
+                                <!-- READ MORE BUTTON -->
+                                <div class="flex justify-center pt-4">
+                                    <button id="story-toggle"
+                                        class="rounded-full bg-[#C9DBB7] px-6 py-3 font-['Montserrat'] text-sm font-semibold text-[#404F30] shadow-md">
+                                        READ MORE
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
         </section>
 
 
+
         <!-- OUR ETHOS -->
-        <section class="relative z-30">
-            <div class="rounded-b-[45px] bg-[#404F30] min-h-[520px] flex items-center px-6 py-14 sm:px-10">
+        <section class="relative">
+            <!-- Centered heading -->
+            <div
+                class="rounded-[45px] bg-[#404F30] min-h-[520px] flex flex-col justify-center px-6 py-14 pb-24 sm:px-10 sm:pb-28">
+
                 <div class="mx-auto max-w-[1120px]">
+                    <h2
+                        class="mb-8 text-center font-['Instrument_Sans'] text-4xl font-bold tracking-wide text-[#EDEEE6] sm:mb-10 sm:text-4xl">
+                        Our Ethos
+                    </h2>
                     <div class="grid gap-5 sm:grid-cols-4">
                         <!-- 1 -->
                         <div
@@ -289,7 +354,7 @@
         </section>
 
         <!-- LEADERSHIP MARQUEE (infinite) -->
-        <section class="bg-[#C9DBB7] z-25 -mt-10">
+        <section class="bg-[#C9DBB7] -mt-10">
             <div class="relative overflow-hidden pb-3 pt-13">
                 <div
                     class="marquee__inner flex w-max items-center gap-8 font-['Instrument_Sans'] font-semibold text-[#404F30]">
@@ -305,7 +370,7 @@
             </div>
         </section>
 
-        <!-- BOARD MEMBERS (Cascading Columns — same system as Jury) -->
+        <!-- BOARD MEMBERS (Cascading Columns — responsive like Jury) -->
         <section class="relative w-[90%] mx-auto">
 
             <div class="overflow-hidden">
@@ -319,11 +384,16 @@
 
                 <div class="h-14 bg-[#5E7249]"></div>
 
-                <div class="relative min-h-[600px] grid grid-cols-[auto_1fr_auto]">
+                <!-- DESKTOP: 3 cols (left/content/right). MOBILE: stacked (top/content/bottom) -->
+                <div class="relative min-h-[600px] grid grid-cols-1 lg:grid-cols-[auto_1fr_auto]">
 
-                    <!-- LEFT STACK -->
+                    <!-- MOBILE TOP STACK (hidden on desktop) -->
+                    <div id="board-top" class="lg:hidden flex flex-col bg-[#EDEEE6] border-b border-[#404F30]/20">
+                    </div>
+
+                    <!-- DESKTOP LEFT STACK (hidden on mobile) -->
                     <div id="board-left"
-                        class="relative flex flex-row flex-nowrap items-stretch bg-[#EDEEE6] border-r border-[#404F30]/20">
+                        class="hidden lg:flex relative flex-row flex-nowrap items-stretch bg-[#EDEEE6] border-r border-[#404F30]/20">
                     </div>
 
                     <!-- ACTIVE CONTENT -->
@@ -340,7 +410,7 @@
                                     </div>
                                     <div class="px-6 pb-7">
                                         <div id="board-name"
-                                            class="font-['Instrument_Sans'] text-xl font-bold uppercase text-[#404F30]">
+                                            class="font-['Instrument_Sans'] text-xl font-bold uppercase text-[#404F30] break-words">
                                             DEEPALI KULKARNI
                                         </div>
                                     </div>
@@ -357,9 +427,13 @@
                         </div>
                     </div>
 
-                    <!-- RIGHT STACK -->
+                    <!-- DESKTOP RIGHT STACK (hidden on mobile) -->
                     <div id="board-right"
-                        class="relative flex flex-row flex-nowrap items-stretch bg-[#404F30] border-l border-[#000000]/10">
+                        class="hidden lg:flex relative flex-row flex-nowrap items-stretch bg-[#404F30] border-l border-[#000000]/10">
+                    </div>
+
+                    <!-- MOBILE BOTTOM STACK (hidden on desktop) -->
+                    <div id="board-bottom" class="lg:hidden flex flex-col bg-[#404F30] border-t border-[#000000]/10">
                     </div>
 
                 </div>
@@ -410,9 +484,11 @@
 
 
 
-        <!-- ADVISORY BOARD (Cascading Columns) -->
-        <section class="relative w-[90%] mx-auto">
+
+        <!-- ADVISORY BOARD (Cascading Columns — responsive like Jury/Board) -->
+        <section class="relative w-[90%] mx-auto mt-16">
             <div class="overflow-hidden">
+
                 <!-- TITLE -->
                 <div class="px-8 py-10 lg:px-12 justify-center flex">
                     <h2
@@ -423,63 +499,67 @@
 
                 <div class="h-14 bg-[#5E7249]"></div>
 
-                <!-- layout -->
-                <div class="relative min-h-[400px] grid grid-cols-[auto_1fr_auto]">
+                <!-- DESKTOP: 3 cols (left/content/right). MOBILE: stacked (top/content/bottom) -->
+                <div class="relative min-h-[600px] grid grid-cols-1 lg:grid-cols-[auto_1fr_auto]">
 
-                    <!-- LEFT CASCADE BARS -->
+                    <!-- MOBILE TOP STACK (hidden on desktop) -->
+                    <div id="advisory-top" class="lg:hidden flex flex-col bg-[#EDEEE6] border-b border-[#404F30]/20">
+                    </div>
+
+                    <!-- DESKTOP LEFT STACK (hidden on mobile) -->
                     <div id="advisory-left"
-                        class="relative flex flex-row flex-nowrap items-stretch bg-[#EDEEE6] border-r border-[#404F30]/20">
-                        <!-- JS inserts buttons -->
+                        class="hidden lg:flex relative flex-row flex-nowrap items-stretch bg-[#EDEEE6] border-r border-[#404F30]/20">
                     </div>
 
                     <!-- ACTIVE CONTENT -->
                     <div class="relative bg-[#EDEEE6]">
                         <div class="grid grid-cols-1 lg:grid-cols-[360px_1fr]">
 
-                            <!-- Active card -->
+                            <!-- Card -->
                             <div class="p-6 lg:p-10">
                                 <div
                                     class="rounded-[28px] bg-[#FFFFFF] shadow-[0_10px_30px_rgba(0,0,0,0.2)] border border-[#404F30]/20">
                                     <div class="p-5">
-                                        <img id="advisory-photo" src="assets/advisory_ferose.jpg"
-                                            alt="Advisory member photo"
-                                            class="h-[280px] w-full rounded-[22px] object-cover" />
+                                        <img id="advisory-photo" class="h-[280px] w-full rounded-[22px] object-cover"
+                                            src="assets/advisory_ferose.png" alt="Advisory member photo" />
                                     </div>
                                     <div class="px-6 pb-7">
                                         <div id="advisory-name"
-                                            class="font-['Instrument_Sans'] text-xl font-bold uppercase text-[#404F30] leading-tight break-words">
-                                            FERose VR
+                                            class="font-['Instrument_Sans'] text-xl font-bold uppercase text-[#404F30] break-words">
+                                            FEROSE VR
                                         </div>
                                         <div id="advisory-title"
                                             class="hidden mt-2 font-['Montserrat'] text-base italic text-[#404F30]">
-                                            (Title here…)
+                                            (Title here)
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Active bio -->
+                            <!-- Bio -->
                             <div class="px-6 pb-10 pt-2 lg:px-10 lg:py-10">
                                 <p id="advisory-bio"
                                     class="font-['Montserrat'] text-base leading-7 text-[#404F30] lg:text-lg lg:leading-8">
-                                    (Bio here…)
                                 </p>
                             </div>
 
                         </div>
                     </div>
 
-                    <!-- RIGHT CASCADE BARS -->
+                    <!-- DESKTOP RIGHT STACK (hidden on mobile) -->
                     <div id="advisory-right"
-                        class="relative flex flex-row flex-nowrap items-stretch bg-[#404F30] border-l border-[#000000]/10">
-                        <!-- JS inserts buttons -->
+                        class="hidden lg:flex relative flex-row flex-nowrap items-stretch bg-[#404F30] border-l border-[#000000]/10">
+                    </div>
+
+                    <!-- MOBILE BOTTOM STACK (hidden on desktop) -->
+                    <div id="advisory-bottom" class="lg:hidden flex flex-col bg-[#404F30] border-t border-[#000000]/10">
                     </div>
 
                 </div>
 
-                <!-- bottom band -->
                 <div class="h-16 bg-[#404F30]"></div>
             </div>
+
 
             <!-- Hidden master list of ALL tabs (JS re-parents them to left/right) -->
             <div id="advisory-tabs-master" class="hidden">
@@ -544,14 +624,14 @@
                     <h3 class="text-sm font-bold text-[#EDEEE6] font-['Instrument_Sans']">USEFUL LINKS</h3>
                     <ul class="mt-4 space-y-2 text-xs text-[#EDEEE6] font-medium">
                         <li>Meet The Team</li>
-                        <li>About Us</li>
+                        <li><a href="about.html">About Us</a></li>
                         <li>Privacy Policy</li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="text-sm font-bold text-[#EDEEE6] font-['Instrument_Sans']">CONTACT US</h3>
-                    <p class="mt-4 text-xs text-[#EDEEE6]">contact@ifdi.ngo</p>
+                    <p class="mt-4 text-xs text-[#EDEEE6]"><a href="mailto:contact@ifdi.ngo">contact@ifdi.ngo</a></p>
                 </div>
 
                 <div class="flex flex-col items-center text-right">
@@ -703,6 +783,9 @@
 
         const boardLeft = document.getElementById("board-left");
         const boardRight = document.getElementById("board-right");
+        const boardTop = document.getElementById("board-top");
+        const boardBottom = document.getElementById("board-bottom");
+
         const boardTabsMaster = document.getElementById("board-tabs-master");
 
         const boardPhoto = document.getElementById("board-photo");
@@ -721,15 +804,27 @@
         }
 
         function placeBoardTabs(i) {
-            boardLeft.innerHTML = "";
-            boardRight.innerHTML = "";
+            // clear all containers
+            if (boardLeft) boardLeft.innerHTML = "";
+            if (boardRight) boardRight.innerHTML = "";
+            if (boardTop) boardTop.innerHTML = "";
+            if (boardBottom) boardBottom.innerHTML = "";
+
+            const isMobile = window.matchMedia("(max-width: 1023px)").matches; // < lg
 
             boardTabs.forEach(btn => {
                 const idx = Number(btn.dataset.board);
                 if (idx === i) return;
 
-                if (idx < i) boardLeft.appendChild(btn);
-                else boardRight.appendChild(btn);
+                if (isMobile) {
+                    // MOBILE: top gets [0..i-1], bottom gets [i+1..end]
+                    if (idx < i) boardTop.appendChild(btn);
+                    else boardBottom.appendChild(btn);
+                } else {
+                    // DESKTOP: left/right
+                    if (idx < i) boardLeft.appendChild(btn);
+                    else boardRight.appendChild(btn);
+                }
             });
         }
 
@@ -745,7 +840,11 @@
             });
         });
 
+        // reflow when breakpoint changes (rotate phone / resize)
+        window.addEventListener("resize", () => placeBoardTabs(activeBoardIndex));
+
         setActiveBoard(0);
+
 
         // --- Advisory data (fill in real titles/photos/bios) ---
         const advisoryData = [
@@ -775,16 +874,21 @@
             }
         ];
 
+        // --- ADVISORY BOARD wiring (responsive: desktop left/right, mobile top/bottom) ---
         const advisoryLeft = document.getElementById("advisory-left");
         const advisoryRight = document.getElementById("advisory-right");
-        const advisoryTabsMaster = document.getElementById("advisory-tabs-master");
+        const advisoryTop = document.getElementById("advisory-top");
+        const advisoryBottom = document.getElementById("advisory-bottom");
 
+        const advisoryTabsMaster = document.getElementById("advisory-tabs-master");
         const advisoryPhoto = document.getElementById("advisory-photo");
         const advisoryName = document.getElementById("advisory-name");
         const advisoryTitle = document.getElementById("advisory-title");
         const advisoryBio = document.getElementById("advisory-bio");
 
-        const advisoryTabs = Array.from(advisoryTabsMaster.querySelectorAll(".advisory-tab"));
+        const advisoryTabs = advisoryTabsMaster
+            ? Array.from(advisoryTabsMaster.querySelectorAll(".advisory-tab"))
+            : [];
 
         let activeAdvisoryIndex = 0;
 
@@ -792,27 +896,35 @@
             const d = advisoryData[i];
             advisoryPhoto.src = d.photo;
             advisoryPhoto.alt = d.name;
-
             advisoryName.textContent = d.name.toUpperCase();
             advisoryTitle.textContent = d.title;
             advisoryBio.textContent = d.bio;
         }
 
         function placeAdvisoryTabs(i) {
-            advisoryLeft.innerHTML = "";
-            advisoryRight.innerHTML = "";
+            const isMobile = window.matchMedia("(max-width: 1023px)").matches; // < lg
+
+            if (advisoryLeft) advisoryLeft.innerHTML = "";
+            if (advisoryRight) advisoryRight.innerHTML = "";
+            if (advisoryTop) advisoryTop.innerHTML = "";
+            if (advisoryBottom) advisoryBottom.innerHTML = "";
 
             advisoryTabs.forEach(btn => {
                 const idx = Number(btn.dataset.advisory);
 
-                // optional “inactive” dim
+                // optional dim
                 btn.classList.toggle("opacity-80", idx !== i);
 
-                // hide active bar
+                // hide active
                 if (idx === i) return;
 
-                if (idx < i) advisoryLeft.appendChild(btn);
-                else advisoryRight.appendChild(btn);
+                if (isMobile) {
+                    if (idx < i) advisoryTop.appendChild(btn);
+                    else advisoryBottom.appendChild(btn);
+                } else {
+                    if (idx < i) advisoryLeft.appendChild(btn);
+                    else advisoryRight.appendChild(btn);
+                }
             });
         }
 
@@ -825,15 +937,28 @@
         // click handlers
         advisoryTabs.forEach(btn => {
             btn.addEventListener("click", () => {
-                const idx = Number(btn.dataset.advisory);
-                setActiveAdvisory(idx);
+                setActiveAdvisory(Number(btn.dataset.advisory));
             });
         });
 
-        // ✅ Default open tab starts from the RIGHT:
-        // pick the last person (right-most) as active on load
+        // reflow on resize
+        window.addEventListener("resize", () => placeAdvisoryTabs(activeAdvisoryIndex));
+
+        // ✅ default open tab starts from RIGHT (last item)
         setActiveAdvisory(advisoryData.length - 1);
+
+
+        const toggleBtn = document.getElementById("story-toggle");
+        const moreContent = document.getElementById("story-more");
+
+        toggleBtn.addEventListener("click", () => {
+            const isHidden = moreContent.classList.contains("hidden");
+
+            moreContent.classList.toggle("hidden");
+            toggleBtn.textContent = isHidden ? "READ LESS" : "READ MORE";
+        });
     </script>
+
 
 </body>
 
