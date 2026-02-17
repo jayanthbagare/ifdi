@@ -15,10 +15,15 @@
 
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
 </head>
 
 <body class="bg-[#222625] text-[#EDEEE6]">
-    <div class="mx-auto max-w-[100%] sm:px-6">
+    <div class="mx-auto max-w-[100%]">
 
         <!-- NAV PILL -->
         <header class="relative z-50">
@@ -79,7 +84,7 @@
         </header>
 
         <!-- HERO -->
-        <section class="relative z-40 -mt-10 overflow-hidden rounded-b-[45px]">
+        <section class="relative z-40 overflow-hidden">
 
             <!-- ===================== -->
             <!-- MOBILE HERO (Figma) -->
@@ -109,11 +114,8 @@
                 </div>
 
                 <!-- green card -->
-                <div class="bg-[#404F30] px-5 py-10">
-                    <div
-                        class="rounded-[45px] bg-[#465537]/70 px-6 py-10 text-center shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
-
-                        <p class="font-['Montserrat'] text-base leading-7 text-[#EDEEE6]/90">
+                <div class="px-5 py-10 bg-[#465537]/70 px-6 py-10 text-center">
+                        <p class="font-['Montserrat'] text-[14px] leading-7 text-[#EDEEE6]/90">
                             A six-month journalism fellowship supporting rights-based, long-form reporting on disability
                             in
                             India—shifting narratives from charity to dignity, justice, and accountability.
@@ -128,7 +130,6 @@
                         <div class="mt-6 font-['Montserrat'] text-sm text-[#EDEEE6]/80">
                             Deadline: 15 Feb 2026
                         </div>
-                    </div>
                 </div>
             </div>
 
@@ -136,15 +137,18 @@
             <!-- DESKTOP HERO (yours) -->
             <!-- ===================== -->
             <div class="relative hidden sm:block">
+                <!-- dark overlay + left-heavy gradient like screenshot -->
+                <div class="absolute inset-0 bg-gradient-to-r from-[#222625]/80 via-[#222625]/40 to-transparent">
+                </div>
                 <!-- background image -->
-                <img src="assets/taba-kalakar.jpg" alt="Hero image" class="h-[640px] w-full object-cover" />
+                <img src="assets/taba-kalakar.jpg" alt="Hero image" class="h-full object-cover" />
 
                 <!-- overlays -->
                 <div class="absolute inset-0 bg-[#222625]/30"></div>
 
                 <!-- content -->
-                <div class="absolute inset-0">
-                    <div class="px-6 pt-28 sm:px-9 sm:pt-32">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="px-6 sm:px-9 w-full">
                         <h1
                             class="hero-text font-['Instrument_Sans'] text-4xl font-bold uppercase tracking-wider text-[#EDEEE6] sm:text-6xl">
                             ABOUT THE<br />FELLOWSHIP
@@ -167,12 +171,12 @@
                             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform"
                                 target="_blank">
 
-                                <span class="inline-flex items-center rounded-[33.88px] bg-[#C9DBB7] px-6 py-3 font-['Montserrat'] text-sm font-bold text-[#000000]
+                                <span class="inline-flex items-center rounded-[33.88px] bg-[#D9D9D9] px-6 py-3 font-['Montserrat'] text-sm font-bold text-[#000000]
                                 shadow-[2.34px_3.12px_4.13px_rgba(0,0,0,0.25)]">
                                     APPLICATIONS OPEN
                                 </span>
                             </a>
-                            <span class="inline-flex items-center rounded-[33.88px] bg-[#C9DBB7] px-6 py-3 font-['Montserrat'] text-sm font-medium text-[#000000]
+                            <span class="inline-flex items-center rounded-[33.88px] bg-[#D9D9D9] px-6 py-3 font-['Montserrat'] text-sm font-medium text-[#000000]
                         shadow-[2.34px_3.12px_4.13px_rgba(0,0,0,0.25)]">
                                 Deadline: 15 Feb 2026
                             </span>
@@ -184,7 +188,7 @@
         </section>
 
         <!-- WHAT IS THIS FELLOWSHIP? -->
-        <section class="relative z-30 -mt-10 rounded-b-[45px] bg-[#404F30] pb-16 pt-20 overflow-hidden">
+        <section class="relative z-25 rounded-b-[45px] bg-[#404F30] pb-16 pt-20 overflow-hidden">
             <!-- subtle glow -->
             <div
                 class="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[900px] rounded-full bg-[#222625] blur-[260px]">
@@ -194,7 +198,7 @@
             <!-- MOBILE (Figma) -->
             <!-- ===================== -->
             <div class="relative px-6 sm:hidden">
-                <h2 class="font-['Instrument_Sans'] text-4xl font-semibold tracking-wide text-[#EDEEE6]">
+                <h2 class="font-['Instrument_Sans'] text-[20px] font-semibold tracking-wide text-[#EDEEE6]">
                     What is this fellowship?
                 </h2>
 
@@ -204,7 +208,7 @@
                         <div class="w-px bg-[#FFFFFF]"></div>
                     </div>
 
-                    <div class="font-['Montserrat'] text-base leading-7 text-[#EDEEE6]/90">
+                    <div class="font-['Montserrat'] text-[12px] leading-7 text-[#EDEEE6]/90">
                         <p>
                             The Journalism Fellowship on Disability Inclusion is a six-month programme by the
                             International Foundation
@@ -212,7 +216,7 @@
                             journalism on disability in India.
                         </p>
 
-                        <p class="mt-6">
+                        <p class="mt-3">
                             The fellowship is designed to shift how disability is reported—from charity and welfare
                             narratives to dignity,
                             justice, rights, and accountability. Fellows will investigate systemic barriers faced by
@@ -220,7 +224,7 @@
                             sectors such as education, employment, healthcare, social protection, and access to justice.
                         </p>
 
-                        <p class="mt-6">
+                        <p class="mt-3">
                             Each cohort supports up to 10 journalists, who receive financial support, mentorship,
                             editorial guidance, and
                             capacity-building to produce three original, long-form investigative stories in English.
@@ -233,10 +237,10 @@
                     <div
                         class="rounded-[24px] bg-[rgba(217,217,217,0.36)] px-6 py-5 shadow-[3.197px_4.262px_5.648px_0_rgba(0,0,0,0.25)]">
                         <div
-                            class="font-['Instrument_Sans'] text-xs font-semibold tracking-wide text-[#EDEEE6]/70 uppercase">
+                            class="font-['Instrument_Sans'] text-[8px] font-semibold tracking-wide text-[#EDEEE6]/70 uppercase">
                             DURATION
                         </div>
-                        <div class="mt-2 font-['Montserrat'] text-xl font-semibold text-[#EDEEE6]">
+                        <div class="mt-2 font-['Montserrat'] text-[12.5px] font-semibold text-[#EDEEE6]">
                             6 months
                         </div>
                     </div>
@@ -244,10 +248,10 @@
                     <div
                         class="rounded-[24px] bg-[rgba(217,217,217,0.36)] px-6 py-5 shadow-[3.197px_4.262px_5.648px_0_rgba(0,0,0,0.25)]">
                         <div
-                            class="font-['Instrument_Sans'] text-xs font-semibold tracking-wide text-[#EDEEE6]/70 uppercase">
+                            class="font-['Instrument_Sans'] text-[8px] font-semibold tracking-wide text-[#EDEEE6]/70 uppercase">
                             FELLOWS
                         </div>
-                        <div class="mt-2 font-['Montserrat'] text-xl font-semibold text-[#EDEEE6]">
+                        <div class="mt-2 font-['Montserrat'] text-[12.5px] font-semibold text-[#EDEEE6]">
                             Up to 10
                         </div>
                     </div>
@@ -255,10 +259,10 @@
                     <div
                         class="rounded-[24px] bg-[rgba(217,217,217,0.36)] px-6 py-5 shadow-[3.197px_4.262px_5.648px_0_rgba(0,0,0,0.25)]">
                         <div
-                            class="font-['Instrument_Sans'] text-xs font-semibold tracking-wide text-[#EDEEE6]/70 uppercase">
+                            class="font-['Instrument_Sans'] text-[8px] font-semibold tracking-wide text-[#EDEEE6]/70 uppercase">
                             GRANT
                         </div>
-                        <div class="mt-2 font-['Montserrat'] text-xl font-semibold text-[#EDEEE6]">
+                        <div class="mt-2 font-['Montserrat'] text-[12.5px] font-semibold text-[#EDEEE6]">
                             ₹2,00,000
                         </div>
                     </div>
@@ -266,10 +270,10 @@
                     <div
                         class="rounded-[24px] bg-[rgba(217,217,217,0.36)] px-6 py-5 shadow-[3.197px_4.262px_5.648px_0_rgba(0,0,0,0.25)]">
                         <div
-                            class="font-['Instrument_Sans'] text-xs font-semibold tracking-wide text-[#EDEEE6]/70 uppercase">
+                            class="font-['Instrument_Sans'] text-[8px] font-semibold tracking-wide text-[#EDEEE6]/70 uppercase">
                             OUTPUT
                         </div>
-                        <div class="mt-2 font-['Montserrat'] text-xl font-semibold text-[#EDEEE6]">
+                        <div class="mt-2 font-['Montserrat'] text-[12.5px] font-semibold text-[#EDEEE6]">
                             3 long-form stories
                         </div>
                     </div>
@@ -277,10 +281,10 @@
                     <div
                         class="rounded-[24px] bg-[rgba(217,217,217,0.36)] px-6 py-5 shadow-[3.197px_4.262px_5.648px_0_rgba(0,0,0,0.25)]">
                         <div
-                            class="font-['Instrument_Sans'] text-xs font-semibold tracking-wide text-[#EDEEE6]/70 uppercase">
+                            class="font-['Instrument_Sans'] text-[8px] font-semibold tracking-wide text-[#EDEEE6]/70 uppercase">
                             LANGUAGE
                         </div>
-                        <div class="mt-2 font-['Montserrat'] text-xl font-semibold text-[#EDEEE6]">
+                        <div class="mt-2 font-['Montserrat'] text-[12.5px] font-semibold text-[#EDEEE6]">
                             English (text-based)
                         </div>
                     </div>
@@ -288,10 +292,10 @@
                     <div
                         class="rounded-[24px] bg-[rgba(217,217,217,0.36)] px-6 py-5 shadow-[3.197px_4.262px_5.648px_0_rgba(0,0,0,0.25)]">
                         <div
-                            class="font-['Instrument_Sans'] text-xs font-semibold tracking-wide text-[#EDEEE6]/70 uppercase">
+                            class="font-['Instrument_Sans'] text-[8px] font-semibold tracking-wide text-[#EDEEE6]/70 uppercase">
                             FORMAT
                         </div>
-                        <div class="mt-2 font-['Montserrat'] text-xl font-semibold text-[#EDEEE6]">
+                        <div class="mt-2 font-['Montserrat'] text-[12.5px] font-semibold text-[#EDEEE6]">
                             Print or Digital
                         </div>
                     </div>
@@ -301,8 +305,8 @@
             <!-- ===================== -->
             <!-- DESKTOP (unchanged) -->
             <!-- ===================== -->
-            <div class="relative hidden sm:block px-6 sm:px-[108px]">
-                <h2 class="font-['Instrument_Sans'] text-2xl font-semibold tracking-wide text-[#EDEEE6]">
+            <div class="relative hidden sm:block px-10 sm:max-w-[80%] sm:mx-auto">
+                <h2 class="font-['Instrument_Sans'] text-[26px] font-semibold tracking-wide text-[#EDEEE6]">
                     What is this fellowship?
                 </h2>
 
@@ -334,7 +338,7 @@
                 </div>
 
                 <!-- 6 stat pills -->
-                <div class="mt-10 grid gap-4 sm:grid-cols-3">
+                <div class="mt-10 grid gap-10 sm:grid-cols-3">
                     <!-- row 1 -->
                     <div class="stat-pill">
                         <div class="stat-kicker">DURATION</div>
@@ -368,14 +372,14 @@
 
 
         <!-- ELIGIBILITY CRITERIA STRIP -->
-        <section class="relative z-20 mt-16">
+        <section class="relative z-20">
             <!-- Centered heading -->
             <h2
-                class="mb-8 text-center font-['Instrument_Sans'] text-xl font-bold tracking-wide text-[#EDEEE6] sm:mb-10 sm:text-4xl">
+                class="my-8 text-center font-['Instrument_Sans'] text-xl font-bold tracking-wide text-[#EDEEE6] sm:mb-10 sm:text-4xl">
                 IFDI Fellowship Eligibility Criteria
             </h2>
 
-            <div class="flex justify-center">
+            <div class="flex justify-center max-w-[90%] mx-auto">
                 <!-- main strip -->
                 <div
                     class="w-[90%] sm:w-full overflow-hidden rounded-[30px] sm:rounded-[45px] bg-[#404F30] shadow-[0_12px_40px_rgba(0,0,0,0.35)]">
@@ -642,7 +646,7 @@
         <!-- TABS HEADER + CONTENT PANEL (mobile matches figma) -->
         <section class="mt-12">
             <!-- Outer shell (rounded container like screenshot) -->
-            <div class="relative overflow-hidden rounded-[28px] bg-[#404F30] shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
+            <div class="relative overflow-hidden rounded-[28px] shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
 
                 <!-- Tabs header band -->
                 <div class="sm:px-0 sm:pt-0">
@@ -676,7 +680,7 @@
                 </div>
 
                 <!-- Content panel -->
-                <div class="px-4 pb-6 pt-5 sm:rounded-b-[38px] sm:px-10 sm:py-10 sm:min-h-[520px]">
+                <div class="px-4 pb-6 pt-5 bg-[#404F30] sm:rounded-b-[38px] sm:px-10 sm:py-10 sm:min-h-[420px]">
                     <div class="w-full sm:max-w-[80%] sm:mx-auto">
 
                         <!-- GAIN -->
@@ -800,7 +804,7 @@
 
 
         <!-- MEET THE JURY TICKER -->
-        <section class="mt-14">
+        <section class="mt-12">
             <div class="bg-[#C9DBB7] py-4">
                 <div class="marquee">
                     <div class="marquee__inner">
@@ -827,7 +831,7 @@
         </section>
 
         <!-- JURY (Cascading Columns) -->
-        <section class="relative mt-16">
+        <section class="relative mt-12">
             <div class="rounded-[28px] overflow-hidden bg-[#C9DBB7] shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
 
                 <!-- (optional) top strip if you want your ticker to sit above -->
@@ -862,11 +866,11 @@
                                         </div>
                                         <div class="px-6 pb-7">
                                             <div id="jury-name"
-                                                class="font-['Instrument_Sans'] text-xl font-bold uppercase text-[#404F30] leading-tight">
+                                                class="font-['Instrument_Sans'] text-[24px] font-bold uppercase text-[#404F30] leading-tight">
                                                 PAMELA PHILIPOSE
                                             </div>
                                             <div id="jury-title"
-                                                class="mt-2 font-['Montserrat'] text-base italic text-[#404F30]">
+                                                class="mt-2 font-['Montserrat'] text-[14px] italic text-[#404F30]">
                                                 Ombudsperson, The Wire; Journalist & Author
                                             </div>
                                         </div>
@@ -876,7 +880,7 @@
                                 <!-- Active bio -->
                                 <div class="px-6 pb-10 pt-2 lg:px-10 lg:py-10">
                                     <p id="jury-bio"
-                                        class="font-['Montserrat'] text-base leading-7 text-[#404F30] lg:text-lg lg:leading-8">
+                                        class="font-['Montserrat'] leading-7 text-[#404F30] lg:text-[16px] lg:leading-8">
                                         ...
                                     </p>
                                 </div>
@@ -893,29 +897,27 @@
                     <div class="bg-[#EDEEE6] sm:hidden">
                         <div class="grid grid-cols-1">
                             <!-- Active card -->
-                            <div class="p-6">
                                 <div
-                                    class="rounded-[28px] bg-[#FFFFFF] shadow-[0_10px_30px_rgba(0,0,0,0.2)] border border-[#404F30]/20">
+                                    class="grid grid-cols-2">
                                     <div class="p-5">
                                         <img id="jury-photo-m" src="assets/jury_pamela.png" alt="Jury member photo"
-                                            class="h-[280px] w-full rounded-[22px] object-cover" />
+                                            class="h-full rounded-[22px] object-cover" />
                                     </div>
-                                    <div class="px-6 pb-7">
+                                    <div class="items-left flex flex-col justify-center">
                                         <div id="jury-name-m"
-                                            class="font-['Instrument_Sans'] text-xl font-bold uppercase text-[#404F30] leading-tight">
+                                            class="font-['Instrument_Sans'] text-[20px] font-bold uppercase text-[#404F30]">
                                             PAMELA PHILIPOSE
                                         </div>
                                         <div id="jury-title-m"
-                                            class="mt-2 font-['Montserrat'] text-base italic text-[#404F30]">
+                                            class="mt-2 font-['Montserrat'] text-[12px] italic text-[#404F30]">
                                             Ombudsperson, The Wire; Journalist & Author
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
                             <!-- Active bio -->
                             <div class="px-6 pb-10 pt-2">
-                                <p id="jury-bio-m" class="font-['Montserrat'] text-base leading-7 text-[#404F30]">
+                                <p id="jury-bio-m" class="font-['Montserrat'] text-[14px] leading-7 text-[#404F30]">
                                     ...
                                 </p>
                             </div>
@@ -974,7 +976,7 @@
         </section>
 
         <!-- APPLY NOW CTA -->
-        <section class="py-16 sm:py-20">
+        <section class="mt-12 sm:mt-12">
             <div class="flex justify-center">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform"
                     target="_blank" class="inline-flex items-center justify-center px-14 py-5 text-xl font-bold tracking-wide text-[#EDEEE6]
@@ -991,10 +993,10 @@
 
         <!-- FOOTER -->
         <footer id="contact" class="bg-[#222625] px-6 py-12">
-            <div class="grid gap-10 sm:grid-cols-4">
+            <div class="grid grid-cols-2 gap-5 sm:grid-cols-5">
 
+                <img src="assets/ifdi-logo-white.png" class="h-30 w-30 sm:h-50 sm:w-50" />
                 <div>
-                    <img src="assets/ifdi-logo-white.png" class="h-20 w-20" />
                     <p class="mt-4 text-xs text-[#EDEEE6] font-medium font-['Instrument_Sans']">
                         International Foundation<br />
                         for Disability Inclusion<br /><br />
@@ -1018,8 +1020,8 @@
                     <p class="mt-4 text-xs text-[#EDEEE6]"><a href="mailto:contact@ifdi.ngo">contact@ifdi.ngo</a></p>
                 </div>
 
-                <div class="flex flex-col items-center text-right">
-                    <h3 class="text-3xl font-bold mb-4">#InclusionReimagined</h3>
+                <div class="flex flex-col sm:items-center text-right">
+                    <h3 class="text-2xl font-bold mb-4">#InclusionReimagined</h3>
                     <div class="flex space-x-4">
                         <a class="hover:opacity-80" href="https://www.instagram.com/ifdi_ngo__/" target="_blank">
                             <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"

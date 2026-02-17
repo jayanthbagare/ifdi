@@ -14,30 +14,35 @@
 
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
 </head>
 
 <body class="bg-[#222625] text-[#EDEEE6]">
 
-    <div class="mx-auto max-w-[100%] sm:px-6">
+    <div class="mx-auto max-w-[100%]">
 
         <!-- HERO -->
         <section
             class="relative z-60 overflow-hidden rounded-b-[35px] border border-[#000000] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
-            <img src="assets/index-photo.jpg" class="w-full object-cover sm:h-[820px]" alt="Hero image" />
+
+            <!-- image -->
+            <img src="assets/index-photo.jpg" class="h-full object-cover sm:h-full" alt="Hero image" />
+
+            <!-- color filter -->
+            <div class="absolute inset-0 bg-[#160202]/40"></div>
 
             <!-- logo -->
-            <img src="assets/ifdi-logo-white.png" class="
-    absolute
-    left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
-    max-h-[80%] max-w-[80%]
-    sm:left-auto sm:top-6 sm:right-6 sm:translate-x-0 sm:translate-y-0
-    sm:h-28 sm:w-28
-  " alt="Logo" />
-
+            <img src="assets/ifdi-logo-white.png" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+                max-h-[60%] max-w-[60%]
+                sm:left-auto sm:top-6 sm:right-6 sm:translate-x-0 sm:translate-y-0
+                sm:h-50 sm:w-50" alt="Logo" />
 
             <!-- title -->
             <div class="hero-text hidden sm:block absolute left-6 top-6 sm:left-9 sm:top-10 sm:right-[260px]">
-                <h1 class="font-['Instrument_Sans'] text-[40px] font-bold tracking-wider text-[#F8F9F1] sm:text-6xl">
+                <h1 class="font-['Instrument_Sans'] font-bold tracking-wider text-[#F8F9F1] sm:text-[64px]">
                     INTERNATIONAL <br />
                     FOUNDATION <br />
                     FOR DISABILITY <br />
@@ -45,11 +50,9 @@
                 </h1>
             </div>
 
-
-
             <!-- bottom line -->
             <div
-                class="hero-text hidden sm:flex absolute bottom-8 left-6 right-6 flex-col gap-3 sm:bottom-10 sm:left-9 sm:right-9 sm:flex-row sm:items-center sm:gap-6">
+                class="hero-text sm:pb-40 hidden sm:flex absolute bottom-8 left-6 right-6 flex-col gap-3 sm:bottom-10 sm:left-9 sm:right-9 sm:flex-row sm:items-center sm:gap-6">
 
                 <p class="font-['Montserrat'] text-sm font-medium text-[#F8F9F1] sm:text-lg">
                     Imagining an Inclusive Future
@@ -65,11 +68,11 @@
         </section>
 
         <!-- MOBILE HERO (Figma style) -->
-        <section class="relative z-50 sm:hidden">
+        <section class="relative z-50 sm:hidden -mt-10">
             <div class="rounded-b-[35px] bg-[#222625] shadow-[0_18px_60px_rgba(0,0,0,0.35)] overflow-hidden">
 
                 <!-- Title glass panel -->
-                <div class="relative py-8 px-4">
+                <div class="relative pb-8 pt-18">
                     <!-- frosted/gradient plate -->
                     <div class="absolute inset-0 bg-gradient-to-b from-[#465537]/35 via-[#222625]/60 to-[#222625]/90">
                     </div>
@@ -77,7 +80,7 @@
 
                     <div class="relative text-center">
                         <h1
-                            class="font-['Instrument_Sans'] text-[40px] font-bold uppercase tracking-[0.08em] leading-[1.05] text-[#F8F9F1]">
+                            class="font-['Instrument_Sans'] text-[24px] font-bold uppercase tracking-[0.08em] leading-[1.05] text-[#F8F9F1]">
                             INTERNATIONAL<br />
                             FOUNDATION<br />
                             FOR DISABILITY INCLUSION
@@ -96,12 +99,14 @@
             </div>
 
             <div class="relative px-6 sm:px-[99px]">
-                <h2 class="font-['Instrument_Sans'] text-3xl font-bold tracking-wide text-[#EDEEE6] sm:text-4xl">
+                <h2 class="font-['Instrument_Sans'] font-bold tracking-wide text-[#EDEEE6]
+               text-[24px] sm:text-[40px]">
                     The Next Frontier in <br class="hidden sm:block" />
                     Disability Innovation.
                 </h2>
 
-                <p class="mt-4 max-w-[820px] font-['Montserrat'] text-sm tracking-tight text-[#F8F9F1] sm:text-base">
+                <p class="mt-4 max-w-[820px] font-['Montserrat'] tracking-tight text-[#F8F9F1]
+              text-[11px] sm:text-[16px]">
                     After 13 years of experience and learning with the India Inclusion Foundation (IIF), we are taking
                     the next step to build a globally connected, equitable, and innovation-driven ecosystem that
                     supports disability inclusion—particularly in under-resourced and marginalized regions across the
@@ -109,20 +114,21 @@
                 </p>
             </div>
 
+
             <!-- CTA bands -->
             <div class="mt-20 relative">
                 <!-- 1) TOP band -->
                 <a href="fellowship.html"
-                    class="relative z-30 -mt-8 block rounded-b-[35px] bg-[#404F30] px-6 py-12 sm:px-[99px]">
+                    class="relative z-30 block rounded-b-[35px] bg-[#404F30] px-6 py-10 sm:px-[99px]">
                     <div class="grid grid-cols-[auto_1fr_auto] items-center">
-                        <span class="font-['Instrument_Sans'] text-xl font-bold text-[#EDEEE6]">
+                        <span class="font-['Instrument_Sans'] text-[14px] sm:text-[22px] font-bold text-[#EDEEE6]">
                             ABOUT THE FELLOWSHIP
                         </span>
 
                         <div></div>
 
                         <div class="flex items-center gap-4">
-                            <span class="h-1 w-28 bg-[#FFFFFF]"></span>
+                            <span class="hidden sm:block h-1 w-28 bg-[#FFFFFF]"></span>
                             <span class="text-3xl leading-none text-[#FFFFFF]">→</span>
                         </div>
                     </div>
@@ -130,16 +136,16 @@
 
                 <!-- 2) MIDDLE band -->
                 <a href="about.html"
-                    class="relative z-20 -mt-8 block rounded-b-[35px] bg-[#222625] px-6 pt-20 pb-12 sm:px-[99px] sm:-mt-10">
+                    class="relative z-20 -mt-8 block rounded-b-[35px] bg-[#222625] px-6 pt-18 pb-10 sm:px-[99px] sm:-mt-10">
                     <div class="grid grid-cols-[auto_1fr_auto] items-center">
-                        <span class="font-['Instrument_Sans'] text-xl font-bold text-[#EDEEE6]">
+                        <span class="font-['Instrument_Sans'] text-[14px] sm:text-[22px] font-bold text-[#EDEEE6]">
                             ABOUT IFDI
                         </span>
 
                         <div></div>
 
                         <div class="flex items-center gap-4">
-                            <span class="h-1 w-28 bg-[#FFFFFF]"></span>
+                            <span class="hidden sm:block h-1 w-28 bg-[#FFFFFF]"></span>
                             <span class="text-3xl leading-none text-[#FFFFFF]">→</span>
                         </div>
                     </div>
@@ -147,16 +153,16 @@
 
                 <!-- 3) BOTTOM band -->
                 <a href="contact.html"
-                    class="relative z-10 -mt-8 block rounded-b-[35px] bg-[#404F30] px-6 pt-20 pb-12 sm:px-[99px] sm:-mt-10">
+                    class="relative z-10 -mt-8 block rounded-b-[35px] bg-[#404F30] px-6 pt-18 pb-10 sm:px-[99px] sm:-mt-10">
                     <div class="grid grid-cols-[auto_1fr_auto] items-center">
-                        <span class="font-['Instrument_Sans'] text-xl font-bold text-[#EDEEE6]">
+                        <span class="font-['Instrument_Sans'] text-[14px] sm:text-[22px] font-bold text-[#EDEEE6]">
                             CONTACT US
                         </span>
 
                         <div></div>
 
                         <div class="flex items-center gap-4">
-                            <span class="h-1 w-28 bg-[#FFFFFF]"></span>
+                            <span class="hidden sm:block h-1 w-28 bg-[#FFFFFF]"></span>
                             <span class="text-3xl leading-none text-[#FFFFFF]">→</span>
                         </div>
                     </div>
@@ -282,10 +288,10 @@
 
         <!-- FOOTER -->
         <footer id="contact" class="bg-[#222625] px-6 py-12">
-            <div class="grid gap-10 sm:grid-cols-4">
+            <div class="grid grid-cols-2 gap-5 sm:grid-cols-5">
 
+                <img src="assets/ifdi-logo-white.png" class="h-30 w-30 sm:h-50 sm:w-50" />
                 <div>
-                    <img src="assets/ifdi-logo-white.png" class="h-20 w-20" />
                     <p class="mt-4 text-xs text-[#EDEEE6] font-medium font-['Instrument_Sans']">
                         International Foundation<br />
                         for Disability Inclusion<br /><br />
@@ -309,8 +315,8 @@
                     <p class="mt-4 text-xs text-[#EDEEE6]"><a href="mailto:contact@ifdi.ngo">contact@ifdi.ngo</a></p>
                 </div>
 
-                <div class="flex flex-col items-center text-right">
-                    <h3 class="text-3xl font-bold mb-4">#InclusionReimagined</h3>
+                <div class="flex flex-col sm:items-center text-right">
+                    <h3 class="text-2xl font-bold mb-4">#InclusionReimagined</h3>
                     <div class="flex space-x-4">
                         <a class="hover:opacity-80" href="https://www.instagram.com/ifdi_ngo__/" target="_blank">
                             <svg class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"

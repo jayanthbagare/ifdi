@@ -163,7 +163,7 @@ nav a.active-link,
 
 /* Fellowship stat pills */
 .stat-pill {
-  background: rgba(201, 219, 183, 0.35); /* #C9DBB7 / 35% */
+  background: rgba(217, 217, 217, 0.36); /* #C9DBB7 / 35% */
   border-radius: 29px;
   padding: 18px 20px;
   box-shadow: 3px 4px 5.3px rgba(0,0,0,0.25);
