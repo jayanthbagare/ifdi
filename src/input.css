@@ -4,331 +4,388 @@
   --color-brand-green: #1e3932;
   --color-brand-beige: #f9f6f1;
 
-  --font-family-serif: 'Calistoga', serif;
-  --font-family-sans: 'Inria Sans', sans-serif;
+  /* Updated for the new Figma design */
+  --font-family-display: 'Instrument Sans', sans-serif;
+  --font-family-body: 'Montserrat', sans-serif;
+
+  /* keep old names for compatibility with other pages if needed */
+  --font-family-serif: 'Instrument Sans', sans-serif;
+  --font-family-sans: 'Montserrat', sans-serif;
 }
 
 nav a.active-link,
 #menu a.active-link {
   text-decoration: underline !important;
-  text-underline-offset: 4px;
-  font-weight: 500;
+  text-underline-offset: 4px !important;
 }
 
-.logo-svg {
-  width: 132px;
-  height: 55px;
-  flex-shrink: 0;
+/* ---------- APPLY NOW ticker ---------- */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-.logo-text {
-  width: 295px;
-  height: auto;
-  margin-left: -5px;
-  position: relative;
-  top: 10px;
-  flex-shrink: 0;
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-/* Logo positioning: safe across tablets (incl. iPad 1024px) */
-.logo-container {
-  margin-left: 0; /* prevent clipping on iPad */
+.marquee__inner {
+  display: inline-flex;
+  gap: 4rem;
+  animation: marquee 120s linear infinite;
 }
 
-/* Optional: only nudge left on very wide screens if desired */
-@media (min-width: 1280px) {
-  .logo-container {
-    margin-left: -24px;
-  }
+.marquee:hover .marquee__inner {
+  animation-play-state: paused;
 }
 
-/* Tablet Responsive (768px and below) */
-@media (max-width: 768px) {
-  .logo-container {
-    margin-left: 0;
-  }
 
-  .logo-svg {
-    width: 88px;
-    height: auto;
-  }
-
-  .logo-text {
-    width: 196px;
-    top: 6px;
-    margin-left: -3px;
-  }
+.ticker-item {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #404F30;
 }
 
-/* Mobile Responsive (480px and below) */
-@media (max-width: 480px) {
-  .logo-container {
-    margin-left: 0;
-  }
-
-  .logo-svg {
-    width: 66px;
-    height: auto;
-  }
-
-  .logo-text {
-    width: 147px;
-    top: 5px;
-    margin-left: -2px;
-  }
+.ticker-dot {
+  width: 4.96px;
+  height: 4.96px;
+  border-radius: 9999px;
+  background: #404F30;
 }
 
-/* Modal Styles */
-.cursor-pointer {
-  cursor: pointer;
-}
-
+/* Keep your existing modal styles etc. below this line (unchanged) */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 50;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
 }
 
 .modal-content {
-  background-color: var(--color-brand-beige);
-  border-radius: 12px;
+  background-color: #F9F6F1;
+  margin: 10% auto;
+  padding: 40px;
+  border-radius: 30px;
+  width: 90%;
   max-width: 800px;
-  width: calc(100% - 24px);
   position: relative;
-  animation: modalFadeIn 0.3s ease-out;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  margin: auto;
-  max-height: 90vh;
-  overflow-y: auto;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
 }
 
-@keyframes modalFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.modal-close {
+.close {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  background: var(--color-brand-green);
-  color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  right: 30px;
+  top: 20px;
   font-size: 28px;
-  line-height: 1;
+  font-weight: bold;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  z-index: 10;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-
-.modal-close:hover {
-  background: #0f1f1a;
-  transform: rotate(90deg);
-}
-
-.modal-close:active {
-  background: #0f1f1a;
-  transform: scale(0.95);
+  color: #1E3932;
 }
 
 .modal-body {
-  padding: 24px 20px 24px 20px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
 }
 
 .modal-image {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto 16px auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  border-radius: 20px;
   flex-shrink: 0;
 }
 
-.modal-text {
-  width: 100%;
+.modal-text h2 {
+  font-family: var(--font-family-serif);
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #1E3932;
 }
 
-.modal-name {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-brand-green);
-  margin-bottom: 12px;
-  text-align: center;
-  line-height: 1.3;
+.modal-text h3 {
+  font-family: var(--font-family-sans);
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #1E3932;
+  opacity: 0.8;
 }
 
-.modal-bio {
-  color: var(--color-gray-700);
-  line-height: 1.7;
-  font-size: 15px;
-  text-align: left;
+.modal-text p {
+  font-family: var(--font-family-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1E3932;
 }
 
-/* Mobile Responsive for Modal (480px and below) */
-@media (max-width: 480px) {
-  .modal {
-    padding: 8px;
-  }
+/* Hero text contrast – outline-style shadow */
+.hero-text {
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.85),
+    0 0 1px rgba(0, 0, 0, 0.95);
+}
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .modal-content {
-    border-radius: 8px;
-    max-height: 85vh;
-    width: calc(100% - 16px);
-  }
-
-  .modal-close {
-    top: 8px;
-    right: 8px;
-    width: 36px;
-    height: 36px;
-    font-size: 24px;
+    margin: 5% auto;
+    padding: 25px;
   }
 
   .modal-body {
-    padding: 20px 16px;
-  }
-
-  .modal-image {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    margin: 0 auto 16px auto;
-  }
-
-  .modal-name {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-  }
-
-  .modal-bio {
-    font-size: 14px;
-    line-height: 1.65;
-  }
-}
-
-/* Tablet Responsive for Modal (481px - 767px) */
-@media (min-width: 481px) and (max-width: 767px) {
-  .modal {
-    padding: 16px;
-  }
-
-  .modal-content {
-    max-width: 90%;
-    width: calc(100% - 32px);
-    max-height: 88vh;
-  }
-
-  .modal-body {
-    padding: 28px 24px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .modal-image {
     width: 180px;
-    height: 180px;
-    object-fit: cover;
-    float: left;
-    margin: 0 20px 16px 0;
+    margin-bottom: 20px;
   }
 
-  .modal-name {
-    font-size: 1.5rem;
-  }
-
-  .modal-bio {
-    font-size: 15px;
+  .modal-text h2 {
+    font-size: 26px;
   }
 }
 
-/* Tablet Responsive for Modal (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .modal-content {
-    max-width: 85%;
-    width: calc(100% - 32px);
+
+/* Outline-style hero text shadow (reused here too) */
+.hero-text {
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.85),
+    0 0 1px rgba(0, 0, 0, 0.95);
+}
+
+/* Fellowship stat pills */
+.stat-pill {
+  background: rgba(217, 217, 217, 0.36); /* #C9DBB7 / 35% */
+  border-radius: 29px;
+  padding: 18px 20px;
+  box-shadow: 3px 4px 5.3px rgba(0,0,0,0.25);
+}
+.stat-kicker {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
+  color: #EDEEE6;
+}
+.stat-value {
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #EDEEE6;
+}
+
+/* Tabs */
+.tab-btn {
+  border-radius: 24px 24px 0 0;
+  padding: 18px 18px;
+  background: rgba(201, 219, 183, 0.35);
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  color: #EDEEE6;
+  text-align: center;
+}
+.tab-btn--active {
+  background: #404F30;
+  
+}
+
+@media (max-width: 640px) {
+  .tab-btn {
+    font-size: 13px;
+    padding: 10px 12px;
+    border-radius: 14px;
   }
 
-  .modal-body {
-    padding: 32px 28px;
+  .tab-btn:not(.tab-btn--active) {
+    background: rgba(201, 219, 183, 0.35);
+    opacity: 0.9;
   }
 
-  .modal-image {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    float: left;
-    margin: 0 24px 16px 0;
-  }
-
-  .modal-name {
-    font-size: var(--text-xl);
-    text-align: left;
-    margin-bottom: 14px;
-  }
-
-  .modal-bio {
-    text-align: left;
-    font-size: 15px;
+  .tab-btn--active {
+    background: #404F30;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
   }
 }
 
-/* Desktop Responsive for Modal (1024px and above) */
-@media (width >= 64rem) {
-  .modal-body {
-    padding: 40px;
-  }
-
-  .modal-image {
-    width: 240px;
-    height: 240px;
-    object-fit: cover;
-    float: left;
-    margin: 0 32px 16px 0;
-  }
-
-  .modal-name {
-    font-size: var(--text-2xl);
-    text-align: left;
-    margin-bottom: 16px;
-  }
-
-  .modal-bio {
-    text-align: left;
-    font-size: 16px;
+@media (max-width: 640px) {
+  .tab-btn {
+    border-radius: 12px;
   }
 }
 
-/* ------------------------------
-   Text justification (site-wide)
-   ------------------------------ */
 
-/* Justify long-form text while keeping UI elements (nav/buttons/headings) normal */
-.justify-text {
-  text-align: justify;
-  text-justify: inter-word;
+/* Info cards inside tab content */
+.info-card {
+  background: rgba(201, 219, 183, 0.4);
+  border-radius: 24px;
+  padding: 18px 18px;
+  box-shadow: 2.46px 3.29px 4.35px rgba(0,0,0,0.25);
+}
+.info-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #EDEEE6;
+}
+.info-body {
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #EDEEE6;
+  opacity: 0.95;
+}
+
+/* Jury ticker styling (uses existing .marquee / .marquee__inner animation) */
+.jury-ticker-item {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #404F30;
+}
+.jury-ticker-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: #404F30;
+  display: inline-block;
+}
+
+/* Vertical text for the bars */
+.jury-vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    line-height: 1;
+    text-align: center;
+}
+
+/* input.css */
+@layer components {
+  .jury-tab {
+    @apply h-full flex-shrink-0 items-center justify-center px-2 lg:w-[90px] flex;
+  }
+}
+
+@layer components {
+  .board-tab {
+    @apply h-full flex-shrink-0 items-center justify-center px-2 lg:w-[90px] flex;
+  }
+}
+
+@layer components {
+  .advisory-tab {
+    @apply h-full flex-shrink-0 items-center justify-center px-2 lg:w-[90px] flex;
+  }
+}
+
+/* desktop bars stay vertical like you already have */
+.jury-tab { width: 84px; min-width: 84px; }
+
+/* mobile: full-width horizontal strips */
+@media (max-width: 640px) {
+  .jury-tab  {
+    width: 100%;
+    min-width: 100%;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .jury-vertical {
+    writing-mode: horizontal-tb;
+    transform: none;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* mobile: full-width horizontal strips (BOARD + ADVISORY) */
+@media (max-width: 640px) {
+  .board-tab,
+  .advisory-tab {
+    width: 100%;
+    min-width: 100%;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* optional: make them feel like list items */
+    padding: 0 12px;
+  }
+
+  /* advisory names must rotate to normal on mobile */
+  .advisory-vertical {
+    writing-mode: horizontal-tb;
+    transform: none;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    white-space: normal;
+  }
+}
+
+/* same “vertical name” treatment as jury */
+.advisory-tab {
+    width: 84px;
+    /* bar width */
+    min-width: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 10px;
+    border-right: 1px solid rgba(64, 79, 48, 0.15);
+}
+
+#advisory-right .advisory-tab {
+    border-right: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.advisory-vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    line-height: 1.05;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Advisory tabs: horizontal on mobile, vertical bars on desktop */
+.advisory-tab{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 14px;
+}
+
+.advisory-vertical{
+  writing-mode: horizontal-tb;
+  transform: none;
+  white-space: nowrap;
+}
+
+/* Desktop (lg+) becomes vertical bars */
+@media (min-width: 1024px){
+  .advisory-tab{
+    width: 84px;           /* match your board/jury bar width */
+    min-height: 600px;     /* match section height vibe */
+    padding: 0;
+  }
+  .advisory-vertical{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
 }
