@@ -15,11 +15,6 @@
 
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-
-    <meta http-equiv="Cache-Control" content="no-store" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-
 </head>
 
 <body class="bg-[#222625] text-[#EDEEE6]">
@@ -114,23 +109,38 @@
                 </div>
 
                 <!-- green card -->
-                <div class="px-5 py-10 bg-[#465537]/70 px-6 py-10 text-center">
+                <div class="relative overflow-hidden px-6 py-10 bg-[#465537]/70 text-center">
+
+                    <!-- subtle glow (background layer) -->
+                    <div class="pointer-events-none absolute inset-0">
+                        <div
+                            class="absolute -top-24 -left-24 h-[260px] w-[260px] bg-[rgba(34, 38, 37, 1)] blur-[120px]">
+                        </div>
+                        <div
+                            class="absolute -bottom-24 -right-24 h-[300px] w-[300px] bg-[rgba(64, 79, 48, 0.75)] blur-[140px]">
+                        </div>
+                    </div>
+
+                    <!-- content -->
+                    <div class="relative z-10">
                         <p class="font-['Montserrat'] text-[14px] leading-7 text-[#EDEEE6]/90">
                             A six-month journalism fellowship supporting rights-based, long-form reporting on disability
-                            in
-                            India—shifting narratives from charity to dignity, justice, and accountability.
+                            in India—shifting narratives from charity to dignity, justice, and accountability.
                         </p>
 
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfP5fVnzm0aPCw5rEuQncVTAmVg_o2SnOZayO_5JRJ-Iq4ALQ/viewform"
-                            target="_blank" class="mx-auto mt-8 inline-flex items-center justify-center rounded-[46px] bg-[rgba(217,217,217,0.36)] px-10 py-4 font-['Montserrat'] text-base font-bold text-[#EDEEE6]
-                    shadow-[3.197px_4.262px_5.648px_0_rgba(0,0,0,0.25)]">
+                            target="_blank" class="mx-auto mt-8 inline-flex items-center justify-center rounded-[46px]
+           bg-[rgba(217,217,217,0.36)] px-10 py-4 font-['Montserrat'] text-base font-bold text-[#EDEEE6]
+           shadow-[3.197px_4.262px_5.648px_0_rgba(0,0,0,0.25)]">
                             APPLICATIONS OPEN
                         </a>
 
                         <div class="mt-6 font-['Montserrat'] text-sm text-[#EDEEE6]/80">
                             Deadline: 15 Feb 2026
                         </div>
+                    </div>
                 </div>
+
             </div>
 
             <!-- ===================== -->
@@ -892,27 +902,26 @@
                     <div class="bg-[#EDEEE6] sm:hidden">
                         <div class="grid grid-cols-1">
                             <!-- Active card -->
-                                <div
-                                    class="grid grid-cols-2">
-                                    <div class="p-5">
-                                        <img id="jury-photo-m" src="assets/jury_pamela.png" alt="Jury member photo"
-                                            class="h-full rounded-[22px] object-cover" />
+                            <div class="grid grid-cols-2">
+                                <div class="p-5">
+                                    <img id="jury-photo-m" src="assets/jury_pamela.png" alt="Jury member photo"
+                                        class="h-full rounded-[22px] object-cover" />
+                                </div>
+                                <div class="items-left flex flex-col justify-center">
+                                    <div id="jury-name-m"
+                                        class="font-['Instrument_Sans'] text-[20px] font-bold uppercase text-[#404F30]">
+                                        PAMELA PHILIPOSE
                                     </div>
-                                    <div class="items-left flex flex-col justify-center">
-                                        <div id="jury-name-m"
-                                            class="font-['Instrument_Sans'] text-[20px] font-bold uppercase text-[#404F30]">
-                                            PAMELA PHILIPOSE
-                                        </div>
-                                        <div id="jury-title-m"
-                                            class="mt-2 font-['Montserrat'] text-[12px] italic text-[#404F30]">
-                                            Ombudsperson, The Wire; Journalist & Author
-                                        </div>
+                                    <div id="jury-title-m"
+                                        class="mt-2 font-['Montserrat'] text-[12px] italic text-[#404F30]">
+                                        Ombudsperson, The Wire; Journalist & Author
                                     </div>
                                 </div>
+                            </div>
 
                             <!-- Active bio -->
                             <div class="px-6 pb-10 pt-2">
-                                <p id="jury-bio-m" class="font-['Montserrat'] text-[14px] leading-7 text-[#404F30]">
+                                <p id="jury-bio-m" class="font-['Montserrat'] text-[11px] leading-7 text-[#404F30]">
                                     ...
                                 </p>
                             </div>

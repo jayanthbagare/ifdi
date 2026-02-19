@@ -2,14 +2,26 @@
 command = "npm run build"
 publish = "."
 
+# 1) HTML: do NOT long-cache
 [[headers]]
-for = "/*.css"
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
 
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
+# (Optional but recommended) If your site serves index at "/" without ".html"
 [[headers]]
-for = "/*.js"
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
 
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
+# 2) Images: long-cache
+[[headers]]
+  for = "/*.(png|jpg|jpeg|webp|gif|svg|ico|avif)"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 3) Fonts: long-cache
+[[headers]]
+  for = "/*.(woff2|woff|ttf|otf|eot)"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
